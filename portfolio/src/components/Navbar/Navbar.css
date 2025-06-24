@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-left {
+    padding: 10px;
+}
+
+.navbar-right {
+    padding: 30px;
+}
+
+li {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
