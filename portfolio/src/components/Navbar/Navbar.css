@@ -28,6 +28,8 @@ hr {
     display: flex;
     padding: 7%;
     font-size: x-large;
+    font-weight: 600;
+    color: #FDCB6E ;
 }
 
 .navbar-right {
@@ -82,4 +84,28 @@ li:hover::after {
     gap: 20px;
     cursor: pointer;
     padding-right: 30px;
+}
+
+.navbar-righter img {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.navbar-righter img:hover {
+    transform: translateY(-5px);
+}
+
+.navbar-righter img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-righter img:hover::after {
+    width: 100%;
 }

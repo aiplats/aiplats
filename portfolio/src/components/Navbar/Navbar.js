@@ -16,6 +16,7 @@ export const Navbar = () => {
 
             <div className="navbar-right">
                 <ul>
+                    <li>About</li>
                     <li>Skills</li>
                     <li>Projects</li>
                     <li>Contact</li>

@@ -17,7 +17,7 @@ export const Header = () => {
 
                     <div className="grid-left-buttons">
                         <button><span>Contact Info</span></button>
-                        <button><span>Download CV</span></button>
+                        <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span>Download CV</span></button></a>
                     </div>
                 </div>
 
