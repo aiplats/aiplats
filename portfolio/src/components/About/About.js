@@ -6,7 +6,6 @@ export const About = () => {
   return (
     <>
         <div className="about-main-page">
-            <br id="About"/>
             <div className="about-container">
                 <div className="about-left">
                     <img src={gradpic} style={{width: '50%'}}/>

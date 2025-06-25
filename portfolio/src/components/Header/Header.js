@@ -30,6 +30,7 @@ export const Header = () => {
                 </div>
             </div>
         </div>
+        <br id="About"/>
     </>
   )
 }
