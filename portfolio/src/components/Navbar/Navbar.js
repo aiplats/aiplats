@@ -16,10 +16,10 @@ export const Navbar = () => {
 
             <div className="navbar-right">
                 <ul>
-                    <li>About</li>
-                    <li>Skills</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -28,8 +28,6 @@ export const Navbar = () => {
                 <img src={whatsapp} style={{width: '40px', height: '40px'}}/>
             </div>
         </div>
-
-        <hr />
     </div>
     </>
   )
