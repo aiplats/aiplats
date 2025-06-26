@@ -1,5 +1,22 @@
-.skills-main h1 {
+.skills-main {
+    background-color: #FDCB6E;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-container {
+    padding: 6%;
+}
+
+.skills-container h1 {
     font-family: 'Montserrat', 'sans-serif';
     font-size: 60px;
     font-weight: 800;
+
+}
+
+.skills-track {
+    display: flex;
+    gap: 100px;
 }

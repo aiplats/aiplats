@@ -46,7 +46,7 @@ export const About = () => {
                     <p>Outside my career, these are the things I mostly enjoy and do in my free time.</p>
                     <div className="interest-carousel">
                       <div className="interest-track">
-                        {[...interestIcons, ...interestIcons].map((icon, index) => (
+                        {[...interestIcons].map((icon, index) => (
                           <div key={index} className="interest-icon">
                             <img src={icon} alt={`Interest ${index + 1}`} />
                           </div>
