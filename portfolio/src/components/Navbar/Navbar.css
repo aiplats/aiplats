@@ -20,10 +20,17 @@
 
 .navbar-left p {
     display: flex;
-    padding: 7%;
+    padding: 10%;
     font-size: x-large;
     font-weight: 600;
-    color: #FDCB6E ;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.navbar-left a {
+    color: #FDCB6E;
+    text-decoration: none;
 }
 
 .navbar-right {
@@ -46,11 +53,15 @@ ul {
     align-items: center;  
     justify-content: center;
     font-size: x-large;
-    color: white;
     font-weight: 800;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease;
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
 }
 
 li:hover {

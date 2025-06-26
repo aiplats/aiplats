@@ -10,8 +10,7 @@ export const Navbar = () => {
     <div className='main-nav'>
         <div className="navbar">
             <div className="navbar-left">
-                <img src={nognog} style={{width: '70px'}}/>
-                <p>AIPLATS</p>
+                <p><a href="">AIPLATS</a></p>
             </div>
 
             <div className="navbar-right">

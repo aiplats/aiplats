@@ -53,3 +53,58 @@
     font-size: 60px;
     font-weight: 800;
 }
+
+.about-interest p{
+    text-align: left;
+    font-size: 24px;
+}
+
+/* Seamless infinite scrolling carousel */
+.interest-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.interest-track {
+    display: flex;
+    animation: scroll-icons 20s linear infinite;
+    gap: 60px;
+    width: fit-content;
+}
+
+.interest-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.interest-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.interest-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Pause animation on hover */
+.interest-carousel:hover .interest-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-icons {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
