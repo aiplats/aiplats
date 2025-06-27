@@ -1,6 +1,8 @@
 .header {
     padding: 0;
     margin: 0;
+    background-image: url("./../assets/bgrightblack.png");
+    background-size: 100% 100%;
 }
 
 .grid {
@@ -23,13 +25,23 @@
 
 .grid-left h2 {
     font-size: xx-large;
-    color: #FDCB6E ;
+    color: #FDCB6E;
+    text-indent: 20px;
+}
+
+.grid-left-tag {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
 }
 
 .grid-left-buttons {
     display: flex;
+    position: relative;
     justify-content: start;
     gap: 50px;
+    left: 20px;
 }
 
 .grid-left button {
@@ -107,13 +119,13 @@
 .circle {
     width: 200px;
     height: 200px;
-    bottom: 180px;
-    left: 0px;
+    bottom: 200px;
+    left: 300px;
 }
 
 .circle2 {
     width: 500px;
     height: 500px;
-    top: 0px;
-    right: 100px;
+    top: 150px;
+    left: 450px;
 }

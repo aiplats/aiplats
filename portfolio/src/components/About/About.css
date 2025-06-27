@@ -2,6 +2,8 @@
     padding: 100px;
     background-color: #FDCB6E;
     color: black;
+    background-image: url("./../assets/bgleftyellow.png");
+    background-size: cover;
 }
 
 .about-container {
@@ -32,10 +34,12 @@
     font-family: 'Montserrat', 'sans-serif';
     font-size: 60px;
     font-weight: 800;
+    text-indent: 20px;
 }
 
 .about-right h2 {
     font-size: 24px;
+    text-indent: 35px;
 }
 
 .about-right p{
@@ -43,6 +47,13 @@
     text-align: left;
     font-size: 24px;
     line-height: 40px;
+}
+
+.about-text {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
 }
 
 .about-heading {
@@ -83,11 +94,9 @@
   background-color: black; 
 }
 
-.cert-icons img{
+.icon-img {
     border: none;
     border-radius: 50%;
-    outline: 2x solid black;
-    outline-offset: 5px;
 }
 
 .cert-icons h2 h3{
