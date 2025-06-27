@@ -8,7 +8,7 @@ export const Header = () => {
         <div className="header">
             <div className="grid">
                 <div className="grid-left">
-                    <h1>Hello! I'm Alex,</h1>
+                    <h1>Hey there! I'm Alex,</h1>
                     <p>A passionate Full Stack Web Developer dedicated to help build functional and engaging websites, with a strong background in both Front-End & Back-End Development.  <br /> <br />
                         I'm here to turn ideas into interactive digital experiences that are not only visually appealing but also seamlessly performant. 
                     </p>

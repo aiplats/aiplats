@@ -35,75 +35,62 @@
 }
 
 .about-right h2 {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .about-right p{
+    text-indent: 2rem;
     text-align: left;
     font-size: 24px;
     line-height: 40px;
 }
 
-.about-bottom-container {
-    display: flex;
+.about-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.about-interest h1{
+.about-heading h1 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.about-heading .line {
+  flex: 1;
+  height: 2px;
+  background-color: black;
+}
+
+.about-interest h1 {
     font-family: 'Montserrat', 'sans-serif';
     font-size: 60px;
     font-weight: 800;
 }
 
-.about-interest p{
-    text-align: left;
-    font-size: 24px;
-}
-
-.interest-carousel {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background: transparent;
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
-
-.interest-track {
+.cert-container {
     display: flex;
-    animation: scroll-icons 20s linear infinite;
-    gap: 60px;
-    width: fit-content;
-}
-
-.interest-icon {
-    flex: 0 0 auto;
-    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+    gap: 5rem;
 }
 
-.interest-icon img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+.vertical-line {
+  width: 2px;
+  height: 500px; 
+  background-color: black; 
 }
 
-.interest-icon img:hover {
-    transform: scale(1.2);
+.cert-icons img{
+    border: none;
+    border-radius: 50%;
+    outline: 2x solid black;
+    outline-offset: 5px;
 }
 
-/* Pause animation on hover */
-.interest-carousel:hover .interest-track {
-    animation-play-state: paused;
-}
-
-@keyframes scroll-icons {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+.cert-icons h2 h3{
+    display: flex;
+    text-align: center;
 }

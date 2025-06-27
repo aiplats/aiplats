@@ -48,7 +48,7 @@ ul {
     list-style-type: none;
 }
 
-.navbar-right li a {
+.navbar-right li {
     display: flex;
     align-items: center;  
     justify-content: center;
@@ -56,7 +56,7 @@ ul {
     font-weight: 800;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .navbar-right a {
