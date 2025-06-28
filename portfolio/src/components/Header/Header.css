@@ -10,31 +10,41 @@
 
 .grid-left {
     flex: 1;
-    padding: 6%;
+    padding: 8%;
 }
 
 .grid-left h1 {
     font-size: 60px;
 }
 
-.grid-left p {
-    font-size: x-large;
-    line-height: 45px;
+.typing-text {
+    font-size: 30px;
 }
+
+.cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: black;
+    animation: blink 0.7s steps(1) infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
 
 .grid-left h2 {
     font-size: xx-large;
     color: #FDCB6E;
-    text-indent: 20px;
+    padding-top: 40px;
 }
 
 
 .grid-left-buttons {
     display: flex;
-    position: relative;
     justify-content: start;
     gap: 50px;
-    left: 20px;
 }
 
 .grid-left button {

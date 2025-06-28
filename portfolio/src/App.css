@@ -6,5 +6,10 @@
   color: white;
   background-image: url("./../src/components/assets/blackbg-croped.jpg");
   background-size: contain;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }

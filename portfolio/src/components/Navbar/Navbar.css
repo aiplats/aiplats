@@ -64,11 +64,11 @@
     text-decoration: none;
 }
 
-li:hover {
+.navbar-right li:hover {
     transform: translateY(-5px);
 }
 
-li::after {
+.navbar-right li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -79,7 +79,7 @@ li::after {
     transition: width 0.3s ease;
 }
 
-li:hover::after {
+.navbar-right li:hover::after {
     width: 100%;
 }
 

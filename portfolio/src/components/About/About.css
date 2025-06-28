@@ -42,18 +42,44 @@
     gap: 50px;
 }
 
+.about-navigation a {
+    text-decoration: none;
+    color: white;
+}
+
 .about-navigation li {
     position: relative;
     top: 100px;
     font-size: 40px;
     cursor: pointer;
     line-height: 100px;
+    transition: transform 0.5s ease;
+}
+
+.about-navigation li:hover {
+    transform: translateY(-5px);
+}
+
+.about-navigation li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.about-navigation li:hover::after {
+    width: 100%;
 }
 
 .about-content {
     overflow-y: scroll;
     height: 600px;
     padding: 2%;
+    scroll-behavior: smooth;
 }
 
 .about-content::-webkit-scrollbar {
@@ -113,8 +139,17 @@
 
 
 
-.skills-container {
+.skills-content {
     display: block;
+    max-width: auto;
+    padding: 5%;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    padding-bottom: 100px;
 }
 
 .skills-container h1 {
@@ -127,20 +162,33 @@
     padding: 0 30px;
 }
 
-.skills-carousel {
-    display: flex;
-    padding: 5%;
+.category-container {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.5);
+    border-radius: 24px;
 }
 
-.skills-track {
-    display: flex;
-    gap: 50px;
+.category-container p {
+    font-size: 22px;
 }
 
+.skills-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
 
-
-
-
+.skills-title {
+    display: block;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    font-size: 20px;
+}
 
 
 .about-interest h1 {

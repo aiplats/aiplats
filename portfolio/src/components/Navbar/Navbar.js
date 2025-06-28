@@ -1,6 +1,5 @@
 import React from 'react'
 import './Navbar.css'
-import nognog from './../assets/nognog-1x1.png';
 import linkedin from './../assets/icons8-linkedin-48.png'
 import whatsapp from './../assets/icons8-whatsapp-48.png'
 
@@ -10,7 +9,7 @@ export const Navbar = () => {
     <div className='main-nav'>
         <div className="navbar">
             <div className="navbar-left">
-                <p><a href="">AIPLATS</a></p>
+                <p><a href="/">AIPLATS</a></p>
             </div>
 
             <div className="navbar-right">
