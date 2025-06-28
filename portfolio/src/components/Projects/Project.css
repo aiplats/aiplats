@@ -1,10 +1,14 @@
-.main-project {
-    padding: 0;
+.main-project-page {
+    padding: 0 20px;
     margin: 0;
 }
 
-.main-project h1 {
-    font-family: 'Montserrat', 'sans-serif';
+.project-container {
+    display: flex;
+    padding: 80px;
+}
+
+.main-project-page h1 {
     font-size: 60px;
     font-weight: 800;
 }

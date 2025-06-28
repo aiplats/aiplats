@@ -83,6 +83,21 @@
     width: 100%;
 }
 
+.navbar-right li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-right li:hover::after {
+    width: 100%;
+}
+
 .navbar-righter {
     display: flex;
     justify-content: center;

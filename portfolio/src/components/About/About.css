@@ -1,3 +1,5 @@
+/* ABOUT SECTION*/
+
 .about-main-page {
     padding: 0 20px;
 }
@@ -75,6 +77,15 @@
     width: 100%;
 }
 
+.about-navigation li.active::after {
+  width: 100%;
+  background-color: white;
+}
+
+.about-navigation li:hover::after {
+  width: 0%;
+}
+
 .about-content {
     overflow-y: scroll;
     height: 600px;
@@ -137,7 +148,7 @@
     line-height: 38px;
 }
 
-
+/* SKILLS SECTION*/
 
 .skills-content {
     display: block;
@@ -191,26 +202,25 @@
 }
 
 
-.about-interest h1 {
-    font-family: 'Montserrat', 'sans-serif';
-    font-size: 60px;
-    font-weight: 800;
-}
+/* CERTIFICATION SECTION*/
 
 .cert-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 5rem;
+    gap: 20px;
+    padding: 30px;
 }
 
 .vertical-line {
-  width: 2px;
-  height: 500px; 
-  background-color: black; 
+    width: 2px;
+    height: 500px; 
+    background-color: white; 
+    margin: 0 20px;
 }
 
 .icon-img {
+    width: 80%;
     border: none;
     border-radius: 50%;
 }

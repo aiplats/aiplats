@@ -1,11 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './About.css'
+import { skillsIcons, certifications } from './../assets/assets'
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
-import itflogo from './../assets/itflogo2.png'
-import adscert from './../assets/adscert.png'
 
-import discord from './../assets/icons8-discord-48.png'
+import github from './../assets/icons8-githubw-50.png'
 import instagram from './../assets/icons8-instagram-48.png'
 import facebook from './../assets/icons8-facebook-48.png'
 
@@ -14,132 +13,17 @@ import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import web from './../assets/icons8-webw-50.png'
 
-import responsive from './../assets/icons8-responsive-design-50.png'
-import uiux from './../assets/icons8-ui-ux-design-50.png'
-import wordpress from './../assets/icons8-wordpress-50.png'
-import framer from './../assets/icons8-framer-48.png'
-
-import git from './../assets/icons8-git-48.png'
-import graphql from './../assets/icons8-graphql-50.png'
-import restapi from './../assets/icons8-rest-api-50.png'
-
-import css from './../assets/icons8-css3-48.png'
-import html from './../assets/icons8-html5-48.png'
-import javascript from './../assets/icons8-javascript-48.png'
-import laravel from './../assets/icons8-laravel-64.png'
-import mongodb from './../assets/icons8-mongodb-48.png'
-import express from './../assets/icons8-express-js-50.png'
-import nodejs from './../assets/icons8-node-js-48.png'
-import react from './../assets/icons8-react-40.png'
-import postgresql from './../assets/icons8-postgresql-48.png'
-
 export const About = () => {
 
+  const [activeSection, setActiveSection] = useState('AboutMe');
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
   const certificationsRef = useRef(null);
 
-  const scrollToRef = (ref) => {
+  const handleNavigationClick = (ref, section) => {
+    setActiveSection(section);
     ref.current.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const skillsIcons = [
-    {
-      category: "Front-End",
-      icon: css,
-      title: "CSS"
-    },
-    {
-      category: "Front-End",
-      icon: html,
-      title: "HTML"
-    },
-    {
-      category: "Front-End",
-      icon: react,
-      title: "REACT"
-    },
-    {
-      category: "Front-End",
-      icon: javascript,
-      title: "JAVASCRIPT"
-    },
-    {
-      category: "Back-End",
-      icon: nodejs,
-      title: "NODE JS"
-    },
-    {
-      category: "Back-End",
-      icon: laravel,
-      title: "LARAVEL"
-    },
-    {
-      category: "Back-End",
-      icon: mongodb,
-      title: "MONGODB"
-    },
-    {
-      category: "Back-End",
-      icon: express,
-      title: "EXPRESS JS"
-    },
-    {
-      category: "Back-End",
-      icon: postgresql,
-      title: "POSTGRESQL"
-    },
-    {
-      category: "Design",
-      icon: wordpress,
-      title: "WORDPRESS"
-    },
-    {
-      category: "Design",
-      icon: framer,
-      title: "FRAMER"
-    },
-    {
-      category: "Design",
-      icon: uiux,
-      title: "UI/UX Design"
-    }, 
-    {
-      category: "Design",
-      icon: responsive,
-      title: "RESPONSIVE DESIGN"
-    },
-    {
-      category: "Others",
-      icon: git,
-      title: "GIT"
-    },
-    {
-      category: "Others",
-      icon: graphql,
-      title: "GRAPHQL"
-    },
-    {
-      category: "Others",
-      icon: restapi,
-      title: "REST API"
-    }
-  ];
-
-  const certifications = [
-    {
-      icon: itflogo,
-      title: "CompTIA IT Fundamentals+",
-      credential: "Credential ID:",
-      id: "2BXGK4CRMJV41DCN"
-    },
-    {
-      icon: adscert,
-      title: "AI-Powered Performance Ads",
-      credential: "Credential ID:",
-      id: "143449646"
-    }
-  ];
 
   const groupedSkills = skillsIcons.reduce((acc, skill) => {
   if (!acc[skill.category]) {
@@ -162,18 +46,24 @@ export const About = () => {
           <div className="about-page-container">
             <div className="about-navigation">
               <ul>
-                <li><a href="#AboutMe" onClick={(e) => {
-                  e.preventDefault();
-                  scrollToRef(aboutMeRef);
-                }}>About Me</a></li>
-                <li><a href="#Skills" onClick={(e) => {
-                  e.preventDefault();
-                  scrollToRef(skillsRef);
-                }}>Skills & Tech</a></li>
-                <li><a href="#Certifications" onClick={(e) => {
-                  e.preventDefault();
-                  scrollToRef(certificationsRef);
-                }}>Certifications</a></li>
+                <li className={activeSection === 'AboutMe' ? 'active' : ''}>
+                  <a href="#AboutMe" onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigationClick(aboutMeRef, 'AboutMe');
+                  }}>About Me</a>
+                </li>
+                <li className={activeSection === 'Skills' ? 'active' : ''}>
+                  <a href="#Skills" onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigationClick(skillsRef, 'Skills');
+                  }}>Skills & Tech</a>
+                </li>
+                <li className={activeSection === 'Certifications' ? 'active' : ''}>
+                  <a href="#Certifications" onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigationClick(certificationsRef, 'Certifications');
+                  }}>Certifications</a>
+                </li>
               </ul>
               <div className="nav-vertical-line"></div>
             </div>
@@ -186,9 +76,9 @@ export const About = () => {
                     <img src={gradpic}/>
 
                     <div className="socials">
-                      <img src={facebook}/>
-                      <img src={instagram}/>
-                      <img src={discord}/>
+                      <a href="https://www.facebook.com/aiplats"><img src={facebook} /></a>
+                      <a href="https://www.instagram.com/aiplatss/"><img src={instagram}/></a>
+                      <a href="https://github.com/aipPlaton"><img src={github}/></a>
                     </div>
                   </div>
 
@@ -202,7 +92,6 @@ export const About = () => {
                 </div>
               </div>
 
-              <br />
 
               <div className="skills-container" ref={skillsRef} id='Skills'>
                 <h1>SKILLS & TECHNOLOGIES</h1>
@@ -223,8 +112,6 @@ export const About = () => {
                       ))}
                       </div>
                     </div>
-
-                    <div className="skill-vertical-line"></div>
 
                     <div className="skills-title">
                         {skillsIcons
@@ -247,8 +134,6 @@ export const About = () => {
                         </div>
                       ))}
                     </div>
-
-                    <div className="skill-vertical-line"></div>
 
                     <div className="category-container">
                       <img src={server}/>
@@ -280,8 +165,6 @@ export const About = () => {
                       </div>
                     </div>
 
-                    <div className="skill-vertical-line"></div>
-
                     <div className="skills-title">
                       {skillsIcons
                       .filter(skill => skill.category === "Design")
@@ -304,8 +187,6 @@ export const About = () => {
                       ))}
                     </div>
 
-                    <div className="skill-vertical-line"></div>
-
                     <div className="category-container">
                       <img src={web}/>
                       <p>Others</p>
@@ -323,8 +204,6 @@ export const About = () => {
 
                 </div>
               </div>
-
-              <br />
             
               <div className="about-certification" ref={certificationsRef} id='Certifications'>
                 <h1>CERTIFICATIONS</h1>
