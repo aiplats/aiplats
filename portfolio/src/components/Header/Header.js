@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import me from './../assets/IMG_7606-removebg-preview.png'
 import bgrightblack from './../assets/bgrightblack.png'
+import { Navbar } from '../Navbar/Navbar'
 
 export const Header = () => {
   return (
@@ -18,7 +19,7 @@ export const Header = () => {
                     <h2>Connect with me!</h2>
 
                     <div className="grid-left-buttons">
-                        <button><span>Contact Info</span></button>
+                        <button><span>Learn More</span></button>
                         <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span>Download CV</span></button></a>
                     </div>
                 </div>

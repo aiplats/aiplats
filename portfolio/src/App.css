@@ -1,7 +1,10 @@
 #root {
-  margin: 0;
-  padding: 0;
-  background-color: #333;
+  width: 100%;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 auto;
   color: white;
+  background-image: url("./../src/components/assets/blackbg-croped.jpg");
+  background-size: contain;
   font-family:'Courier New', Courier, monospace;
 }

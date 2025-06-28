@@ -1,5 +1,5 @@
 import React from 'react'
-import './Skills.css'
+
 import css from './../assets/icons8-css3-48.png'
 import git from './../assets/icons8-git-48.png'
 import html from './../assets/icons8-html5-48.png'

@@ -1,8 +1,7 @@
 .header {
+    position: sticky;
     padding: 0;
     margin: 0;
-    background-image: url("./../assets/bgrightblack.png");
-    background-size: 100% 100%;
 }
 
 .grid {
@@ -15,7 +14,7 @@
 }
 
 .grid-left h1 {
-    font-size: xxx-large;
+    font-size: 60px;
 }
 
 .grid-left p {
@@ -29,12 +28,6 @@
     text-indent: 20px;
 }
 
-.grid-left-tag {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-}
 
 .grid-left-buttons {
     display: flex;
