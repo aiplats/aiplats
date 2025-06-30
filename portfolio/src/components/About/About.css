@@ -8,6 +8,10 @@
     padding: 80px;
 }
 
+.scroll-section {
+  scroll-margin-top: 10px; 
+}
+
 .about-heading {
   display: flex;
   align-items: center;
@@ -40,7 +44,6 @@
 
 .about-navigation {
     display: flex;
-    padding: 3%;
     gap: 50px;
 }
 
@@ -212,6 +215,13 @@
     padding: 30px;
 }
 
+.category-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(235, 233, 233, 0.2);
+}
+
 .vertical-line {
     width: 2px;
     height: 500px; 
@@ -223,6 +233,15 @@
     width: 80%;
     border: none;
     border-radius: 50%;
+}
+
+.cert-icons {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .cert-icons h2 h3{

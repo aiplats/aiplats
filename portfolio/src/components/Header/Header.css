@@ -108,6 +108,7 @@
     position: relative;
     z-index: 10;
     overflow: hidden;
+    filter: drop-shadow(-40px 0 0 #333) drop-shadow(0 0 0 white);
 }
 
 .circle,

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
-import me from './../assets/IMG_7606-removebg-preview.png'
+
+import me from './../assets/IMG_3093.PNG'
 
 export const Header = () => {
 
@@ -62,7 +63,7 @@ export const Header = () => {
 
                 <div className="grid-right">
                     <div className="image-wrapper">
-                        <img src={me} style={{width: '70%'}}/>
+                        <img src={me} style={{height: '95%', width: '40%'}}/>
                     </div>
                 </div>
             </div>

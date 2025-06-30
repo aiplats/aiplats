@@ -1,6 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect ,useRef } from 'react'
 import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
+import { motion } from 'framer-motion';
+
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 
@@ -32,6 +34,32 @@ export const About = () => {
   acc[skill.category].push(skill);
   return acc;
 }, {});
+
+useEffect(() => {
+  const sections = document.querySelectorAll('.scroll-section');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.5, 
+    }
+  );
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  return () => {
+    sections.forEach(section => observer.unobserve(section));
+  };
+}, []);
+
 
   return (
     <>
@@ -69,7 +97,16 @@ export const About = () => {
             </div>
 
             <div className="about-content" >
-              <div ref={aboutMeRef}>
+              <div ref={aboutMeRef} className="scroll-section">
+                <motion.div 
+                  ref={aboutMeRef}
+                  className="scroll-section"
+                  id='AboutMe'
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                >
                 <h1 id='AboutMe'>About Me</h1>
                 <div className="about-container">
                   <div className="about-info">
@@ -90,10 +127,20 @@ export const About = () => {
                     <p>I'm a BSIT graduate from First Asia Institute of Technology and Humanities (FAITH Colleges), where I developed a strong foundation in Web Development. From crafting clean UI to managing server-side logic."</p>
                   </div>
                 </div>
+                </motion.div>
               </div>
 
 
-              <div className="skills-container" ref={skillsRef} id='Skills'>
+              <div className="skills-container scroll-section" ref={skillsRef} id='Skills'>
+                <motion.div
+                  ref={skillsRef}
+                  className="skills-container scroll-section"
+                  id='Skills'
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                >
                 <h1>SKILLS & TECHNOLOGIES</h1>
                 <h2>01 - SOFTWARE SKILLS</h2>
 
@@ -106,9 +153,11 @@ export const About = () => {
                       {skillsIcons
                       .filter(skill => skill.category === "Front-End")
                       .map((skill, index) => (
-                        <div key={index} className="icon-image">
-                          <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
-                        </div>
+                        <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.7 }}>
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                          </motion.div>
                       ))}
                       </div>
                     </div>
@@ -142,9 +191,11 @@ export const About = () => {
                         {skillsIcons
                         .filter(skill => skill.category === "Back-End")
                         .map((skill, index) => (
-                          <div key={index} className="icon-image">
+                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.7 }}>
                             <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                     </div>
@@ -158,9 +209,11 @@ export const About = () => {
                         {skillsIcons
                         .filter(skill => skill.category === "Design")
                         .map((skill, index) => (
-                          <div key={index} className="icon-image">
+                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.7 }}>
                             <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                     </div>
@@ -194,18 +247,30 @@ export const About = () => {
                         {skillsIcons
                         .filter(skill => skill.category === "Others")
                         .map((skill, index) => (
-                          <div key={index} className="icon-image">
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
-                          </div>
+                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.05, duration: 0.7 }}>
+                              <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                          </motion.div>
                         ))}
                       </div>
                     </div>
                   </div>
 
                 </div>
+                </motion.div>
               </div>
             
-              <div className="about-certification" ref={certificationsRef} id='Certifications'>
+              <div className="about-certification scroll-section" ref={certificationsRef} id='Certifications'>
+                <motion.div
+                  ref={certificationsRef}
+                  className="about-certification scroll-section"
+                  id='Certifications'
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1 }}
+                >
                 <h1>CERTIFICATIONS</h1>
                 <br />
                 
@@ -221,6 +286,7 @@ export const About = () => {
                     </React.Fragment>
                   ))}
                 </div>
+                </motion.div>
               </div>
 
             </div>
