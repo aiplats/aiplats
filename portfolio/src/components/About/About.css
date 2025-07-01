@@ -208,18 +208,17 @@
 /* CERTIFICATION SECTION*/
 
 .cert-container {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .category-container {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(235, 233, 233, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(235, 233, 233, 0.2);
 }
 
 .vertical-line {
@@ -230,21 +229,26 @@
 }
 
 .icon-img {
-    width: 80%;
+    width: 40%;
     border: none;
     border-radius: 50%;
 }
 
 .cert-icons {
-  background: #1f1f1f;
-  border-radius: 12px;
-  padding: 1rem;
-  margin: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(243, 240, 240, 0.2);
 }
 
-.cert-icons h2 h3{
+.cert-details {
     display: flex;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
 }

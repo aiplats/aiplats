@@ -123,12 +123,16 @@ export  const certifications = [
   {
     icon: itflogo,
     title: "CompTIA IT Fundamentals+",
+    issuer: "Issuer:",
+    company: "CompTIA",
     credential: "Credential ID:",
     id: "2BXGK4CRMJV41DCN"
   },
   {
     icon: adscert,
     title: "AI-Powered Performance Ads",
+    issuer: "Issuer:",
+    company: "Google",
     credential: "Credential ID:",
     id: "143449646"
   }

@@ -279,10 +279,14 @@ useEffect(() => {
                     <React.Fragment key={index}>
                       <div className="cert-icons">
                         <img src={cert.icon} className="icon-img" alt={`Certification ${index + 1}`} />
-                        <h2>{cert.title}</h2>
-                        <h3>{cert.credential} {cert.id}</h3>
+
+                        <div className="cert-details">
+                          <h2>{cert.title}</h2>
+                          <h2>{cert.issuer} {cert.company}</h2>
+                          <h3><b>{cert.credential}</b> {cert.id}</h3>
+                        </div>
                       </div>
-                      {index !== certifications.length - 1 && <div className="vertical-line"></div>}
+                      {/* {index !== certifications.length - 1 && <div className="vertical-line"></div>} */}
                     </React.Fragment>
                   ))}
                 </div>

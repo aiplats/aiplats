@@ -48,23 +48,24 @@ export const Header = () => {
         <div className="header">
             <div className="grid">
                 <div className="grid-left">
-                    <div className="grid-left-tag">
-                        <h1>Hey there! I'm Alex,</h1>
-                        <p className="typing-text">A {text}<span className="cursor">|</span></p>
-                    </div>
-        
-                    <h2>Connect with me!</h2>
+                  <h1 className="fullscreen-header">ALEXANDER<br />ISAAC <br />PLATON</h1>
+                </div>
 
-                    <div className="grid-left-buttons">
-                        <a href="#About"><button><span>Learn More!</span></button></a>
-                        <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span>Download CV</span></button></a>
-                    </div>
+                <div className="grid-center">
+                  <div className="image-wrapper">
+                    <img src={me} alt="Alex" />
+                  </div>
                 </div>
 
                 <div className="grid-right">
-                    <div className="image-wrapper">
-                        <img src={me} style={{height: '95%', width: '40%'}}/>
+                  <div className="typing-block">
+                    <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
+                    <h2>Connect with me!</h2>
+                    <div className="grid-right-buttons">
+                      <a href="#About"><button><span>Learn More!</span></button></a>
+                      <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span>Download CV</span></button></a>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
