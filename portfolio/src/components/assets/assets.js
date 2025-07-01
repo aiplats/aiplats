@@ -30,10 +30,15 @@ import html from './../assets/icons8-html5-48.png'
 import javascript from './../assets/icons8-javascript-48.png'
 import laravel from './../assets/icons8-laravel-64.png'
 import mongodb from './../assets/icons8-mongodb-48.png'
+import supabase from './../assets/icons8-supabase-48.png'
 import express from './../assets/icons8-express-js-50.png'
 import nodejs from './../assets/icons8-node-js-48.png'
 import react from './../assets/icons8-react-40.png'
 import postgresql from './../assets/icons8-postgresql-48.png'
+
+import mahikacafe from './../assets/mahikacafe.png'
+import historiko from './../assets/historiko.png'
+import taalert from './../assets/taalert.png'
 
 
 export const skillsIcons = [
@@ -150,5 +155,26 @@ export const socialContact = [
   {
     icon: map,
     name: "Batangas, Philippines",
+  }
+]
+
+export const projects = [
+  {
+    project: historiko,
+    name: "Historiko",
+    desc: "An Araling Panlipunan Learning Management System (LMS) made specifically for High School Students.",
+    techstack: html, css, react, javascript, supabase, nodejs
+  },
+  {
+    project: mahikacafe,
+    name: "Mahika Cafe",
+    desc: "An E-Commerce Online Coffee Ordering System with a recommendation algorithm aligned with Health Benefits.",
+    techstack: html, css, react, javascript, mongodb, nodejs, express
+  },
+  {
+    project: taalert,
+    name: "TaAlert",
+    desc: "A Web based dashboard used to display and analyze readings from TaAlert IoT device",
+    techstack: html, css, react, javascript, supabase
   }
 ]
