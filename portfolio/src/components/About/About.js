@@ -1,8 +1,7 @@
-import React, { useState, useEffect ,useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
 import { motion } from 'framer-motion';
-
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 
@@ -21,45 +20,58 @@ export const About = () => {
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
   const certificationsRef = useRef(null);
+  const contentContainerRef = useRef(null); // Add ref for the scrollable container
 
   const handleNavigationClick = (ref, section) => {
     setActiveSection(section);
-    ref.current.scrollIntoView({ behavior: 'smooth' });
+    
+    // Calculate the position relative to the scrollable container
+    if (ref.current && contentContainerRef.current) {
+      const containerTop = contentContainerRef.current.offsetTop;
+      const elementTop = ref.current.offsetTop;
+      const scrollPosition = elementTop - containerTop;
+      
+      // Scroll within the container instead of the whole page
+      contentContainerRef.current.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const groupedSkills = skillsIcons.reduce((acc, skill) => {
-  if (!acc[skill.category]) {
-    acc[skill.category] = [];
-  }
-  acc[skill.category].push(skill);
-  return acc;
-}, {});
-
-useEffect(() => {
-  const sections = document.querySelectorAll('.scroll-section');
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    },
-    {
-      threshold: 0.5, 
+    if (!acc[skill.category]) {
+      acc[skill.category] = [];
     }
-  );
+    acc[skill.category].push(skill);
+    return acc;
+  }, {});
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+  useEffect(() => {
+    const sections = document.querySelectorAll('.scroll-section');
 
-  return () => {
-    sections.forEach(section => observer.unobserve(section));
-  };
-}, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+        root: contentContainerRef.current // Set the scrollable container as the root
+      }
+    );
 
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <>
@@ -67,7 +79,7 @@ useEffect(() => {
         <div className="about-sub-page">
 
           <div className="about-heading">
-            <h1>ABOUT PAGE</h1>
+            <h1 className="section-title">ABOUT ME</h1>
             <div className="line"></div>
           </div>
 
@@ -76,38 +88,35 @@ useEffect(() => {
               <ul>
                 <li className={activeSection === 'AboutMe' ? 'active' : ''}>
                   <a href="#AboutMe" onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(aboutMeRef, 'AboutMe');
                   }}>About Me</a>
                 </li>
                 <li className={activeSection === 'Skills' ? 'active' : ''}>
                   <a href="#Skills" onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(skillsRef, 'Skills');
                   }}>Skills & Tech</a>
                 </li>
                 <li className={activeSection === 'Certifications' ? 'active' : ''}>
                   <a href="#Certifications" onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(certificationsRef, 'Certifications');
                   }}>Certifications</a>
                 </li>
               </ul>
-              <div className="nav-vertical-line"></div>
             </div>
 
-            <div className="about-content" >
-              <div ref={aboutMeRef} className="scroll-section">
+            <div className="about-content" ref={contentContainerRef}>
+              <div ref={aboutMeRef} className="scroll-section" id='AboutMe'>
                 <motion.div 
-                  ref={aboutMeRef}
                   className="scroll-section"
-                  id='AboutMe'
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1 }}
                 >
-                <h1 id='AboutMe'>About Me</h1>
+                <h1></h1>
                 <div className="about-container">
                   <div className="about-info">
                     <img src={gradpic}/>
@@ -130,12 +139,9 @@ useEffect(() => {
                 </motion.div>
               </div>
 
-
               <div className="skills-container scroll-section" ref={skillsRef} id='Skills'>
                 <motion.div
-                  ref={skillsRef}
                   className="skills-container scroll-section"
-                  id='Skills'
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -230,7 +236,7 @@ useEffect(() => {
                   </div>
 
                   <div className="skills-grid">          
-                    <div cla me="skills-title">
+                    <div className="skills-title">
                       {skillsIcons
                       .filter(skill => skill.category === "Others")
                       .map((skill, index) => (
@@ -263,9 +269,7 @@ useEffect(() => {
             
               <div className="about-certification scroll-section" ref={certificationsRef} id='Certifications'>
                 <motion.div
-                  ref={certificationsRef}
                   className="about-certification scroll-section"
-                  id='Certifications'
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -286,7 +290,6 @@ useEffect(() => {
                           <h3><b>{cert.credential}</b> {cert.id}</h3>
                         </div>
                       </div>
-                      {/* {index !== certifications.length - 1 && <div className="vertical-line"></div>} */}
                     </React.Fragment>
                   ))}
                 </div>
