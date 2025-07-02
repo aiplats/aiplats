@@ -20,16 +20,18 @@ export const About = () => {
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
   const certificationsRef = useRef(null);
-  const contentContainerRef = useRef(null);
+  const contentContainerRef = useRef(null); // Add ref for the scrollable container
 
   const handleNavigationClick = (ref, section) => {
     setActiveSection(section);
     
+    // Calculate the position relative to the scrollable container
     if (ref.current && contentContainerRef.current) {
       const containerTop = contentContainerRef.current.offsetTop;
       const elementTop = ref.current.offsetTop;
       const scrollPosition = elementTop - containerTop;
       
+      // Scroll within the container instead of the whole page
       contentContainerRef.current.scrollTo({
         top: scrollPosition,
         behavior: 'smooth'
@@ -58,7 +60,7 @@ export const About = () => {
       },
       {
         threshold: 0.5,
-        root: contentContainerRef.current 
+        root: contentContainerRef.current // Set the scrollable container as the root
       }
     );
 
@@ -86,16 +88,19 @@ export const About = () => {
               <ul>
                 <li className={activeSection === 'AboutMe' ? 'active' : ''}>
                   <a href="#AboutMe" onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(aboutMeRef, 'AboutMe');
                   }}>About Me</a>
                 </li>
                 <li className={activeSection === 'Skills' ? 'active' : ''}>
                   <a href="#Skills" onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(skillsRef, 'Skills');
                   }}>Skills & Tech</a>
                 </li>
                 <li className={activeSection === 'Certifications' ? 'active' : ''}>
                   <a href="#Certifications" onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
                     handleNavigationClick(certificationsRef, 'Certifications');
                   }}>Certifications</a>
                 </li>
