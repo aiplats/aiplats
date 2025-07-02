@@ -8,8 +8,9 @@ export const Project = () => {
       <div className="main-project-page" id='Projects'>
         <div className="project-container">
           <h1>PROJECTS</h1>
-          <div className="project-container">
+          <div className="project-sub-container">
               {projects.map((proj, index) => {
+                return (
                 <React.Fragment  key={index}>
                   <div className="project-content">
                     <img src={proj.project} alt={proj.name}/>
@@ -20,6 +21,7 @@ export const Project = () => {
                     </div>
                   </div>
                 </React.Fragment>
+                );
               })}
           </div>
         </div>
