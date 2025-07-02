@@ -4,16 +4,109 @@
 }
 
 .project-container {
-    display: flex;
     padding: 80px;
+}
+
+.project-sub-container {
+    display: flex;
+    gap: 20px; 
+}
+
+.project-content {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    cursor: pointer;
+}
+
+.project-content:hover {
+    transform: scale(1.3);
+    z-index: 10;
+}
+
+.project-sub-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.techstack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.tech-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.techstack-icons img {
+    width: 50px;
+
+}
+
+.tech-text {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.project-content:hover .project-details {
+    opacity: 1;
+}
+
+.project-details p {
+    margin: 8px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-details p:first-child {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.project-details p:nth-child(2) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.project-details p:last-child {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.9;
 }
 
 .main-project-page h1 {
     font-family: 'Montserrat', 'sans-serif';
     font-size: 60px;
     font-weight: 800;
-}
-
-.project-container {
-    display: flex;
+    text-align: center;
+    margin-bottom: 100px;
 }

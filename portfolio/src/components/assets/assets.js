@@ -79,6 +79,11 @@ export const skillsIcons = [
   },
   {
     category: "Back-End",
+    icon: supabase,
+    title: "SUPABASE"
+  },
+  {
+    category: "Back-End",
     icon: express,
     title: "EXPRESS JS"
   },
@@ -163,18 +168,21 @@ export const projects = [
     project: historiko,
     name: "Historiko",
     desc: "An Araling Panlipunan Learning Management System (LMS) made specifically for High School Students.",
-    techstack: html, css, react, javascript, supabase, nodejs
+    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
+    link: "https://mahika-cafe.vercel.app/",
   },
   {
     project: mahikacafe,
     name: "Mahika Cafe",
     desc: "An E-Commerce Online Coffee Ordering System with a recommendation algorithm aligned with Health Benefits.",
-    techstack: html, css, react, javascript, mongodb, nodejs, express
+    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "MONGODB", "NODE JS", "EXPRESS JS"],
+    link: "https://historiko.vercel.app/",
   },
   {
     project: taalert,
     name: "TaAlert",
     desc: "A Web based dashboard used to display and analyze readings from TaAlert IoT device",
-    techstack: html, css, react, javascript, supabase
+    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE"],
+    link: "https://capstone-eta-ten.vercel.app/"
   }
 ]
