@@ -44,13 +44,13 @@ import taalert from './../assets/taalert.png'
 export const skillsIcons = [
   {
     category: "Front-End",
-    icon: css,
-    title: "CSS"
+    icon: html,
+    title: "HTML"
   },
   {
     category: "Front-End",
-    icon: html,
-    title: "HTML"
+    icon: css,
+    title: "CSS"
   },
   {
     category: "Front-End",
@@ -136,7 +136,8 @@ export  const certifications = [
     issuer: "Issuer:",
     company: "CompTIA",
     credential: "Credential ID:",
-    id: "2BXGK4CRMJV41DCN"
+    id: "2BXGK4CRMJV41DCN",
+    url: "https://www.credly.com/badges/717db591-47ed-4549-94d9-748ca3fef174"
   },
   {
     icon: adscert,
@@ -144,7 +145,8 @@ export  const certifications = [
     issuer: "Issuer:",
     company: "Google",
     credential: "Credential ID:",
-    id: "143449646"
+    id: "143449646",
+    url: "https://skillshop.credential.net/00c02ab1-8fea-47a9-ae8d-f20501e21048#acc.F1NRb4xh"
   }
 ];
 

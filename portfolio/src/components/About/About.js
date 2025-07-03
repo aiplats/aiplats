@@ -114,7 +114,7 @@ export const About = () => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <h1></h1>
                 <div className="about-container">
@@ -145,7 +145,7 @@ export const About = () => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <h1>SKILLS & TECHNOLOGIES</h1>
                 <h2>01 - SOFTWARE SKILLS</h2>
@@ -273,7 +273,7 @@ export const About = () => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1 }}
+                  transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <h1>CERTIFICATIONS</h1>
                 <br />
@@ -288,6 +288,7 @@ export const About = () => {
                           <h2>{cert.title}</h2>
                           <h2>{cert.issuer} {cert.company}</h2>
                           <h3><b>{cert.credential}</b> {cert.id}</h3>
+                          <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button>View Certificate</button></a>
                         </div>
                       </div>
                     </React.Fragment>
