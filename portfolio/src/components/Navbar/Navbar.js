@@ -6,16 +6,22 @@ import whatsapp from './../assets/icons8-whatsapp-48.png'
 export const Navbar = () => {
 
     const [activeSection, setActiveSection] = useState('About');
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
     
     const handleNavigationClick = (id, section) => {
       setActiveSection(section);
+      setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+    };
+
+    const toggleMobileMenu = () => {
+      setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
   return (
@@ -26,6 +32,7 @@ export const Navbar = () => {
                 <p><a href="/">AIPLATS</a></p>
             </div>
 
+            {/* Desktop Navigation */}
             <div className="navbar-right">
                 <ul>
                     <li className={activeSection === 'About' ? 'active' : ''}>
@@ -49,9 +56,53 @@ export const Navbar = () => {
                 </ul>
             </div>
 
+            {/* Desktop Social Links */}
             <div className="navbar-righter">
-                <a href="www.linkedin.com/in/aiplats"><img src={linkedin} style={{width: '40px', height: '40px'}}/></a>
-                <img src={whatsapp} style={{width: '40px', height: '40px'}}/>
+                <a href="https://www.linkedin.com/in/aiplats" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} alt="LinkedIn" style={{width: '40px', height: '40px'}}/>
+                </a>
+                <img src={whatsapp} alt="WhatsApp" style={{width: '40px', height: '40px'}}/>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="mobile-menu-button" onClick={toggleMobileMenu}>
+                <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+            <ul>
+                <li className={activeSection === 'About' ? 'active' : ''}>
+                    <a href="#About" onClick={(e) => {
+                        e.preventDefault();
+                        handleNavigationClick('About', 'About');
+                    }}>About</a>
+                </li>
+                <li className={activeSection === 'Projects' ? 'active' : ''}>
+                    <a href="#Projects" onClick={(e) => {
+                        e.preventDefault();
+                        handleNavigationClick('Projects', 'Projects');
+                    }}>Projects</a>
+                </li>
+                <li className={activeSection === 'Contact' ? 'active' : ''}>
+                    <a href="#Contact" onClick={(e) => {
+                        e.preventDefault();
+                        handleNavigationClick('Contact', 'Contact');
+                    }}>Contact</a>
+                </li>
+            </ul>
+            
+            {/* Mobile Social Links */}
+            <div className="mobile-social">
+                <a href="https://www.linkedin.com/in/aiplats" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} alt="LinkedIn" style={{width: '40px', height: '40px'}}/>
+                </a>
+                <img src={whatsapp} alt="WhatsApp" style={{width: '40px', height: '40px'}}/>
             </div>
         </div>
     </div>
