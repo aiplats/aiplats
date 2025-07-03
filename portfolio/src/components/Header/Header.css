@@ -136,6 +136,76 @@
   z-index: 1;
 }
 
+/* Tablet and iPad (Portrait & Landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fullscreen-header {
+    font-size: 15vw;
+    top: 20%;
+  }
+
+  .image-wrapper {
+    max-width: 250px;
+    padding: 0 10px;
+  }
+
+  .typing-text {
+    font-size: 26px;
+  }
+
+  .grid-right h2 {
+    font-size: x-large;
+  }
+
+  .grid-right-buttons {
+    gap: 20px;
+  }
+}
+
+/* Small Laptops / Netbooks */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .fullscreen-header {
+    font-size: 9vw;
+    top: 20%;
+  }
+
+  .image-wrapper {
+    max-width: 280px;
+    padding: 0 30px;
+  }
+
+  .typing-text {
+    font-size: 28px;
+  }
+
+  .grid-right h2 {
+    font-size: x-large;
+  }
+
+  .grid-right-buttons {
+    gap: 25px;
+  }
+}
+
+/* Medium to Large Laptops */
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .fullscreen-header {
+    font-size: 8vw;
+    top: 18%;
+  }
+
+  .image-wrapper {
+    max-width: 300px;
+  }
+
+  .typing-text {
+    font-size: 30px;
+  }
+
+  .grid-right h2 {
+    font-size: xx-large;
+  }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .grid {

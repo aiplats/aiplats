@@ -333,6 +333,79 @@
 }
 
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-navigation {
+        display: flex;
+        width: 22%;
+    }
+
+    .about-navigation li {
+        font-size: 24px;
+    }
+
+    .about-text {
+        width: 78%;
+        height: 500px;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+
+    .about-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 40px 30px;
+  }
+
+  .cert-icons {
+    padding: 1.5rem;
+    border-radius: 16px;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .icon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .cert-details {
+    text-align: right;
+  }
+
+  .cert-details h2 {
+    font-size: 18px;
+  }
+
+  .cert-details h3 {
+    font-size: 14px;
+  }
+
+  .cert-details button {
+    font-size: 14px;
+    padding: 10px 16px;
+    margin-top: 10px;
+  }
+
+  .about-certification h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {

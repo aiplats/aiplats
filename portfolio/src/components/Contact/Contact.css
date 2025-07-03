@@ -167,6 +167,25 @@
     font-size: 14px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-vertical-line {
+        display: none;
+    }
+
+    .contact-icons {
+        padding: 30px 0px;
+    }
+
+    .personal-deets {
+        padding: 15px 30px;
+        width: 75%;
+    }
+
+    .personal-deets p {
+        font-size: 13px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-container {

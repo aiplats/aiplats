@@ -108,6 +108,78 @@
     margin-bottom: 100px;
 }
 
+/* Tablets / iPads (Portrait & Landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-container {
+    padding: 60px 30px;
+  }
+
+  .project-sub-container {
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .project-content {
+    flex: 1 1 calc(45% - 20px);
+  }
+
+  .project-content:hover {
+    transform: scale(1.05);
+  }
+
+  .main-project-page h1 {
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+
+  .tech-icon,
+  .techstack-icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-text {
+    font-size: 13px;
+  }
+}
+
+/* Laptops / Small Desktops */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .project-container {
+    padding: 70px 50px;
+  }
+
+  .project-sub-container {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .project-content {
+    flex: 1 1 calc(30% - 20px);
+  }
+
+  .project-content:hover {
+    transform: scale(1.1);
+  }
+
+  .main-project-page h1 {
+    font-size: 56px;
+    margin-bottom: 80px;
+  }
+
+  .tech-icon,
+  .techstack-icons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tech-text {
+    font-size: 14px;
+  }
+}
+
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .main-project-page {
