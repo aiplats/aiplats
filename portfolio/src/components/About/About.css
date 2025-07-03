@@ -1,4 +1,5 @@
-/* ABOUT SECTION */
+/* ABOUT SECTION*/
+
 .about-main-page {
     padding: 0 20px;
     background: rgba(255, 255, 255, 0.05);
@@ -7,100 +8,156 @@
 }
 
 .about-sub-page {
-    padding: 60px 20px;
+  padding: 60px 80px;
 }
 
 .scroll-section {
-    margin-bottom: 80px;
+  margin-bottom: 60px;
+  scroll-padding-top: 250px;
 }
 
 .about-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  height: 600px;
+  overflow-y: visible; 
 }
 
 .about-heading {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .about-heading h1 {
-    margin: 0;
-    font-size: 3rem;
-    white-space: nowrap;
-    text-align: center;
+  margin: 0;
+  font-size: 60px;
+  white-space: nowrap;
 }
 
-.about-page-container {
-    display: block;
-    width: 100%;
-}
 
-.about-container {
+.about-page-container, .about-container {
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    margin-bottom: 2rem;
 }
 
 .section-title {
-    display: inline-block;
-    border-bottom: 3px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  display: inline-block;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-vertical-line {
+    width: 2px;
+    height: 600px; 
+    background-color: white;
+}
+
+.about-navigation {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    scroll-padding-top: 250px;
+}
+
+.about-navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+.about-navigation li {
+    position: relative;
+    top: 100px;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 100px;
+    transition: transform 0.5s ease;
+}
+
+.about-navigation li {
+  position: relative;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 100px;
+  transition: color 0.3s ease;
+}
+
+.about-navigation li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.about-navigation li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.about-navigation li:hover a::after,
+.about-navigation li.active a::after {
+  width: 100%;
+}
+
+.about-content {
+    overflow-y: scroll;
+    height: 600px;
+    padding: 4%;
+    padding-top: 0%;
+    margin-top: 30px;
+    scroll-behavior: smooth;
+}
+
+.about-content::-webkit-scrollbar {
+    display: none;
 }
 
 .about-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .about-text h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ccc;
-    margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ccc;
 }
 
 .about-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    min-width: 300px;
+    justify-content: start;
+    align-items: start;
+    padding: 3%;
 }
 
 .about-info img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
+    display: flex;
+    width: 350px;
+    border: none;
     border-radius: 24px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 }
 
 .socials {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
 }
 
 .socials img {
+    padding: 30px 30px;
     width: 50px;
-    height: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
+    box-shadow: none;
 }
 
 .socials img:hover {
@@ -109,70 +166,68 @@
 }
 
 .about-text {
-    flex: 1;
-    padding: 0 1rem;
+    padding: 15px 5px;
 }
 
-/* SKILLS SECTION */
+.about-text h1 {
+    font-size: 30px;
+}
+
+.about-text p{
+    max-width: auto;
+    text-align: left;
+    font-size: 20px;
+    line-height: 38px;
+}
+
+/* SKILLS SECTION*/
+
 .skills-content {
     display: block;
-    width: 100%;
-    padding: 2rem 0;
+    max-width: auto;
+    padding: 5%;
 }
 
 .skills-grid {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: center;
+    gap: 100px;
+    padding-bottom: 100px;
 }
 
 .skills-container h1 {
-    font-size: 3rem;
+    font-size: 60px;
     font-weight: 800;
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 .skills-container h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
+    padding: 0 30px;
+    font-size: 30px;
 }
 
 .category-container {
     display: block;
     text-align: center;
-    padding: 2rem;
+    padding: 20px;
     background-color: rgba(51, 51, 51, 0.5);
     border-radius: 24px;
-    flex: 1;
-}
-
-.category-container > img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
 }
 
 .category-container p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 22px;
 }
 
 .skills-icon {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 1rem;
-    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
 }
 
 .skills-icon img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .skills-icon img:hover {
@@ -180,28 +235,17 @@
     filter: brightness(1.2);
 }
 
+
 .skills-title {
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 1rem;
+    align-self: center;
+    width: 100%;
+    font-size: 20px;
 }
 
-.skills-title h2 {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0;
-}
 
-/* CERTIFICATION SECTION */
-.about-certification h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 2rem;
-}
+/* CERTIFICATION SECTION*/
 
 .cert-container {
     display: grid;
@@ -209,74 +253,93 @@
     gap: 2rem;
 }
 
-.cert-icons {
+.category-container {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(235, 233, 233, 0.2);
 }
 
-.cert-icons:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+.about-certification h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 500px; 
+    background-color: white; 
+    margin: 0 20px;
 }
 
 .icon-img {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
+    width: 40%;
+    border: none;
     border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
 .icon-img:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 0 8px #f9a826);
+    transition: 0.3s ease;
+}
+
+.cert-icons {
+    background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cert-icons:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes entrance {
+    to {
+        opacity: 1;
+        transform: translateX(50px);
+    }
 }
 
 .cert-details {
-    flex: 1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
-}
-
-.cert-details h2 {
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-.cert-details h3 {
-    font-size: 1rem;
-    margin: 0;
-    color: #ccc;
+    align-items: right;
+    text-align: right;
 }
 
 .cert-details button {
-    padding: 0.8rem 1.5rem;
+    padding: 10px 20px;
     cursor: pointer;
-    background: var(--primary, #f9a826);
+    background: var(--primary);
     color: white;
-    border: none;
     border-radius: 12px;
+    text-decoration: none;
     font-weight: 600;
     transition: background 0.3s ease;
-    margin-top: 1rem;
-    align-self: flex-start;
 }
 
 .cert-details button:hover {
-    background: #ffbe48;
+  background: #ffbe48;
 }
+
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+    .about-navigation {
+        display: none;
+    }
+
     .about-sub-page {
         padding: 40px 10px;
     }
@@ -296,10 +359,6 @@
         width: 100%;
     }
     
-    .about-info img {
-        max-width: 280px;
-    }
-    
     .about-text {
         padding: 0;
     }
@@ -310,7 +369,12 @@
     
     .about-text p {
         font-size: 1rem;
-        text-align: left;
+        text-align: center;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
     }
     
     .skills-container h1 {
@@ -322,8 +386,20 @@
     }
     
     .skills-grid {
-        flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
+    }
+    
+    .skills-grid .category-container {
+        max-width: 100%;
+    }
+    
+    .skills-grid .skills-title {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .skills-grid .skills-title .icon-title {
+        text-align: center !important;
     }
     
     .category-container {
@@ -372,10 +448,6 @@
         font-size: 2rem;
     }
     
-    .about-info img {
-        max-width: 250px;
-    }
-    
     .socials img {
         width: 40px;
         height: 40px;
@@ -387,6 +459,12 @@
     
     .about-text p {
         font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
     }
     
     .skills-container h1 {
@@ -406,7 +484,7 @@
     }
     
     .skills-icon {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .skills-icon img {

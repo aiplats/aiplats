@@ -4,19 +4,17 @@
 }
 
 .project-container {
-    padding: 80px 20px;
+    padding: 80px;
 }
 
 .project-sub-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 20px; 
 }
 
 .project-content {
     position: relative;
     flex: 1;
-    min-width: 300px;
     overflow: hidden;
     border-radius: 10px;
     transition: transform 0.3s ease, z-index 0.3s ease;
@@ -24,7 +22,7 @@
 }
 
 .project-content:hover {
-    transform: scale(1.05);
+    transform: scale(1.3);
     z-index: 10;
 }
 
@@ -54,30 +52,26 @@
 }
 
 .techstack-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 5px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
 }
 
 .tech-icon {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .techstack-icons img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+
 }
 
 .tech-text {
-    font-size: 14px;
-    color: #ccc;
-    padding: 2px 6px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+  font-size: 14px;
+  color: #555;
 }
 
 .project-content:hover .project-details {
@@ -108,7 +102,6 @@
 }
 
 .main-project-page h1 {
-    font-family: 'Montserrat', 'sans-serif';
     font-size: 60px;
     font-weight: 800;
     text-align: center;
