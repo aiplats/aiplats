@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Contact.css';
-
+import emailjs from '@emailjs/browser';
 import { socialContact } from '../assets/assets';
 
 export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_4rjdsta',    
+        'template_3y0d3cc',       
+        form.current,
+        'roty9GMb-hPkQlOsU'         
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <>
         <div className="main-contact-page" id='Contact'>
@@ -12,7 +37,7 @@ export const Contact = () => {
                 <hr />
                 <h2>I’m always open to exploring new opportunities and engaging in innovative projects. Let’s connect and discuss how we can turn your ideas into impactful solutions.</h2>
 
-                <div className="contact-form">
+                <form ref={form} onSubmit={sendEmail} className="contact-form">
                     <div className="contact-input">
                         <div className="name-email-row">
                           <input className="contact-details" placeholder="Name" />
@@ -22,7 +47,7 @@ export const Contact = () => {
                         <input className="contact-details" placeholder="Subject"></input>
                         <input className="contact-details" placeholder="Message"></input>
 
-                        <button>Send Message</button>
+                        <button type="submit">Send Message</button>
                     </div>
 
                     <div className="contact-vertical-line"></div>
@@ -37,7 +62,7 @@ export const Contact = () => {
                         ))}
                         
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </>
