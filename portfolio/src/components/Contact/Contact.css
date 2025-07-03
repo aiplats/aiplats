@@ -212,15 +212,18 @@
     
     .contact-icons {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .contact-icons p {
+        display: none;
     }
     
     .personal-deets {
         flex-direction: column;
         text-align: center;
-        min-width: 120px;
+        min-width: 60px;
         padding: 20px 15px;
     }
     

@@ -199,9 +199,6 @@
 
 /* Extra small screens */
 @media (max-width: 480px) {
-  .fullscreen-header {
-    font-size: 18vw;
-  }
 
   .typing-text {
     font-size: 20px;
