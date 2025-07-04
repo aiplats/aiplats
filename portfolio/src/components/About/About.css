@@ -523,6 +523,14 @@
 }
 
 @media (max-width: 480px) {
+
+    .about-info {
+        padding: 1rem;
+    }
+
+    .about-info img {
+        width: 100%;
+    }
     
     .about-heading h1 {
         font-size: 2rem;
@@ -556,7 +564,7 @@
     }
     
     .skills-container h2 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .category-container {
@@ -565,6 +573,10 @@
     
     .category-container p {
         font-size: 1rem;
+    }
+
+    .skills-grid {
+        gap: 0px;
     }
     
     .skills-icon {
