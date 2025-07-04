@@ -171,14 +171,14 @@ export const projects = [
     name: "Historiko",
     desc: "An Araling Panlipunan Learning Management System (LMS) made specifically for High School Students.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
-    link: "https://mahika-cafe.vercel.app/",
+    link: "https://historiko.vercel.app/",
   },
   {
     project: mahikacafe,
     name: "Mahika Cafe",
     desc: "An E-Commerce Online Coffee Ordering System with a recommendation algorithm aligned with Health Benefits.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "MONGODB", "NODE JS", "EXPRESS JS"],
-    link: "https://historiko.vercel.app/",
+    link: "https://mahika-cafe.vercel.app/",
   },
   {
     project: taalert,

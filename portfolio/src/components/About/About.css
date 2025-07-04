@@ -422,14 +422,19 @@
     }
     
     .about-container {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .about-content {
+        padding: 0%;
     }
     
     .about-info {
         min-width: auto;
-        width: 100%;
     }
     
     .about-text {
@@ -443,11 +448,16 @@
     .about-text p {
         font-size: 1rem;
         text-align: center;
+        line-height: 25px;
     }
 
     .socials {
         display: flex;
         justify-content: center;
+    }
+
+    .skills-content {
+        padding: 0%;
     }
     
     .skills-container h1 {
@@ -513,9 +523,6 @@
 }
 
 @media (max-width: 480px) {
-    .about-sub-page {
-        padding: 30px 5px;
-    }
     
     .about-heading h1 {
         font-size: 2rem;
@@ -538,6 +545,10 @@
     .socials {
         display: flex;
         justify-content: center;
+    }
+
+    .skills-content {
+        padding: 0%;
     }
     
     .skills-container h1 {
