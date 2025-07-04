@@ -264,4 +264,8 @@
     .contact-input, .contact-icons {
         padding: 20px;
     }
+
+    .personal-deets {
+        padding: 15px 10px;
+    }
 }
