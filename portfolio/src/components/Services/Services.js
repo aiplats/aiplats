@@ -7,6 +7,7 @@ export const Services = () => {
     <>
         <div className="main-services-page" id="Services">
             <div className="services-container">
+                <h1>SERVICES</h1>
                 <div className="service-tags">
                     <h1>WHAT I PROVIDE</h1>
                     <p>"As a passionate IT graduate, I offer a range of services in web development, software troubleshooting, and system support. Whether you're a small business or a startup, I'm excited to help bring ideas to life."</p>
