@@ -6,6 +6,7 @@ import { Project } from './components/Projects/Project';
 import { Contact } from './components/Contact/Contact';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
+import { Services } from './components/Services/Services';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <About />
       <Project />
+      <Services />
       <Contact />
       <ScrollToTop />
       <Footer />

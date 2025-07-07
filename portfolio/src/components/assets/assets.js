@@ -15,6 +15,7 @@ import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import web from './../assets/icons8-webw-50.png'
+import api from './../assets/icons8-api-64.png'
 
 import responsive from './../assets/icons8-responsive-design-50.png'
 import uiux from './../assets/icons8-ui-ux-design-50.png'
@@ -186,5 +187,32 @@ export const projects = [
     desc: "A Web based dashboard used to display and analyze readings from TaAlert IoT device",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE"],
     link: "https://capstone-eta-ten.vercel.app/"
+  }
+]
+
+export const services = [
+  {
+    number: "01",
+    icon: frontend,
+    name: "Web Development",
+    desc: "Build responsive and user-friendly web applications using HTML, CSS, JavaScript, and React"
+  }, 
+  {
+    number: "02",
+    icon: server,
+    name: "Database Integration",
+    desc: "Integrate databases to store and manage data using MongoDB, Supabase, MySQL, and Nodejs"
+  },
+  {
+    number: "03",
+    icon: api,
+    name: "API Integration",
+    desc: "Integrate APIs to fetch and send data to external services"
+  },
+  {
+    number: "04",
+    icon: paint,
+    name: "UI/UX Design",
+    desc: "Create visually appealing and user-centered designs using Framer, WordPress and Tailwind CSS"
   }
 ]
