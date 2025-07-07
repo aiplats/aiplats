@@ -47,6 +47,11 @@
   margin-bottom: 20px;
 }
 
+.highlight {
+  color: #FDCB6E;
+}
+
+
 .nav-vertical-line {
     width: 2px;
     height: 600px; 
@@ -61,16 +66,16 @@
 }
 
 .about-navigation a {
-    text-decoration: none;
     color: white;
 }
 
-.about-navigation li {
+.about-navigation ul {
     position: relative;
     top: 100px;
     font-size: 40px;
     cursor: pointer;
     line-height: 100px;
+    list-style-type: none;
     transition: transform 0.5s ease;
 }
 
@@ -78,6 +83,7 @@
   position: relative;
   font-size: 40px;
   cursor: pointer;
+  text-decoration: none;
   line-height: 100px;
   transition: color 0.3s ease;
 }

@@ -79,7 +79,9 @@ export const About = () => {
         <div className="about-sub-page">
 
           <div className="about-heading">
-            <h1 className="section-title">ABOUT ME</h1>
+            <h1 className="section-title">
+              ABOUT <span className="highlight">ALEX</span>
+            </h1>
             <div className="line"></div>
           </div>
 

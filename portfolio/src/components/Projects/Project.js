@@ -17,6 +17,7 @@ export const Project = () => {
       <div className="main-project-page" id='Projects'>
         <div className="project-container">
           <h1>PROJECTS</h1>
+          <div className="line"></div>
           <div className="project-sub-container">
               {projects.map((proj, index) => {
                 return (
