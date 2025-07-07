@@ -1,0 +1,165 @@
+.main-footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    padding: 2rem 1rem;
+    text-align: center;
+    border: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-name {
+    font-size: 1rem;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links,
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.footer-links a:hover {
+    transform: translateY(-5px);
+    color: #FDCB6E;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-links a.active::after {
+    width: 100%;
+    background-color: #FDCB6E;
+}
+
+.footer-socials img {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .footer-links {
+        gap: 0.5rem;
+    }
+    
+    .footer-links a {
+        font-size: 16px;
+    }
+    
+    .footer-links,
+    .footer-socials {
+        gap: 1rem;
+    }
+    
+    .footer-name {
+        font-size: 0.9rem;
+        order: 3; /* Move copyright to bottom */
+    }
+    
+    .footer-links {
+        order: 1;
+    }
+    
+    .footer-socials {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        padding: 1rem 0.5rem;
+    }
+    
+    .footer-container {
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        gap: 0.5rem;
+    }
+    
+    .footer-links a {
+        font-size: 17px;
+        padding: 0.5rem;
+    }
+    
+    .footer-socials {
+        gap: 1.5rem;
+    }
+    
+    .footer-socials img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .footer-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-links a {
+        font-size: 12px;
+    }
+    
+    .footer-socials img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    .footer-name {
+        font-size: 0.7rem;
+    }
+}

@@ -5,6 +5,7 @@ import { About } from './components/About/About';
 import { Project } from './components/Projects/Project';
 import { Contact } from './components/Contact/Contact';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Project />
       <Contact />
       <ScrollToTop />
+      <Footer />
     </>
   );
 }

@@ -56,15 +56,6 @@ export const Navbar = () => {
                 </ul>
             </div>
 
-            {/* Desktop Social Links */}
-            <div className="navbar-righter">
-                <a href="https://www.linkedin.com/in/aiplats" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedin} alt="LinkedIn" style={{width: '40px', height: '40px'}}/>
-                </a>
-                <img src={whatsapp} alt="WhatsApp" style={{width: '40px', height: '40px'}}/>
-            </div>
-
-            {/* Mobile Menu Button */}
             <div className="mobile-menu-button" onClick={toggleMobileMenu}>
                 <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
                     <span></span>
@@ -74,7 +65,6 @@ export const Navbar = () => {
             </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
             <ul>
                 <li className={activeSection === 'About' ? 'active' : ''}>
