@@ -10,11 +10,12 @@ export const Footer = () => {
         <footer>
             <div className="main-footer">
                 <div className="footer-container">
-                    <div class="footer-name">© 2025 Alexander Platon</div>
+                    <div class="footer-name">© 2025 aiplats</div>
 
                     <div class="footer-links">
                       <a href="#About">About</a> | 
                       <a href="#Projects">Projects</a> | 
+                      <a href="#Services">Services</a> | 
                       <a href="#Contact">Contact</a>
                     </div>
 

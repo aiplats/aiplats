@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 
+import profile from './../assets/icons8-profile-48.png'
+import skills from './../assets/icons8-skills-48.png'
+import certificate from './../assets/icons8-certificate-48.png'
+
 import github from './../assets/icons8-githubw-50.png'
 import instagram from './../assets/icons8-instagram-48.png'
 import facebook from './../assets/icons8-facebook-48.png'
@@ -17,50 +21,53 @@ import web from './../assets/icons8-webw-50.png'
 export const About = () => {
 
   const [activeSection, setActiveSection] = useState('AboutMe');
+  const [isScrolling, setIsScrolling] = useState(false);
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
   const certificationsRef = useRef(null);
-  const contentContainerRef = useRef(null); // Add ref for the scrollable container
+  const contentContainerRef = useRef(null); 
+  const scrollTimeoutRef = useRef(null);
 
   const handleNavigationClick = (ref, section) => {
     setActiveSection(section);
+    setIsScrolling(true);
     
-    // Calculate the position relative to the scrollable container
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+    
     if (ref.current && contentContainerRef.current) {
       const containerTop = contentContainerRef.current.offsetTop;
       const elementTop = ref.current.offsetTop;
       const scrollPosition = elementTop - containerTop;
       
-      // Scroll within the container instead of the whole page
       contentContainerRef.current.scrollTo({
         top: scrollPosition,
         behavior: 'smooth'
       });
     }
-  };
 
-  const groupedSkills = skillsIcons.reduce((acc, skill) => {
-    if (!acc[skill.category]) {
-      acc[skill.category] = [];
-    }
-    acc[skill.category].push(skill);
-    return acc;
-  }, {});
+    scrollTimeoutRef.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll('.scroll-section');
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
+        if (!isScrolling) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id);
+            }
+          });
+        }
       },
       {
         threshold: 0.5,
-        root: contentContainerRef.current // Set the scrollable container as the root
+        root: contentContainerRef.current
       }
     );
 
@@ -70,8 +77,11 @@ export const About = () => {
 
     return () => {
       sections.forEach(section => observer.unobserve(section));
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
     };
-  }, []);
+  }, [isScrolling]);
 
   return (
     <>
@@ -88,23 +98,43 @@ export const About = () => {
           <div className="about-page-container">
             <div className="about-navigation">
               <ul>
-                <li className={activeSection === 'AboutMe' ? 'active' : ''}>
+                <li>
                   <a href="#AboutMe" onClick={(e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
+                    e.preventDefault();
                     handleNavigationClick(aboutMeRef, 'AboutMe');
-                  }}>About Me</a>
+                  }}>
+                    <img
+                      src={profile}
+                      alt="profile"
+                      className={activeSection === 'AboutMe' ? 'active' : ''}
+                    />
+                  </a>
                 </li>
-                <li className={activeSection === 'Skills' ? 'active' : ''}>
+                
+                <li>
                   <a href="#Skills" onClick={(e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
+                    e.preventDefault();
                     handleNavigationClick(skillsRef, 'Skills');
-                  }}>Skills & Tech</a>
+                  }}>
+                    <img
+                      src={skills}
+                      alt="skills"
+                      className={activeSection === 'Skills' ? 'active' : ''}
+                    />
+                  </a>
                 </li>
-                <li className={activeSection === 'Certifications' ? 'active' : ''}>
+                
+                <li>
                   <a href="#Certifications" onClick={(e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
+                    e.preventDefault();
                     handleNavigationClick(certificationsRef, 'Certifications');
-                  }}>Certifications</a>
+                  }}>
+                    <img
+                      src={certificate}
+                      alt="certificate"
+                      className={activeSection === 'Certifications' ? 'active' : ''}
+                    />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -118,24 +148,23 @@ export const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, duration: 0.8 }}
                 >
-                <h1></h1>
                 <div className="about-container">
                   <div className="about-info">
-                    <img src={gradpic}/>
+                    <img src={gradpic} alt='gradpic'/>
 
                     <div className="socials">
-                      <a href="https://www.facebook.com/aiplats"><img src={facebook} /></a>
-                      <a href="https://www.instagram.com/aiplatss/"><img src={instagram}/></a>
-                      <a href="https://github.com/aipPlaton"><img src={github}/></a>
+                      <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
+                      <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
+                      <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
                     </div>
                   </div>
 
                   <div className="about-text">
                     <h1><b>Alexander Isaac P. Platon</b></h1>
 
-                    <p>"I am an aspiring Full-Stack Web Developer, who is passionate in building and developing Web Applications. I specialize in building functional, responsive, and engaging web applications with React Framework. </p>
-                    <p>I have worked on projects for a client and personal projects throughout the start of my career, and my experience has helped me understand and provide solutions from different projects. </p>
-                    <p>I'm a BSIT graduate from First Asia Institute of Technology and Humanities (FAITH Colleges), where I developed a strong foundation in Web Development. From crafting clean UI to managing server-side logic."</p>
+                    <p>"I am a dedicated Full-Stack Web Developer with a passion for creating innovative and impactful web applications. I specialize in developing functional, responsive, and user-centric solutions using modern technologies, with particular expertise in the React framework. </p>
+                    <p>Throughout my career, I have successfully delivered projects for clients while continuously expanding my skill set through personal development initiatives. This diverse project experience has strengthened my problem-solving abilities and deepened my understanding of various technical challenges across different domains.</p>
+                    <p>My comprehensive skill set spans the entire development lifecycle, from designing intuitive user interfaces to implementing robust server-side architecture, enabling me to deliver end-to-end solutions that meet both user needs and business objectives."</p>
                   </div>
                 </div>
                 </motion.div>
@@ -155,7 +184,7 @@ export const About = () => {
                 <div className="skills-content">
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={frontend}/>
+                      <img src={frontend} alt='frontend'/>
                       <p>Front-End</p>
                       <div className="skills-icon">
                       {skillsIcons
@@ -193,7 +222,7 @@ export const About = () => {
                     </div>
 
                     <div className="category-container">
-                      <img src={server}/>
+                      <img src={server} alt='server'/>
                       <p>Back-End</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -211,7 +240,7 @@ export const About = () => {
 
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={paint}/>
+                      <img src={paint} alt='paint'/>
                       <p>Design</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -249,7 +278,7 @@ export const About = () => {
                     </div>
 
                     <div className="category-container">
-                      <img src={web}/>
+                      <img src={web} alt='web'/>
                       <p>Others</p>
                       <div className="skills-icon">
                         {skillsIcons

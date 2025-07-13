@@ -47,7 +47,7 @@ export const Navbar = () => {
                             handleNavigationClick('Projects', 'Projects');
                         }}>Projects</a>
                     </li>
-                    <li className={activeSection === 'Projects' ? 'active' : ''}>
+                    <li className={activeSection === 'Services' ? 'active' : ''}>
                         <a href="#Services" onClick={(e) => {
                             e.preventDefault();
                             handleNavigationClick('Services', 'Services');
@@ -85,6 +85,12 @@ export const Navbar = () => {
                         handleNavigationClick('Projects', 'Projects');
                     }}>Projects</a>
                 </li>
+                <li className={activeSection === 'Services' ? 'active' : ''}>
+                        <a href="#Services" onClick={(e) => {
+                            e.preventDefault();
+                            handleNavigationClick('Services', 'Services');
+                        }}>Services</a>
+                    </li>
                 <li className={activeSection === 'Contact' ? 'active' : ''}>
                     <a href="#Contact" onClick={(e) => {
                         e.preventDefault();

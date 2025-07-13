@@ -19,7 +19,7 @@ export const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully!");
+          alert("Email sent successfully!");
           form.current.reset();
         },
         (error) => {
@@ -40,12 +40,12 @@ export const Contact = () => {
                 <form ref={form} onSubmit={sendEmail} className="contact-form">
                     <div className="contact-input">
                         <div className="name-email-row">
-                          <input className="contact-details" placeholder="Name" />
-                          <input className="contact-details" placeholder="Email" />
+                          <input className="contact-details" placeholder="Name" name="user_name" required/>
+                          <input className="contact-details" placeholder="Email" name="user_email" required/>
                         </div>
 
-                        <input className="contact-details" placeholder="Subject"></input>
-                        <input className="contact-details" placeholder="Message"></input>
+                        <input className="contact-details" placeholder="Subject" name="subject" required />
+                        <input className="contact-details" placeholder="Message" name="message" required />
 
                         <button type="submit">Send Message</button>
                     </div>
@@ -56,7 +56,7 @@ export const Contact = () => {
                         {socialContact
                         .map((contact, index) => (
                             <div key={index} className="personal-deets">
-                                <img src={contact.icon}/>
+                                <img src={contact.icon} alt='contact-icon'/>
                                 <p>{contact.name}</p>
                             </div>
                         ))}
