@@ -33,6 +33,7 @@ import laravel from './../assets/icons8-laravel-64.png'
 import mongodb from './../assets/icons8-mongodb-48.png'
 import supabase from './../assets/icons8-supabase-48.png'
 import express from './../assets/icons8-express-js-50.png'
+import expressb from './../assets/icons8-express-js-black-50.png'
 import nodejs from './../assets/icons8-node-js-48.png'
 import react from './../assets/icons8-react-40.png'
 import postgresql from './../assets/icons8-postgresql-48.png'
@@ -166,25 +167,26 @@ export const socialContact = [
   }
 ]
 
+
 export const projects = [
-  {
-    project: historiko,
-    name: "Historiko",
-    desc: "An Araling Panlipunan Learning Management System (LMS) made specifically for High School Students.",
-    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
-    link: "https://historiko.vercel.app/",
-  },
   {
     project: mahikacafe,
     name: "Mahika Cafe",
-    desc: "An E-Commerce Online Coffee Ordering System with a recommendation algorithm aligned with Health Benefits.",
+    desc: "An e-commerce coffee ordering platform featuring a recommendation algorithm tailored to individual health preferences and wellness goals.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "MONGODB", "NODE JS", "EXPRESS JS"],
     link: "https://mahika-cafe.vercel.app/",
   },
   {
+    project: historiko,
+    name: "Historiko",
+    desc: "A Learning Management System (LMS) for Araling Panlipunan, specifically tailored for high school students to enhance historical and civic education.",
+    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
+    link: "https://historiko.vercel.app/",
+  },
+  {
     project: taalert,
     name: "TaAlert",
-    desc: "A Web based dashboard used to display and analyze readings from TaAlert IoT device",
+    desc: "A web-based dashboard designed to display, monitor, and analyze real-time data from the TaAlert IoT device.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE"],
     link: "https://capstone-eta-ten.vercel.app/"
   }
