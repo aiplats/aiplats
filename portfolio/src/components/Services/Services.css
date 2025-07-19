@@ -6,17 +6,17 @@
 }
 
 .services-container {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px;
   position: relative;
   z-index: 2;
 }
 
 .services-container {
-    text-align: center;
-    font-size: 30px;
-    margin-top: -70px;
+  text-align: center;
+  font-size: 30px;
+  margin-top: -70px;
 }
 
 .service-tags {
@@ -40,7 +40,7 @@
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 35%;
   height: 3px;
   background: linear-gradient(90deg, #ffd700, #ffed4a);
   border-radius: 2px;
@@ -261,6 +261,10 @@
   
   .service-tags h1 {
     font-size: 1.8rem;
+  }
+
+  .service-tags h1::after {
+    width: 60%;
   }
   
   .service-tags p {

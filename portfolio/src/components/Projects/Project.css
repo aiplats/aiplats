@@ -1,15 +1,22 @@
 .main-project-page {
-    padding: 0 20px;
-    margin: 0;
+  padding: 0 20px;
+  margin: 0;
+  padding-bottom: 150px;
+}
+
+.main-project-page h1 {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .project-container {
-    padding: 80px;
+  padding: 10px 40px;
 }
 
 .project-sub-container {
-    display: flex;
-    gap: 20px; 
+  display: flex;
+  gap: 20px; 
 }
 
 .project-content {
@@ -18,7 +25,6 @@
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease, z-index 0.3s ease;
-  cursor: pointer;
 }
 
 .project-content::before {
@@ -40,11 +46,6 @@
   transform: translateY(-5px);
   border-color: rgba(255, 215, 0, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.project-content:hover {
-    transform: scale(1.2);
-    z-index: 10;
 }
 
 .project-sub-container img {
@@ -77,11 +78,11 @@
   width: 30px;
   height: 30px;
   object-fit: contain;
+  padding-bottom: 30px;
 }
 
 .techstack-icons img {
-    width: 50px;
-
+  width: 50px;
 }
 
 .tech-text {
@@ -90,37 +91,38 @@
 }
 
 .project-content:hover .project-details {
-    opacity: 1;
+  opacity: 1;
 }
 
 .project-details p {
-    margin: 8px 0;
+  margin: 8px 0;
+}
+
+.project-details button {
+  background-color: #FDCB6E;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .project-details p:first-child {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .project-details p:nth-child(2) {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
 
 .project-details p:last-child {
-    font-size: 14px;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-.main-project-page h1 {
-    font-size: 60px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 100px;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
 /* Tablets / iPads (Portrait & Landscape) */
@@ -254,6 +256,10 @@
 }
 
 @media (max-width: 480px) {
+
+  br {
+    display: none;
+  }
     .project-container {
         padding: 20px 5px;
     }
@@ -267,12 +273,16 @@
         padding: 10px;
     }
     
+    .project-details button {
+      font-size: 13px;
+    }
+    
     .project-details p:first-child {
         font-size: 18px;
     }
     
     .project-details p:nth-child(2) {
-        font-size: 13px;
+        font-size: 14px;
     }
     
     .tech-icon,

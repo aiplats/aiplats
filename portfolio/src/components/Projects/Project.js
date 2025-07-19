@@ -15,14 +15,14 @@ export const Project = () => {
   return (
     <>
       <div className="main-project-page" id='Projects'>
-        <div className="project-container">
+        <div className="project-container"> 
           <h1>PROJECTS</h1>
           <div className="line"></div>
           <div className="project-sub-container">
               {projects.map((proj, index) => {
                 return (
                 <React.Fragment  key={index}>
-                  <div className="project-content" onClick={() => handleProjectClick (proj.link)}>
+                  <div className="project-content">
                     <img src={proj.project} alt={proj.name}/>
                     <div className="project-details">
                       <p>{proj.name}</p>
@@ -43,10 +43,11 @@ export const Project = () => {
                               className="tech-icon"
                             />
                           ) : (
-                            <span key={i} className="tech-text">{tech}</span> // fallback if no icon
+                            <span key={i} className="tech-text">{tech}</span>
                           );
                         })}
                       </div>
+                      <button onClick={() => handleProjectClick (proj.link)}>View Project</button>
                     </div>
                   </div>
                 </React.Fragment>

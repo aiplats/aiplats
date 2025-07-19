@@ -37,7 +37,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 15vw;
   text-align: left;
-  color: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.151);
   z-index: 0;
   pointer-events: none;
   user-select: none;
@@ -128,7 +128,7 @@
 }
 
 .grid-right button:hover {
-  color: white;
+  color: black;
 }
 
 .grid-right button span {

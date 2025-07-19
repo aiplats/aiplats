@@ -186,7 +186,7 @@ export const projects = [
   {
     project: taalert,
     name: "TaAlert",
-    desc: "A web-based dashboard designed to display, monitor, and analyze real-time data from the TaAlert IoT device.",
+    desc: "A web-based dashboard designed to display, monitor, and analyze real-time data from the TaAlert: A real-time Air Quality Monitoring IoT device.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE"],
     link: "https://capstone-eta-ten.vercel.app/"
   }
