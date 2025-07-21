@@ -84,8 +84,12 @@
 
 .grid-right h2 {
   font-size: xx-large;
-  color: #FDCB6E;
-  padding-top: 20px;
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
 .grid-right-buttons {
