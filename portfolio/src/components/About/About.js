@@ -97,51 +97,66 @@ export const About = () => {
             <h1 className="section-title">
               ABOUT <span className="highlight">ALEX</span>
             </h1>
+
+            <div className="navigation-links">
+                <ul>
+                  <li>
+                    <a href="#AboutMe" onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigationClick(aboutMeRef, 'AboutMe');
+                    }}>
+                      <img
+                        src={profile}
+                        alt="profile"
+                        className={activeSection === 'AboutMe' ? 'active' : ''}
+                        style={{marginRight: '10px'}}
+                      />About
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="#Skills" onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigationClick(skillsRef, 'Skills');
+                    }}>
+                      <img
+                        src={skills}
+                        alt="skills"
+                        className={activeSection === 'Skills' ? 'active' : ''}
+                        style={{marginRight: '10px'}}
+                      />Skills
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="#Certifications" onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigationClick(certificationsRef, 'Certifications');
+                    }}>
+                      <img
+                        src={certificate}
+                        alt="certificate"
+                        className={activeSection === 'Certifications' ? 'active' : ''}
+                        style={{marginRight: '10px'}}
+                      />Certification
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
             <div className="line"></div>
           </div>
 
           <div className="about-page-container">
             <div className="about-navigation">
-              <ul>
-                <li>
-                  <a href="#AboutMe" onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigationClick(aboutMeRef, 'AboutMe');
-                  }}>
-                    <img
-                      src={profile}
-                      alt="profile"
-                      className={activeSection === 'AboutMe' ? 'active' : ''}
-                    />
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="#Skills" onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigationClick(skillsRef, 'Skills');
-                  }}>
-                    <img
-                      src={skills}
-                      alt="skills"
-                      className={activeSection === 'Skills' ? 'active' : ''}
-                    />
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="#Certifications" onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigationClick(certificationsRef, 'Certifications');
-                  }}>
-                    <img
-                      src={certificate}
-                      alt="certificate"
-                      className={activeSection === 'Certifications' ? 'active' : ''}
-                    />
-                  </a>
-                </li>
-              </ul>
+
+              <div className="about-info">
+                <img src={gradpic} alt='gradpic'/>
+
+                <h3>"Progess over Perfection"</h3>
+              </div>
+
+              
             </div>
 
             <div className="about-content" ref={contentContainerRef}>
@@ -154,11 +169,7 @@ export const About = () => {
                   transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <div className="about-container">
-                  <div className="about-info">
-                    <img src={gradpic} alt='gradpic'/>
-
-                    <h3>"Progess over Perfection"</h3>
-                  </div>
+                  
 
                   <div className="about-description">
                     <div className="about-text">
