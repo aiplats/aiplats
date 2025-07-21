@@ -28,9 +28,9 @@ export const Navbar = () => {
     <>
     <div className='main-nav'>
         <div className="navbar">
-            <div className="navbar-left">
+            {/* <div className="navbar-left">
                 <p><a href="/">AIPLATS</a></p>
-            </div>
+            </div> */}
 
             {/* Desktop Navigation */}
             <div className="navbar-right">

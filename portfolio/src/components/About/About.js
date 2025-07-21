@@ -3,6 +3,9 @@ import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
 import { motion } from 'framer-motion';
 
+import { FiMail } from 'react-icons/fi';
+
+
 import gradpic from './../assets/PLATON-GRAD.jpg'
 import faith from './../assets/FAITH-Colleges-Logo.png'
 
@@ -18,6 +21,7 @@ import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import web from './../assets/icons8-webw-50.png'
+import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 
 export const About = () => {
 
@@ -172,9 +176,14 @@ export const About = () => {
                       </figure>
 
                       <div className="socials">
+                        <h3>Social Links</h3>
                         <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
                         <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
                         <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
+                      </div>
+
+                      <div className="about-contact">
+                        <a href="#Contact"><button><FiMail size={25} />Contact</button></a>
                       </div>
                     </div>
                   </div>
@@ -331,7 +340,7 @@ export const About = () => {
                           <h2>{cert.title}</h2>
                           <h2>{cert.issuer} {cert.company}</h2>
                           <h3><b>{cert.credential}</b> {cert.id}</h3>
-                          <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button>View Certificate</button></a>
+                          <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button><HiArrowTopRightOnSquare size={30}/>View Certificate</button></a>
                         </div>
                       </div>
                     </React.Fragment>

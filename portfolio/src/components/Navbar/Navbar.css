@@ -7,11 +7,11 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color: transparent;
     z-index: 1;
-    padding: 0 20px;
+    padding-top: 20px;
 }
 
 .navbar-left {
@@ -39,7 +39,9 @@
 .navbar-right {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 50px;
 }
 
 .navbar-right ul {
@@ -47,7 +49,6 @@
     align-items: center;  
     justify-content: center;
     gap: 100px;
-    padding-right: 50px;
     list-style-type: none;
     margin: 0;
     padding-left: 0;

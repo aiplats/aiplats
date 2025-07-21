@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
 
+import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2";
+
 import me from './../assets/IMG_3093.PNG'
 
 export const Header = () => {
@@ -62,8 +64,8 @@ export const Header = () => {
                     <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
                     <h2>Connect with me!</h2>
                     <div className="grid-right-buttons">
-                      <a href="#About"><button><span>Learn More!</span></button></a>
-                      <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span>Download CV</span></button></a>
+                      <a href="#About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></a>
+                      <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a>
                     </div>
                   </div>
                 </div>

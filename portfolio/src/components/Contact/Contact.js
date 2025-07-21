@@ -3,6 +3,8 @@ import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { socialContact } from '../assets/assets';
 
+import { FiMail } from 'react-icons/fi';
+
 export const Contact = () => {
   const form = useRef();
 
@@ -47,7 +49,7 @@ export const Contact = () => {
                         <input className="contact-details" placeholder="Subject" name="subject" required />
                         <input className="contact-details" placeholder="Message" name="message" required />
 
-                        <button type="submit">Send Message</button>
+                        <button type="submit"><FiMail size={25} />Send Message</button>
                     </div>
 
                     <div className="contact-vertical-line"></div>

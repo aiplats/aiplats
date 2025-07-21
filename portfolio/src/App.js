@@ -1,4 +1,7 @@
 import './App.css';
+
+import { FiMail } from 'react-icons/fi';
+
 import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
 import { About } from './components/About/About';

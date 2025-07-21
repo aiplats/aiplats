@@ -2,6 +2,8 @@ import React from 'react'
 import './Project.css'
 import { projects, skillsIcons } from '../assets/assets'
 
+import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
+
 export const Project = () => {
 
   const getIconByTitle = (title) => {
@@ -47,7 +49,7 @@ export const Project = () => {
                           );
                         })}
                       </div>
-                      <button onClick={() => handleProjectClick (proj.link)}>View Project</button>
+                      <button onClick={() => handleProjectClick (proj.link)}><HiArrowTopRightOnSquare size={30}/>View Project</button>
                     </div>
                   </div>
                 </React.Fragment>

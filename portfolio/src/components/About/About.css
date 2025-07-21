@@ -48,7 +48,12 @@
 }
 
 .highlight {
-  color: #FDCB6E;
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
 .nav-vertical-line {
@@ -154,23 +159,6 @@
     justify-content: center;
 }
 
-.socials {
-    display: flex;
-}
-
-.socials img {
-    padding: 30px 30px;
-    width: 50px;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-    box-shadow: none;
-}
-
-.socials img:hover {
-    transform: scale(1.1) rotate(10deg);
-    filter: brightness(1.2);
-}
-
 .about-text {
     padding: 15px 5px;
 }
@@ -188,10 +176,72 @@
 
 .about-profile {
     display: flex;
+    justify-content: space-around;
+    width: 90%;
+    gap: 50px;
 }
 
 .faith-div img{
     width: 200px;
+}
+
+.socials {
+    display: block;
+}
+
+.socials img {
+    padding: 0px 20px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    box-shadow: none;
+}
+
+.socials img:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.about-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-contact h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.about-contact a {
+  text-decoration: none;
+}
+
+.about-contact button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
+    color: white;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+}
+
+.about-contact button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+    background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+.about-contact button:active {
+    transform: translateY(-1px);
 }
 
 
@@ -329,23 +379,41 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: right;
+    align-items: flex-end;
     text-align: right;
+    gap: 10px;
+}
+
+.cert-details a {
+    text-decoration: none; 
 }
 
 .cert-details button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
     color: white;
+    padding: 10px 15px;
+    border: none;
     border-radius: 12px;
-    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
     font-weight: 600;
-    transition: background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
 }
 
 .cert-details button:hover {
-  background: #ffbe48;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+  background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+.cert-details button:active {
+  transform: translateY(-1px);
 }
 
 
@@ -470,6 +538,22 @@
     .socials {
         display: flex;
         justify-content: center;
+    }
+
+    .about-profile {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .about-profile figcaption {
+        font-size: 0.8rem;
+    }
+
+    .socials h3 {
+        display: none;
     }
 
     .skills-content {

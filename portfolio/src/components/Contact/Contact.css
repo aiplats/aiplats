@@ -88,6 +88,10 @@
 }
 
 .contact-input button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background: linear-gradient(135deg, #FDCB6E, #E17055);
     color: white;
     padding: 18px 30px;
