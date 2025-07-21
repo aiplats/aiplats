@@ -70,19 +70,21 @@
 }
 
 .navigation-links {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 385px;
 }
 
 .navigation-links ul {
-    display: flex;
     position: relative;
     gap: 50px;
     cursor: pointer;
     transition: transform 0.5s ease;
     list-style: none;
-    background-color: #d1d1d1;
     padding: 10px;
     border-radius: 50px;
 }
@@ -96,8 +98,12 @@
 
 .navigation-links li a {
     display: flex;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: #333;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
     text-decoration: none;
     color: white;
 }
@@ -118,7 +124,7 @@
 .about-content {
     overflow-y: scroll;
     height: 600px;
-    padding: 4%;
+    padding: 5%;
     padding-top: 0%;
     margin-top: 30px;
     scroll-behavior: smooth;
@@ -146,23 +152,39 @@
 }
 
 .about-info {
-    justify-content: start;
-    align-items: start;
-    padding: 3%;
+    display: flex;
+    flex: 1;
 }
 
-.about-info img {
+.about-info figure {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.about-info figure img {
     display: flex;
-    width: 95%;
-    height: 88%;
+    position: relative;
+    top: 30px;
+    right: 30px;
+    width: 90%;
+    height: 90%;
     border: none;
     border-radius: 24px;
     box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 }
 
-.about-info h3 {
+.about-info figcaption {
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .about-text {
@@ -307,7 +329,6 @@
     filter: brightness(1.2);
 }
 
-
 .skills-title {
     display: block;
     justify-content: center;
@@ -413,13 +434,13 @@
 }
 
 .cert-details button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
-  background: linear-gradient(135deg, #E17055, #FDCB6E);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+    background: linear-gradient(135deg, #E17055, #FDCB6E);
 }
 
 .cert-details button:active {
-  transform: translateY(-1px);
+    transform: translateY(-1px);
 }
 
 
