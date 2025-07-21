@@ -200,6 +200,10 @@
   .services-container {
     padding: 0 15px;
   }
+
+  .services-container h1 {
+    font-size: 2.2rem;
+  }
   
   .service-tags {
     margin-bottom: 40px;

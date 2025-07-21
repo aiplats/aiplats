@@ -15,12 +15,13 @@
     /* Option 1: Semi-transparent background instead of fully transparent */
     background-color: rgba(0, 0, 0, 0.1);
     /* Option 2: Gradient overlay */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-    z-index: 1;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)); */
+    z-index: 1001; /* Higher than mobile menu, lower than button */
     padding-top: 20px;
     /* Add backdrop filter here too for better browser support */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    position: relative; /* Ensure positioning context */
 }
 
 /* Alternative: Create a pseudo-element overlay */
@@ -151,10 +152,11 @@
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001;
+    z-index: 1002; /* Higher than mobile menu */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     backdrop-filter: blur(5px);
+    position: relative; /* Ensure positioning context */
 }
 
 .hamburger {
@@ -200,12 +202,12 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     transition: left 0.3s ease;
-    z-index: 999;
+    z-index: 1000; /* Lower than hamburger button */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding: 0; /* Remove top padding to center properly */
 }
 
 .mobile-menu.open {
@@ -217,6 +219,11 @@
     padding: 0;
     margin: 0;
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu li {
@@ -224,6 +231,10 @@
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-menu a {
@@ -231,6 +242,9 @@
     text-decoration: none;
     transition: color 0.3s ease;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .mobile-menu li.active a {
@@ -246,11 +260,13 @@
     height: 3px;
     background-color: #FDCB6E;
     transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%); /* Center the underline */
 }
 
 .mobile-menu li.active::after {
-    width: 100%;
-    left: 0;
+    width: 80px; /* Fixed width for consistent underline */
+    left: 50%;
+    transform: translateX(-50%); /* Keep centered */
 }
 
 .mobile-social {
@@ -313,14 +329,15 @@
     .mobile-menu-button {
         display: flex;
     }
+
+    .mobile-social {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
     .navbar {
         padding: 0 10px;
-        display: flex;
-        justify-content: right;
-        align-items: flex-end;
     }
     
     .navbar-left p {
@@ -334,6 +351,7 @@
     }
     
     .mobile-social {
+        margin-top: 30px;
         display: none;
     }
     

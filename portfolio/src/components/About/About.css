@@ -623,6 +623,10 @@
     .cert-details {
         align-items: center;
     }
+
+    .cert-details h3 {
+        font-size: 0.9rem;
+    }
     
     .cert-details button {
         align-self: center;
