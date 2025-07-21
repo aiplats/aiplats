@@ -4,6 +4,7 @@ import { skillsIcons, certifications } from './../assets/assets'
 import { motion } from 'framer-motion';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
+import faith from './../assets/FAITH-Colleges-Logo.png'
 
 import profile from './../assets/icons8-profile-48.png'
 import skills from './../assets/icons8-skills-48.png'
@@ -152,19 +153,30 @@ export const About = () => {
                   <div className="about-info">
                     <img src={gradpic} alt='gradpic'/>
 
-                    <div className="socials">
-                      <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
-                      <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
-                      <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
-                    </div>
+                    <h3>"Progess over Perfection"</h3>
                   </div>
 
-                  <div className="about-text">
-                    <h1><b>Alexander Isaac P. Platon</b></h1>
+                  <div className="about-description">
+                    <div className="about-text">
+                      <h1><b>Alexander Isaac P. Platon</b></h1>
 
-                    <p>"I am a dedicated Full-Stack Web Developer with a passion for creating innovative and impactful web applications. I specialize in developing functional, responsive, and user-centric solutions using modern technologies, with particular expertise in the React framework. </p>
-                    <p>Throughout my career, I have successfully delivered projects for clients while continuously expanding my skill set through personal development initiatives. This diverse project experience has strengthened my problem-solving abilities and deepened my understanding of various technical challenges across different domains.</p>
-                    <p>My comprehensive skill set spans the entire development lifecycle, from designing intuitive user interfaces to implementing robust server-side architecture, enabling me to deliver end-to-end solutions that meet both user needs and business objectives."</p>
+                      <p>"I am a dedicated Full-Stack Web Developer with a strong focus on building responsive, user-centric web applications using modern technologies, particularly React. I’ve delivered diverse projects for clients and continuously expand my skills through ongoing development. With experience across the full development lifecycle—from intuitive UI design to robust backend architecture—I create end-to-end solutions that align with both user needs and business goals."</p>
+                    </div>
+
+                    <div className="about-profile">
+                      <figure className="faith-div">
+                        <img src={faith} alt="faith logo"/>
+                        <br />
+                        <br />
+                        <figcaption>BS Information Technology<br/>A.Y. 2021 - 2025</figcaption>
+                      </figure>
+
+                      <div className="socials">
+                        <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
+                        <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
+                        <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 </motion.div>
@@ -179,7 +191,7 @@ export const About = () => {
                   transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <h1>SKILLS & TECHNOLOGIES</h1>
-                <h2>01 - SOFTWARE SKILLS</h2>
+                <h2>01 - TECHNICAL SKILLS</h2>
 
                 <div className="skills-content">
                   <div className="skills-grid">

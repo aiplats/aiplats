@@ -178,7 +178,7 @@ export const projects = [
   },
   {
     project: historiko,
-    name: "Historiko",
+    name: "Historiko (Freelance Project)",
     desc: "A Learning Management System (LMS) for Araling Panlipunan, specifically tailored for high school students to enhance historical and civic education.",
     techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
     link: "https://historiko.vercel.app/",
