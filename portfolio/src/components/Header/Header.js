@@ -50,7 +50,7 @@ export const Header = () => {
         <div className="header">
             <div className="grid">
                 <div className="grid-left">
-                  <h1 className="fullscreen-header">ALEXANDER<br />ISAAC <br />PLATON</h1>
+                  <h1 className="fullscreen-header">ALEXANDER<br /> ISAAC <br />PLATON</h1>
                 </div>
 
                 <div className="grid-center">

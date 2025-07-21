@@ -493,6 +493,10 @@
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+    .about-main-page {
+        padding: 20px 10px;
+    }
+
     .about-navigation {
         display: none;
     }
@@ -556,6 +560,10 @@
         display: none;
     }
 
+    .about-contact button {
+        padding: 10px 15px;
+    }
+
     .skills-content {
         padding: 0%;
     }
@@ -570,6 +578,7 @@
     
     .skills-grid {
         gap: 2rem;
+        padding-bottom: 30px;
     }
     
     .skills-grid .category-container {
@@ -601,6 +610,8 @@
     
     .cert-container {
         grid-template-columns: 1fr;
+        padding: 0px 20px;
+        gap: 1rem;
     }
     
     .cert-icons {
@@ -615,6 +626,7 @@
     
     .cert-details button {
         align-self: center;
+        padding: 5px 10px;
     }
 }
 
@@ -649,6 +661,10 @@
     .socials {
         display: flex;
         justify-content: center;
+    }
+
+    .about-contact button {
+        padding: 8px 13px;
     }
 
     .skills-content {
@@ -707,7 +723,7 @@
     }
     
     .cert-details button {
-        padding: 0.6rem 1.2rem;
+        padding: 5px 10px;
         font-size: 0.9rem;
     }
 }

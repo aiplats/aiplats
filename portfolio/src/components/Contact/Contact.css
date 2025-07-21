@@ -275,4 +275,8 @@
     .personal-deets {
         padding: 15px 10px;
     }
+
+    .contact-input button {
+        padding: 10px;
+    }
 }
