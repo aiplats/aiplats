@@ -27,7 +27,7 @@ export const ScrollToTop = () => {
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      <img src={arrowup} alt="Scroll to top" />
+      <a href="/"><img src={arrowup} alt="Scroll to top" /></a>
     </button>
   );
 };
