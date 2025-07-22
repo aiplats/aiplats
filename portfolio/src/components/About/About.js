@@ -238,7 +238,7 @@ export const About = () => {
                     </div>
 
                     <div className="category-container">
-                      <img src={server} alt='server'/>
+                      <img src={frontend} alt='frontend'/>
                       <p>Back-End</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -256,11 +256,11 @@ export const About = () => {
 
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={paint} alt='paint'/>
-                      <p>Design</p>
+                      <img src={server} alt='server'/>
+                      <p>Database</p>
                       <div className="skills-icon">
                         {skillsIcons
-                        .filter(skill => skill.category === "Design")
+                        .filter(skill => skill.category === "Database")
                         .map((skill, index) => (
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
@@ -273,7 +273,7 @@ export const About = () => {
 
                     <div className="skills-title">
                       {skillsIcons
-                      .filter(skill => skill.category === "Design")
+                      .filter(skill => skill.category === "Database")
                       .map((skill, index) => (
                         <div key={index} className="icon-title" style={{ textAlign: 'right'}}>
                           <h2>{skill.title}</h2>
@@ -285,7 +285,7 @@ export const About = () => {
                   <div className="skills-grid">          
                     <div className="skills-title">
                       {skillsIcons
-                      .filter(skill => skill.category === "Others")
+                      .filter(skill => skill.category === "Design")
                       .map((skill, index) => (
                         <div key={index} className="icon-title" style={{ textAlign: 'left'}}>
                           <h2>{skill.title}</h2>
@@ -295,10 +295,10 @@ export const About = () => {
 
                     <div className="category-container">
                       <img src={web} alt='web'/>
-                      <p>Others</p>
+                      <p>Design</p>
                       <div className="skills-icon">
                         {skillsIcons
-                        .filter(skill => skill.category === "Others")
+                        .filter(skill => skill.category === "Design")
                         .map((skill, index) => (
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -307,6 +307,34 @@ export const About = () => {
                           </motion.div>
                         ))}
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="skills-grid">
+                    <div className="category-container">
+                      <img src={paint} alt='paint'/>
+                      <p>DevOps & Tools</p>
+                      <div className="skills-icon">
+                        {skillsIcons
+                        .filter(skill => skill.category === "DevOps & Tools")
+                        .map((skill, index) => (
+                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.7 }}>
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="skills-title">
+                      {skillsIcons
+                      .filter(skill => skill.category === "DevOps & Tools")
+                      .map((skill, index) => (
+                        <div key={index} className="icon-title" style={{ textAlign: 'right'}}>
+                          <h2>{skill.title}</h2>
+                        </div>
+                      ))}
                     </div>
                   </div>
 

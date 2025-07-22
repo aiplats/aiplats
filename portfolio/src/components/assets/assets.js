@@ -14,6 +14,7 @@ import map from './../assets/icons8-map-48.png'
 import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
+import tailwind from './../assets/icons8-tailwind-css-48.png'
 import web from './../assets/icons8-webw-50.png'
 import api from './../assets/icons8-api-64.png'
 
@@ -25,6 +26,8 @@ import framer from './../assets/icons8-framer-48.png'
 import git from './../assets/icons8-git-48.png'
 import graphql from './../assets/icons8-graphql-50.png'
 import restapi from './../assets/icons8-rest-api-50.png'
+import vscode from './../assets/icons8-vs-code-48.png'
+import vercel from './../assets/icons8-vercel-50.png'
 
 import css from './../assets/icons8-css3-48.png'
 import html from './../assets/icons8-html5-48.png'
@@ -33,7 +36,7 @@ import laravel from './../assets/icons8-laravel-64.png'
 import mongodb from './../assets/icons8-mongodb-48.png'
 import supabase from './../assets/icons8-supabase-48.png'
 import express from './../assets/icons8-express-js-50.png'
-import expressb from './../assets/icons8-express-js-black-50.png'
+import mysql from './../assets/icons8-mysql-48.png'
 import nodejs from './../assets/icons8-node-js-48.png'
 import react from './../assets/icons8-react-40.png'
 import postgresql from './../assets/icons8-postgresql-48.png'
@@ -47,62 +50,82 @@ export const skillsIcons = [
   {
     category: "Front-End",
     icon: html,
-    title: "HTML"
+    title: "HTML5"
   },
   {
     category: "Front-End",
     icon: css,
-    title: "CSS"
+    title: "CSS3"
+  },
+  {
+    category: "Front-End",
+    icon: tailwind,
+    title: "Tailwind CSS"
   },
   {
     category: "Front-End",
     icon: react,
-    title: "REACT"
+    title: "React"
   },
   {
     category: "Front-End",
     icon: javascript,
-    title: "JAVASCRIPT"
+    title: "JavaScript"
   },
   {
     category: "Back-End",
     icon: nodejs,
-    title: "NODE JS"
+    title: "Node.js"
   },
   {
     category: "Back-End",
     icon: laravel,
-    title: "LARAVEL"
-  },
-  {
-    category: "Back-End",
-    icon: mongodb,
-    title: "MONGODB"
-  },
-  {
-    category: "Back-End",
-    icon: supabase,
-    title: "SUPABASE"
+    title: "Laravel"
   },
   {
     category: "Back-End",
     icon: express,
-    title: "EXPRESS JS"
+    title: "Express.js"
   },
   {
     category: "Back-End",
+    icon: graphql,
+    title: "GraphQL"
+  },
+  {
+    category: "Back-End",
+    icon: restapi,
+    title: "Rest API"
+  },
+  {
+    category: "Database",
+    icon: mongodb,
+    title: "MongoDB"
+  },
+  {
+    category: "Database",
+    icon: supabase,
+    title: "Supabase"
+  },
+  {
+    category: "Database",
+    icon: mysql,
+    title: "MySQL"
+  },
+  {
+    category: "Database",
     icon: postgresql,
-    title: "POSTGRESQL"
+    title: "PostgreSQL"
   },
   {
     category: "Design",
     icon: wordpress,
-    title: "WORDPRESS"
+    title: "WordPress"
   },
   {
     category: "Design",
     icon: framer,
-    title: "FRAMER"
+    title: "Framer"
   },
   {
     category: "Design",
@@ -112,23 +135,29 @@ export const skillsIcons = [
   {
     category: "Design",
     icon: responsive,
-    title: "RESPONSIVE DESIGN"
+    title: "Responsive Design"
   },
   {
-    category: "Others",
+    category: "DevOps & Tools",
     icon: git,
-    title: "GIT"
+    title: "Git"
   },
   {
-    category: "Others",
-    icon: graphql,
-    title: "GRAPHQL"
+    category: "DevOps & Tools",
+    icon: github,
+    title: "GitHub"
   },
   {
-    category: "Others",
-    icon: restapi,
-    title: "REST API"
-  }
+    category: "DevOps & Tools",
+    icon: vscode,
+    title: "VS Code"
+  },
+  {
+    category: "DevOps & Tools",
+    icon: vercel,
+    title: "Vercel"
+  },
+  
 ];
 
 export  const certifications = [
