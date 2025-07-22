@@ -3,8 +3,8 @@ import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
 import { motion } from 'framer-motion';
 
-import { FiMail } from 'react-icons/fi';
-
+import { FiAward, FiMail, FiUser } from 'react-icons/fi';
+import { FaCode } from 'react-icons/fa';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 import faith from './../assets/FAITH-Colleges-Logo.png'
@@ -92,58 +92,52 @@ export const About = () => {
     <>
       <div className="about-main-page" id='About'>
         <div className="about-sub-page">
-
           <div className="about-heading">
-
             <h1 className="section-title">
-                      ABOUT <span className="highlight">ALEX</span>
-                    </h1>
-
+              ABOUT <span className="highlight">ALEX</span>
+            </h1>
             <div className="line"></div>
           </div>
 
           <div className="about-page-container">
             <div className="about-navigation">
-
               <div className="about-info">
                 <figure>
-                  <img  src={gradpic} alt='gradpic'/>
-                  <figcaption>"Progess over Perfection"</figcaption>
+                  <img src={gradpic} alt='gradpic'/>
                 </figure>
-                <div className="navigation-links">
+              </div>
+              
+              <div className="navigation-links">
                 <ul>
                   <li>
                     <a href="#AboutMe" onClick={(e) => {
                       e.preventDefault();
                       handleNavigationClick(aboutMeRef, 'AboutMe');
                     }}>
+                      <FiUser style={{marginRight: '8px'}}/>
                       About
                     </a>
                   </li>
-                  
                   <li>
                     <a href="#Skills" onClick={(e) => {
                       e.preventDefault();
                       handleNavigationClick(skillsRef, 'Skills');
                     }}>
+                      <FaCode style={{marginRight: '8px'}}/>
                       Skills
                     </a>
                   </li>
-                  
                   <li>
                     <a href="#Certifications" onClick={(e) => {
                       e.preventDefault();
                       handleNavigationClick(certificationsRef, 'Certifications');
                     }}>
+                      <FiAward style={{marginRight: '8px'}}/>
                       Certification
                     </a>
                   </li>
                 </ul>
               </div>
-
-              </div>
-
-              
             </div>
 
             <div className="about-content" ref={contentContainerRef}>
@@ -156,6 +150,11 @@ export const About = () => {
                   transition={{ delay: 0.2, duration: 0.8 }}
                 >
                 <div className="about-container">
+
+                  <div className="about-info-overflow">
+                    <img src={gradpic} alt='gradpic'/>
+                  </div>
+                
                   <div className="about-description">
                     <div className="about-text">
                       <h1><b>Alexander Isaac P. Platon</b></h1>

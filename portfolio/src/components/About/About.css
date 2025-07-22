@@ -54,12 +54,6 @@
   color: transparent;
 }
 
-.nav-vertical-line {
-    width: 2px;
-    height: 600px; 
-    background-color: white;
-}
-
 .about-navigation {
     display: flex;
     position: sticky;
@@ -76,7 +70,7 @@
     align-items: center;
     position: absolute;
     top: 100px;
-    left: 385px;
+    left: 365px;
 }
 
 .navigation-links ul {
@@ -98,23 +92,50 @@
 
 .navigation-links li a {
     display: flex;
-    padding: 10px 30px;
+    padding: 10px 35px;
     border-radius: 15px;
     background-color: #333;
-    justify-content: center;
     align-items: center;
     font-size: 24px;
     text-decoration: none;
     color: white;
+    transition: transform 0.3s ease;
+}
+
+.navigation-links li a:hover {
+    transform: translateX(5px);
+}
+
+/* After Effect (Underline) */
+.navigation-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navigation-links li a:hover::after,
+.navigation-links li a.active::after {
+    width: 94%;
+}
+
+
+.navigation-links li a.active:hover {
+    background-color: #3a80d2;
 }
 
 .about-navigation img {
-  background-color: #333;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-radius: 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-navigation img.active {
@@ -152,8 +173,13 @@
 }
 
 .about-info {
+    position: relative;
     display: flex;
     flex: 1;
+}
+
+.about-info-overflow img {
+    display: none;
 }
 
 .about-info figure {
@@ -175,16 +201,6 @@
     border: none;
     border-radius: 24px;
     box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
-}
-
-.about-info figcaption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 30px;
-    font-size: 20px;
-    margin-top: 10px;
 }
 
 .about-text {
@@ -340,6 +356,10 @@
 
 /* CERTIFICATION SECTION*/
 
+.about-certification {
+    display: block;
+}
+
 .cert-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -379,20 +399,20 @@
 
 .cert-icons {
     background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .cert-icons:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 @keyframes entrance {
@@ -403,12 +423,10 @@
 }
 
 .cert-details {
-    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    gap: 10px;
 }
 
 .cert-details a {
@@ -421,7 +439,7 @@
     gap: 10px;
     background: linear-gradient(135deg, #FDCB6E, #E17055);
     color: white;
-    padding: 10px 15px;
+    padding: 10px 30px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -470,62 +488,95 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
-  .cert-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    padding: 40px 30px;
-  }
+@media (min-width: 1024px) and (max-width: 1540px) {
+    .about-content {
+        padding: 0px 20px;
+        margin-top: -20px;
+    }
 
-  .cert-icons {
-    padding: 1.5rem;
-    border-radius: 16px;
-    flex-direction: row;
-    gap: 1.5rem;
-    align-items: center;
-  }
+    .about-content h1 {
+        font-size: 45px;
+    }
 
-  .icon-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
+    .about-description {
+        width: 100%;
+    }
 
-  .cert-details {
-    text-align: right;
-  }
+    .about-info figure img {
+        width: 88%;
+    }
 
-  .cert-details h2 {
-    font-size: 18px;
-  }
+    .about-profile {
+        width: 100%;
+    }
 
-  .cert-details h3 {
-    font-size: 14px;
-  }
+    .socials h3 {
+        display: none;
+    }
 
-  .cert-details button {
-    font-size: 14px;
-    padding: 10px 16px;
-    margin-top: 10px;
-  }
+    .navigation-links {
+        left: 312px;
+    }
 
-  .about-certification h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
+    .cert-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 20px 10px;
+    }
+
+    .cert-icons {
+      padding: 1.5rem;
+      border-radius: 16px;
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .icon-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .cert-details {
+      text-align: right;
+      gap: 0px;
+    }
+
+    .cert-details h2 {
+      font-size: 18px;
+    }
+
+    .cert-details h3 {
+      font-size: 14px;
+    }
+
+    .cert-details button {
+      font-size: 14px;
+      padding: 10px 16px;
+      margin-top: 10px;
+    }
+
+    .about-certification h1 {
+      text-align: left;
+      margin-bottom: 30px;
+    }
 }
 
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-    .about-main-page {
+    .about-page-container {
         padding: 20px 10px;
     }
 
-    .about-navigation {
+    .about-navigation  {
         display: none;
+    }
+
+    .about-main-page {
+        padding: 20px 10px;
     }
 
     .about-sub-page {
@@ -550,6 +601,12 @@
     
     .about-info {
         min-width: auto;
+    }
+
+    .about-info img {
+        display: flex;
+        border-radius: 14px;
+        box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
     }
     
     .about-text {
@@ -760,7 +817,7 @@
 }
 
 /* LANDSCAPE TABLET */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1023px) and (min-width: 768px) {
     .about-sub-page {
         padding: 50px 40px;
     }

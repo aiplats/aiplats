@@ -62,7 +62,8 @@ export const Header = () => {
                 <div className="grid-right">
                   <div className="typing-block">
                     <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
-                    <h2>Connect with me!</h2>
+                    <h2>"Progress over Perfection"</h2>
+                    <h3>Connect with me!</h3>
                     <div className="grid-right-buttons">
                       <a href="#About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></a>
                       <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a>
