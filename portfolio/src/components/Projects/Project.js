@@ -7,7 +7,11 @@ import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
 export const Project = () => {
 
   const getIconByTitle = (title) => {
-    return skillsIcons.find(skill => skill.title === title.toUpperCase());
+    // Normalize both the input title and skill titles for comparison
+    const normalizedInput = title.toLowerCase().trim();
+    return skillsIcons.find(skill => 
+      skill.title.toLowerCase().trim() === normalizedInput
+    );
   };
 
   const handleProjectClick = (link) => {

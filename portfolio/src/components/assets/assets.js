@@ -202,21 +202,21 @@ export const projects = [
     project: mahikacafe,
     name: "Mahika Cafe",
     desc: "An e-commerce coffee ordering platform featuring a recommendation algorithm tailored to individual health preferences and wellness goals.",
-    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "MONGODB", "NODE JS", "EXPRESS JS"],
+    techstack: ["HTML5", "CSS3", "React", "JavaScript", "MongoDB", "Node.js", "Express.js"],
     link: "https://mahika-cafe.vercel.app/",
   },
   {
     project: historiko,
     name: "Historiko (Freelance Project)",
     desc: "A Learning Management System (LMS) for Araling Panlipunan, specifically tailored for high school students to enhance historical and civic education.",
-    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE", "NODE JS"],
+    techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase", "Node.js"],
     link: "https://historiko.vercel.app/",
   },
   {
     project: taalert,
     name: "TaAlert",
     desc: "A web-based dashboard designed to display, monitor, and analyze real-time data from the TaAlert: A real-time Air Quality Monitoring IoT device.",
-    techstack: ["HTML", "CSS", "REACT", "JAVASCRIPT", "SUPABASE"],
+    techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase"],
     link: "https://capstone-eta-ten.vercel.app/"
   }
 ]

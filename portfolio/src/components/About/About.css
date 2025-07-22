@@ -34,7 +34,11 @@
     white-space: nowrap;
 }
 
-.about-page-container, .about-container {
+.about-container {
+    display: flex;
+}
+
+.about-page-container {
     display: flex;
 }
 
@@ -598,13 +602,10 @@
     .about-content {
         padding: 0%;
     }
-    
-    .about-info {
-        min-width: auto;
-    }
 
-    .about-info img {
+    .about-info-overflow img {
         display: flex;
+        width: 100%;
         border-radius: 14px;
         box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
     }

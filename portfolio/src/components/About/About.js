@@ -140,6 +140,7 @@ export const About = () => {
               </div>
             </div>
 
+
             <div className="about-content" ref={contentContainerRef}>
               <div ref={aboutMeRef} className="scroll-section" id='AboutMe'>
                 <motion.div 
