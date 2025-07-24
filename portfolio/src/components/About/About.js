@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import { FiAward, FiMail, FiUser } from 'react-icons/fi';
 import { FaCode } from 'react-icons/fa';
+import { HiArrowDownCircle } from 'react-icons/hi2';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 import faith from './../assets/FAITH-Colleges-Logo.png'
@@ -190,6 +191,7 @@ export const About = () => {
                       </div> */}
 
                       <div className="about-contact">
+                        <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><HiArrowDownCircle size={25}/>Download CV</button></a>
                         <a href="#Contact"><button><FiMail size={25} />Work with Me</button></a>
                       </div>
                     </div>

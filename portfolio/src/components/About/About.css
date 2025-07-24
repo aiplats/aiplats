@@ -261,6 +261,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .about-contact h3 {
@@ -269,7 +270,7 @@
 }
 
 .about-contact a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .about-contact button {
@@ -278,7 +279,7 @@
     gap: 10px;
     background: linear-gradient(135deg, #FDCB6E, #E17055);
     color: white;
-    padding: 18px 30px;
+    padding: 15px 20px;
     border: none;
     border-radius: 12px;
     cursor: pointer;

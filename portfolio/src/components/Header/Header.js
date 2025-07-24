@@ -66,7 +66,7 @@ export const Header = () => {
                     <h3>Connect with me!</h3>
                     <div className="grid-right-buttons">
                       <a href="#About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></a>
-                      <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a>
+                      {/* <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a> */}
                     </div>
                   </div>
                 </div>
