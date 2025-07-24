@@ -284,7 +284,6 @@
   }
 
   .grid-right button {
-    width: 100%;
     max-width: 250px;
     margin: 0 auto;
   }
@@ -302,7 +301,7 @@
   }
 
   .grid-right button {
-    font-size: medium;
-    padding: 12px 25px;
+    font-size: small;
+    padding: 8px 15px;
   }
 }

@@ -205,13 +205,7 @@ export const projects = [
     techstack: ["HTML5", "CSS3", "React", "JavaScript", "MongoDB", "Node.js", "Express.js"],
     link: "https://mahika-cafe.vercel.app/",
   },
-  {
-    project: historiko,
-    name: "Historiko (Freelance Project)",
-    desc: "A Learning Management System (LMS) for Araling Panlipunan, specifically tailored for high school students to enhance historical and civic education.",
-    techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase", "Node.js"],
-    link: "https://historiko.vercel.app/",
-  },
+  
   {
     project: taalert,
     name: "TaAlert",
@@ -219,6 +213,16 @@ export const projects = [
     techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase"],
     link: "https://capstone-eta-ten.vercel.app/"
   }
+]
+
+export const freelance = [
+  {
+    project: historiko,
+    name: "Historiko",
+    desc: "A Learning Management System (LMS) for Araling Panlipunan, with incorporated gamified quizzes, flashcards, and progress— boosting student engagement.",
+    techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase", "Node.js"],
+    link: "https://historiko.vercel.app/",
+  },
 ]
 
 export const services = [

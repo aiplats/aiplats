@@ -16,6 +16,7 @@ import certificate from './../assets/icons8-certificate-48.png'
 import github from './../assets/icons8-githubw-50.png'
 import instagram from './../assets/icons8-instagram-48.png'
 import facebook from './../assets/icons8-facebook-48.png'
+import linkedin from './../assets/icons8-linkedin-48.png'
 
 import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
@@ -137,9 +138,19 @@ export const About = () => {
                     </a>
                   </li>
                 </ul>
+
+                <div className="socials">
+                  <div className="social-container">
+                    <h3>Social Links</h3>
+                    <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
+                    <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
+                    <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
+                    <a href="https://www.linkedin.com/in/aiplats"><img src={linkedin} alt='linkedin'/></a>
+                  </div>
+                </div>
+                
               </div>
             </div>
-
 
             <div className="about-content" ref={contentContainerRef}>
               <div ref={aboutMeRef} className="scroll-section" id='AboutMe'>
@@ -171,15 +182,15 @@ export const About = () => {
                         <figcaption>BS Information Technology<br/>A.Y. 2021 - 2025</figcaption>
                       </figure>
 
-                      <div className="socials">
+                      {/* <div className="socials">
                         <h3>Social Links</h3>
                         <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
                         <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
                         <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
-                      </div>
+                      </div> */}
 
                       <div className="about-contact">
-                        <a href="#Contact"><button><FiMail size={25} />Contact</button></a>
+                        <a href="#Contact"><button><FiMail size={25} />Work with Me</button></a>
                       </div>
                     </div>
                   </div>
@@ -210,7 +221,7 @@ export const About = () => {
                         <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
                           </motion.div>
                       ))}
                       </div>
@@ -248,7 +259,7 @@ export const About = () => {
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
                           </motion.div>
                         ))}
                       </div>
@@ -266,7 +277,7 @@ export const About = () => {
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
                           </motion.div>
                         ))}
                       </div>
@@ -304,7 +315,7 @@ export const About = () => {
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.05, duration: 0.7 }}>
-                              <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                              <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
                           </motion.div>
                         ))}
                       </div>
@@ -322,7 +333,7 @@ export const About = () => {
                           <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} />
+                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
                           </motion.div>
                         ))}
                       </div>

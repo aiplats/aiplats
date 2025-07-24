@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { socialContact } from '../assets/assets';
 
 import { FiMail } from 'react-icons/fi';
+import { RiSendPlaneFill } from 'react-icons/ri';
 
 export const Contact = () => {
   const form = useRef();
@@ -35,7 +36,7 @@ export const Contact = () => {
     <>
         <div className="main-contact-page" id='Contact'>
             <div className="contact-container">
-                <h1>GET IN TOUCH <br />WITH ME!</h1>
+                <h1>GET IN TOUCH <br />WITH <span className="highlight">ALEX!</span></h1>
                 <hr />
                 <h2>I’m always open to exploring new opportunities and engaging in innovative projects. Let’s connect and discuss how we can turn your ideas into impactful solutions.</h2>
 
@@ -49,7 +50,7 @@ export const Contact = () => {
                         <input className="contact-details" placeholder="Subject" name="subject" required />
                         <input className="contact-details" placeholder="Message" name="message" required />
 
-                        <button type="submit"><FiMail size={25} />Send Message</button>
+                        <button type="submit"><RiSendPlaneFill  size={25} />Send Message</button>
                     </div>
 
                     <div className="contact-vertical-line"></div>

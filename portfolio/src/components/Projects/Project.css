@@ -10,17 +10,26 @@
   text-align: center;
 }
 
+.project-container h2 {
+  text-align: center;
+  font-size: 28px;
+  padding: 2%;
+}
+
 .project-container {
   padding: 10px 40px;
 }
 
 .project-sub-container {
   display: flex;
+  justify-content: center;
   gap: 20px; 
 }
 
 .project-content {
   position: relative;
+  width: 100%;
+  max-width: 600px;
   flex: 1;
   overflow: hidden;
   border-radius: 10px;
@@ -245,6 +254,10 @@
   .main-project-page h1 {
     font-size: 40px;
     margin-bottom: 50px;
+  }
+  
+  .project-container h2 {
+    font-size: 22px;
   }
   
   .project-details {
