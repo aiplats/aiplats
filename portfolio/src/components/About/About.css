@@ -625,9 +625,15 @@
         padding: 0%;
     }
 
+    .about-info-overflow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .about-info-overflow img {
         display: flex;
-        width: 100%;
+        width: 65%;
         border-radius: 14px;
         box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
     }
@@ -667,8 +673,18 @@
         display: none;
     }
 
+    .about-contact {
+        display: block;
+        margin: 0 auto;;
+    }
+
     .about-contact button {
         padding: 10px 15px;
+        margin-bottom: 15px;
+    }
+
+    .skill-category {
+        width: 28%;
     }
 
     .skills-content {
@@ -739,6 +755,10 @@
         align-self: center;
         padding: 5px 10px;
     }
+
+    .about-content::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -776,6 +796,7 @@
 
     .about-contact button {
         padding: 8px 13px;
+        margin-bottom: 10px;
     }
 
     .skills-content {
@@ -825,8 +846,9 @@
         min-width: 60px;
     }
     
-    .cert-details h2 {
+    .cert-details {
         font-size: 1rem;
+        text-align: center;
     }
     
     .cert-details h3 {

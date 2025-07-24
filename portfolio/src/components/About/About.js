@@ -214,7 +214,7 @@ export const About = () => {
                 <div className="skills-content">
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={frontend} alt='frontend'/>
+                      <img src={frontend} className="skill-category" alt='frontend'/>
                       <p>Front-End</p>
                       <div className="skills-icon">
                       {skillsIcons
@@ -252,7 +252,7 @@ export const About = () => {
                     </div>
 
                     <div className="category-container">
-                      <img src={frontend} alt='frontend'/>
+                      <img src={frontend} className="skill-category" alt='frontend'/>
                       <p>Back-End</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -270,7 +270,7 @@ export const About = () => {
 
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={server} alt='server'/>
+                      <img src={server} className="skill-category" alt='server'/>
                       <p>Database</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -308,7 +308,7 @@ export const About = () => {
                     </div>
 
                     <div className="category-container">
-                      <img src={web} alt='web'/>
+                      <img src={paint} className="skill-category" alt='paint'/>
                       <p>Design</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -326,7 +326,7 @@ export const About = () => {
 
                   <div className="skills-grid">
                     <div className="category-container">
-                      <img src={paint} alt='paint'/>
+                      <img src={web} className="skill-category" alt='web'/>
                       <p>DevOps & Tools</p>
                       <div className="skills-icon">
                         {skillsIcons
@@ -376,7 +376,7 @@ export const About = () => {
                         <div className="cert-details">
                           <h2>{cert.title}</h2>
                           <h2>{cert.issuer} {cert.company}</h2>
-                          <h3><b>{cert.credential}</b> {cert.id}</h3>
+                          <h3>{cert.credential} {cert.id}</h3>
                           <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button><HiArrowTopRightOnSquare size={30}/>View Certificate</button></a>
                         </div>
                       </div>
