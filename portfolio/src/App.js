@@ -1,28 +1,38 @@
 import './App.css';
-
-import { FiMail } from 'react-icons/fi';
-
 import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
 import { About } from './components/About/About';
-import { Project } from './components/Projects/Project';
-import { Contact } from './components/Contact/Contact';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
-import { Services } from './components/Services/Services';
+
+import { Suspense, lazy } from 'react';
+
+const Project = lazy(() => import('./components/Projects/Project'));
+const Services = lazy(() => import('./components/Services/Services'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
-      <Header />
-      <About />
-      <Project />
-      <Services />
-      <Contact />
-      <ScrollToTop />
-      <Footer />
-    </>
+
+      <main aria-label="Main content">
+        <Header />
+        <About />
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Project />
+          <Services />
+          <Contact />
+        </Suspense>
+        
+        <ScrollToTop />
+      </main>
+
+      <footer aria-label="Footer">
+        <Footer />
+      </footer>
+    </div>
   );
 }
 

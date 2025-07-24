@@ -4,7 +4,7 @@ import { projects, freelance, skillsIcons } from '../assets/assets'
 
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
 
-export const Project = () => {
+const Project = () => {
 
   const getIconByTitle = (title) => {
     // Normalize both the input title and skill titles for comparison
@@ -106,3 +106,5 @@ export const Project = () => {
     </>
   )
 }
+
+export default Project;

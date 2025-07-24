@@ -2,7 +2,7 @@ import React from 'react'
 import './Services.css'
 import { services } from './../assets/assets'
 
-export const Services = () => {
+const Services = () => {
   return (
     <>
         <div className="main-services-page" id="Services">
@@ -32,3 +32,5 @@ export const Services = () => {
     </>
   )
 }
+
+export default Services;

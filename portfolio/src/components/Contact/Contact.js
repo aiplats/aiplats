@@ -6,7 +6,7 @@ import { socialContact } from '../assets/assets';
 import { FiMail } from 'react-icons/fi';
 import { RiSendPlaneFill } from 'react-icons/ri';
 
-export const Contact = () => {
+const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -71,3 +71,5 @@ export const Contact = () => {
     </>
   )
 }
+
+export default Contact;
