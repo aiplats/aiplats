@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './GitHubContribution.css'
 
+import { HiArrowDownCircle } from 'react-icons/hi2';
+import { FiMail } from 'react-icons/fi';
+
 function GitHubContributions() {
 
   const [calendar, setCalendar] = useState(null);
@@ -103,14 +106,17 @@ function GitHubContributions() {
 
   return (
     <div>
-      <h3>GitHub Contributions</h3>
-      <p>Total: {calendar.totalContributions}</p>
+        <div className="contribution-column">
+            <div className="contribution-details">
+                <h2>GitHub Contributions</h2>
+                <p>Total: {calendar.totalContributions}</p>
+            </div>
 
-        <select value={year} onChange={(e) => setYear(Number(e.target.value))}>
-          {[2025, 2024, 2023, 2022].map((y) => (
-            <option key={y} value={y}>{y}</option>
-          ))}
-        </select>
+            <div className="about-contact">
+                <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><HiArrowDownCircle size={25}/>Download CV</button></a>
+                <a href="#Contact"><button><FiMail size={25} />Work with Me</button></a>
+            </div>
+        </div>
 
       <div className="contribution-calendar">
         {calendar.weeks.map((week, i) => (
@@ -130,6 +136,12 @@ function GitHubContributions() {
             ))}
           </div>
         ))}
+
+        <select value={year} onChange={(e) => setYear(Number(e.target.value))}>
+          {[2025, 2024, 2023, 2022].map((y) => (
+            <option key={y} value={y}>{y}</option>
+          ))}
+        </select>
       </div>
     </div>
   );

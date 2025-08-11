@@ -176,27 +176,8 @@ export const About = () => {
                       <p>"I am a dedicated Full-Stack Web Developer with a strong focus on building responsive, user-centric web applications using modern technologies, particularly React. I’ve delivered diverse projects for clients and continuously expand my skills through ongoing development. With experience across the full development lifecycle—from intuitive UI design to robust backend architecture—I create end-to-end solutions that align with both user needs and business goals."</p>
                     </div>
 
-                    <GitHubContributions />
-
                     <div className="about-profile">
-                      <figure className="faith-div">
-                        <img src={faith} alt="faith logo"/>
-                        <br />
-                        <br />
-                        <figcaption>BS Information Technology<br/>A.Y. 2021 - 2025</figcaption>
-                      </figure>
-
-                      {/* <div className="socials">
-                        <h3>Social Links</h3>
-                        <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
-                        <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
-                        <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
-                      </div> */}
-
-                      <div className="about-contact">
-                        <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><HiArrowDownCircle size={25}/>Download CV</button></a>
-                        <a href="#Contact"><button><FiMail size={25} />Work with Me</button></a>
-                      </div>
+                      <GitHubContributions />
                     </div>
                   </div>
                 </div>

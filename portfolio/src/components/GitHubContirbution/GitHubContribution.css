@@ -1,9 +1,21 @@
+.contribution-column { 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: -20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Calendar Layout */
 .contribution-calendar {
   display: flex;
   flex-direction: row; /* Weeks side-by-side horizontally */
+  flex-wrap: nowrap;
   gap: 3px;
   align-items: flex-start;
-  margin-bottom: 50px;
+  overflow-x: auto; /* Prevents squishing on smaller screens */
+  padding-bottom: 8px;
 }
 
 .week {
@@ -17,8 +29,106 @@
   transition: transform 0.2s ease;
   width: 12px;
   height: 12px;
+  flex-shrink: 0;
 }
 
 .day:hover {
   transform: scale(1.2);
+}
+
+.contribution-details {
+  min-width: 220px;
+  flex: 1;
+}
+
+.about-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-contact button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Dropdown Year Selector */
+select {
+  padding: 5px 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #161b22;
+  color: white;
+  margin-left: 15px;
+}
+
+/* ======= MEDIA QUERIES ======= */
+
+/* Large desktops (wider than 1440px) */
+@media (min-width: 1440px) {
+  .contribution-column {
+    gap: 120px;
+  }
+  .day {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Standard desktops & laptops */
+@media (max-width: 1439px) and (min-width: 1025px) {
+  .contribution-column {
+    gap: 80px;
+  }
+}
+
+/* Tablets / iPads */
+@media (max-width: 1024px) {
+  .contribution-column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .contribution-calendar {
+    overflow-x: scroll;
+  }
+}
+
+/* Large mobile phones */
+@media (max-width: 768px) {
+  .contribution-details h2 {
+    font-size: 1.3rem;
+  }
+  .about-contact button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .contribution-column {
+    gap: 20px;
+  }
+  .day {
+    width: 10px;
+    height: 10px;
+  }
+  .about-contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  select {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Extra-small mobile (less than 350px) */
+@media (max-width: 350px) {
+  .day {
+    width: 8px;
+    height: 8px;
+  }
 }
