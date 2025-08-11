@@ -45,7 +45,7 @@ body {
 }
 
 .contribution-details select {
-    display: none;
+  display: none;
 }
 
 .about-contact {
@@ -110,8 +110,8 @@ select {
   }
 
   .contribution-details select {
-    margin-left: 0;
-    margin-top: 5px;
+    display: flex;
+    margin-left: 75px;
   }
 
   .contribution-calendar {
