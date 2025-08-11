@@ -24,6 +24,7 @@ import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import web from './../assets/icons8-webw-50.png'
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
+import GitHubContributions from '../GitHubContirbution/GitHubContribution';
 
 export const About = () => {
 
@@ -174,6 +175,8 @@ export const About = () => {
 
                       <p>"I am a dedicated Full-Stack Web Developer with a strong focus on building responsive, user-centric web applications using modern technologies, particularly React. I’ve delivered diverse projects for clients and continuously expand my skills through ongoing development. With experience across the full development lifecycle—from intuitive UI design to robust backend architecture—I create end-to-end solutions that align with both user needs and business goals."</p>
                     </div>
+
+                    <GitHubContributions />
 
                     <div className="about-profile">
                       <figure className="faith-div">

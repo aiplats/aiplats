@@ -1,0 +1,24 @@
+.contribution-calendar {
+  display: flex;
+  flex-direction: row; /* Weeks side-by-side horizontally */
+  gap: 3px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.week {
+  display: flex;
+  flex-direction: column; /* Days stacked vertically inside each week */
+  gap: 3px;
+}
+
+.day {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 12px;
+  height: 12px;
+}
+
+.day:hover {
+  transform: scale(1.2);
+}
