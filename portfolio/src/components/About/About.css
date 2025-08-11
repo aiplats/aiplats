@@ -254,7 +254,9 @@
 }
 
 .socials img:hover {
-    transform: scale(1.1) rotate(10deg);
+    transform: scale(1.1);
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 123, 255, 0.5));
+    transition: all 0.3s ease;
 }
 
 .about-contact {
