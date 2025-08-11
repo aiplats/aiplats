@@ -275,6 +275,10 @@
     text-align: center;
     padding-top: 15px;
   }
+  
+  .grid-right h3 {
+    font-size: 18px;
+  }
 
   .grid-right-buttons {
     justify-content: center;

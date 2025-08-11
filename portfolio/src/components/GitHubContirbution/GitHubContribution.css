@@ -44,6 +44,10 @@ body {
   flex: 1;
 }
 
+.contribution-details select {
+    display: none;
+}
+
 .about-contact {
   display: flex;
   flex-wrap: wrap;
