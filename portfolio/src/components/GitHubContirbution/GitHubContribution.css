@@ -1,3 +1,8 @@
+/* Prevent the entire page from scrolling horizontally */
+body {
+  overflow-x: hidden;
+}
+
 .contribution-column { 
   display: flex;
   flex-wrap: wrap;
@@ -10,17 +15,15 @@
 /* Calendar Layout */
 .contribution-calendar {
   display: flex;
-  flex-direction: row; /* Weeks side-by-side horizontally */
-  flex-wrap: nowrap;
+  flex-direction: row;
   gap: 3px;
   align-items: flex-start;
-  overflow-x: auto; /* Prevents squishing on smaller screens */
-  padding-bottom: 8px;
+  flex-wrap: nowrap;
 }
 
 .week {
   display: flex;
-  flex-direction: column; /* Days stacked vertically inside each week */
+  flex-direction: column;
   gap: 3px;
 }
 
@@ -65,70 +68,77 @@ select {
 
 /* ======= MEDIA QUERIES ======= */
 
-/* Large desktops (wider than 1440px) */
-@media (min-width: 1440px) {
-  .contribution-column {
-    gap: 120px;
-  }
-  .day {
-    width: 14px;
-    height: 14px;
-  }
-}
-
-/* Standard desktops & laptops */
-@media (max-width: 1439px) and (min-width: 1025px) {
-  .contribution-column {
-    gap: 80px;
-  }
-}
-
-/* Tablets / iPads */
-@media (max-width: 1024px) {
+/* Mobile phones */
+@media (max-width: 768px) {
   .contribution-column {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
   }
-  .contribution-calendar {
-    overflow-x: scroll;
-  }
-}
 
-/* Large mobile phones */
-@media (max-width: 768px) {
-  .contribution-details h2 {
-    font-size: 1.3rem;
+  .about-contact {
+    order: -1; 
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
   }
+
   .about-contact button {
-    font-size: 0.85rem;
-    padding: 6px 10px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .about-contact select {
+    display: flex;
+    padding: 4px 8px;
+  }
+
+  .contribution-details {
+    flex-direction: column;
+    align-items: center;
+    order: 0; 
+    margin-bottom: 15px;
+  }
+
+  .contribution-details h2 {
+    font-size: 18px;
+  }
+
+  .contribution-details select {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .contribution-calendar {
+    max-width: 90vw;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-top: 10px;
   }
 }
 
 /* Small mobile phones */
 @media (max-width: 480px) {
-  .contribution-column {
-    gap: 20px;
-  }
   .day {
     width: 10px;
     height: 10px;
   }
-  .about-contact {
-    flex-direction: column;
-    align-items: stretch;
+  .contribution-calendar {
+    max-width: 85vw;
   }
-  select {
-    margin-left: 0;
-    margin-top: 10px;
+  .contribution-calendar select {
+    display: none;
   }
 }
 
-/* Extra-small mobile (less than 350px) */
+/* Extra small mobile */
 @media (max-width: 350px) {
   .day {
     width: 8px;
     height: 8px;
+  }
+  .contribution-calendar {
+    max-width: 80vw;
   }
 }

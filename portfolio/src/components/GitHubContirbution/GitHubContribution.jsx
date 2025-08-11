@@ -110,6 +110,12 @@ function GitHubContributions() {
             <div className="contribution-details">
                 <h2>GitHub Contributions</h2>
                 <p>Total: {calendar.totalContributions}</p>
+
+                <select value={year} onChange={(e) => setYear(Number(e.target.value))}>
+                  {[2025, 2024, 2023, 2022].map((y) => (
+                    <option key={y} value={y}>{y}</option>
+                  ))}
+                </select>
             </div>
 
             <div className="about-contact">
