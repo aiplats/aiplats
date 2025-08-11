@@ -749,13 +749,17 @@
         align-items: center;
     }
 
+    .cert-details h2 {
+        font-size: 1rem;
+    }
+
     .cert-details h3 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .cert-details button {
         align-self: center;
-        padding: 5px 10px;
+        padding: 5px 8px;
     }
 
     .about-content::-webkit-scrollbar {
@@ -854,12 +858,12 @@
     }
     
     .cert-details h3 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .cert-details button {
-        padding: 5px 10px;
-        font-size: 0.9rem;
+        padding: 5px 5px;
+        font-size: 0.8rem;
     }
 }
 
