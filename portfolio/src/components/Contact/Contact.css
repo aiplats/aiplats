@@ -139,6 +139,10 @@
     gap: 20px;
 }
 
+.contact-icons a {
+    text-decoration: none;
+}
+
 .personal-deets {
     display: flex;
     align-items: center;

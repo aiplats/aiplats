@@ -58,12 +58,17 @@ const Contact = () => {
                     <div className="contact-icons">
                         {socialContact
                         .map((contact, index) => (
-                            <div key={index} className="personal-deets">
-                                <img src={contact.icon} alt='contact-icon'/>
-                                <p>{contact.name}</p>
-                            </div>
+                            <a 
+                              key={index} 
+                              className="personal-deets" 
+                              href={contact.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                            >
+                              <img src={contact.icon} alt='contact-icon'/>
+                              <p>{contact.name}</p>
+                            </a>
                         ))}
-                        
                     </div>
                 </form>
             </div>

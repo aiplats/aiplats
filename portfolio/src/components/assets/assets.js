@@ -185,10 +185,12 @@ export const socialContact = [
   {
     icon: whatsapp,
     name: "Alexander Isaac Platon",
+    link: "https://wa.me/639603814668"
   },
   {
     icon: gmail,
     name: "platon.alexanderip@gmail.com",
+    link: "mailto:platon.alexanderip@gmail.com?"
   },
   {
     icon: map,
