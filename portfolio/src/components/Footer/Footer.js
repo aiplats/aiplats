@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import aiplatslogo from './../assets/aiplatslogo.jpeg'
 
 import linkedin from './../assets/icons8-linkedin-48.png'
 import github from './../assets/icons8-white-github-50.png'
@@ -10,7 +11,10 @@ export const Footer = () => {
         <footer>
             <div className="main-footer">
                 <div className="footer-container">
-                    <div class="footer-name">© 2025 aiplats. All rights reserved.</div>
+                    <div class="footer-name">
+                      <img src={aiplatslogo} alt='aiplats logo' /> &nbsp;
+                      © 2025 aiplats. All rights reserved.
+                    </div>
 
                     <div class="footer-links">
                       <a href="#About">About</a> | 
