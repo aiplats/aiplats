@@ -19,6 +19,9 @@ body {
   gap: 3px;
   align-items: flex-start;
   flex-wrap: nowrap;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 10px 10px 10px 10px;
 }
 
 .week {
@@ -129,7 +132,7 @@ select {
     height: 10px;
   }
   .contribution-calendar {
-    max-width: 85vw;
+    max-width: 81vw;
   }
   .contribution-calendar select {
     display: none;
