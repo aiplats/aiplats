@@ -44,6 +44,7 @@ import postgresql from './../assets/icons8-postgresql-48.png'
 import mahikacafe from './../assets/mahikacafe.png'
 import historiko from './../assets/historiko.png'
 import taalert from './../assets/taalert.png'
+import acres from './../assets/acres.png'
 
 
 export const skillsIcons = [
@@ -224,6 +225,13 @@ export const freelance = [
     desc: "A Learning Management System (LMS) for Araling Panlipunan, with incorporated gamified quizzes, flashcards, and progress— boosting student engagement.",
     techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase", "Node.js"],
     link: "https://historiko.vercel.app/",
+  },
+  {
+    project: acres,
+    name: "Alliance Core Real Estate Services",
+    desc: "A Professional Real Estate Website show casting exclusive listings and partner developers.",
+    techstack: ["HTML5", "CSS3", "React", "JavaScript"],
+    link: "https://alliancecore-res.vercel.app/",
   },
 ]
 
