@@ -118,7 +118,7 @@ select {
   }
 
   .contribution-calendar {
-    max-width: 90vw;
+    max-width: 80vw;
     overflow-x: auto;
     padding-bottom: 6px;
     margin-top: 10px;
@@ -132,7 +132,7 @@ select {
     height: 10px;
   }
   .contribution-calendar {
-    max-width: 80vw;
+    max-width: 78vw;
   }
   .contribution-calendar select {
     display: none;
