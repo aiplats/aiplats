@@ -132,7 +132,7 @@ select {
     height: 10px;
   }
   .contribution-calendar {
-    max-width: 81vw;
+    max-width: 80vw;
   }
   .contribution-calendar select {
     display: none;
