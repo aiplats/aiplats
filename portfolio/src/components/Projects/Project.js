@@ -3,6 +3,7 @@ import './Project.css'
 import { projects, freelance, skillsIcons } from '../assets/assets'
 
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
+import { Contact } from '../Contact/Contact';
 
 function Project() {
 
@@ -102,6 +103,7 @@ function Project() {
           </div>
         </div>
 
+        <Contact />
       </div>
     </>
   )

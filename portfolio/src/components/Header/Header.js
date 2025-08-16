@@ -5,21 +5,23 @@ import { Link } from 'react-router-dom';
 import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2";
 
 import me from './../assets/IMG_3093.PNG'
-import { providedServices } from '../assets/assets';
-import { FaArrowRight } from 'react-icons/fa';
+import { freelance, projects, providedServices } from '../assets/assets';
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Contact } from '../Contact/Contact';
 
 export const Header = () => {
 
     const phrases = [
-        "Full-Stack Developer.", 
-
+      "Full-Stack Developer.", 
     ]
 
     const [text, setText] = useState('');
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+
+    const slides = [...projects, ...freelance].map(item => item.project);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const currentPhrase = phrases[phraseIndex];
@@ -46,6 +48,20 @@ export const Header = () => {
 
         return () => clearTimeout(timeout);
     }, [charIndex, isDeleting, phraseIndex]);
+
+    const nextSlide = () => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+      setCurrentIndex((prev) =>
+        prev === 0 ? slides.length - 1 : prev - 1
+      );
+    };
+
+    const goToSlide = (index) => {
+      setCurrentIndex(index);
+    };
 
   return (
     <>
@@ -96,6 +112,44 @@ export const Header = () => {
           <div className="sub-header-text">
             <Link to="/Services"><button><span>Need help on your website?<FaArrowRight size={20}/></span></button></Link>
             <Link to="/About"><button><span>Learn More About My Technology<FaArrowRight size={20}/></span></button></Link>
+          </div>
+        </div>
+
+        <div className="project-container">
+          <div className="text-tag">
+            <p>Project Showcase</p>
+            <h3>Where innovation meets execution—each project is a testament to my ability to transform ideas into functional, visually stunning digital experiences. By blending cutting-edge technology with user-centric design, I deliver solutions that not only captivate audiences but also drive measurable success. Explore my work to see how I turn challenges into opportunities and visions into reality.</h3>
+          </div>
+
+          <button className="arrow left" onClick={prevSlide}>
+            <FaChevronLeft size={30}/>
+          </button>
+
+          <div className="project-slide">
+            <img
+              src={slides[currentIndex]}
+              alt={`Slide ${currentIndex}`}
+              className="single-slide-image"
+            />
+          </div>
+
+          <button className="arrow right" onClick={nextSlide}>
+            <FaChevronRight size={30}/>
+          </button>
+
+          <div className="dots">
+            {[0, 1, 2].map((dotIndex) => (
+              <span
+                key={dotIndex}
+                className={`dot ${dotIndex === currentIndex % 3 ? 'active' : ''}`}
+                onClick={() => goToSlide(dotIndex)}
+              ></span>
+            ))}
+          </div>
+
+          <div className="project-buttons">
+            <h3>Want to know more?</h3>
+            <Link to="/Projects"><button><span><HiArrowRightEndOnRectangle size={30}/>Explore Projects</span></button></Link>
           </div>
         </div>
 

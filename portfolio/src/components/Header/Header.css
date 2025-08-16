@@ -219,7 +219,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px 80px 0px;
+  padding: 50px 0px 0px 0px;
   gap: 20px;
   width: 103%;
   text-align: center;
@@ -257,6 +257,110 @@
   gap: 10px; 
 }
 
+
+/* PROJECTS CONTAINER */
+
+.project-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.project-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px
+}
+
+.single-slide-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.arrow.left { left: 450px; }
+.arrow.right { right: 450px; }
+
+.arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+
+.project-buttons {
+  padding: 30px;
+  margin-top: 10px;
+}
+
+.project-buttons button {
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+}
+
+.project-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+  background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+.project-buttons button:active {
+  transform: translateY(-1px);
+}
+
+.project-buttons button span {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
 /* Tablet and iPad (Portrait & Landscape) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .fullscreen-header {
@@ -279,6 +383,11 @@
 
   .grid-right-buttons {
     gap: 20px;
+  }
+
+  .project-slide-item {
+    flex: 1 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 }
 
@@ -471,6 +580,17 @@
 
   .sub-header-text button span {
     font-size: 13px;
+  }
+
+  .single-slide-image {
+    max-width: 90%;
+  }
+
+  .arrow.left {
+    left: 5px;
+  }
+  .arrow.right {
+    right: 5px;
   }
 }
 
