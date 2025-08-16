@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <>
-        <div className="main-contact-page" id='Contact'>
+        <div className="main-contact-page">
             <div className="contact-container">
                 <h1>GET IN TOUCH <br />WITH <span className="highlight">ALEX!</span></h1>
                 <hr />

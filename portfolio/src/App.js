@@ -1,11 +1,12 @@
 import './App.css';
+import { Suspense, lazy } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
 import { About } from './components/About/About';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
-
-import { Suspense, lazy } from 'react';
 
 const Project = lazy(() => import('./components/Projects/Project'));
 const Services = lazy(() => import('./components/Services/Services'));
@@ -13,26 +14,38 @@ const Contact = lazy(() => import('./components/Contact/Contact'));
 
 function App() {
   return (
-    <div className="app">
+    <BrowserRouter basename='/'>
       <Navbar />
+      <ScrollToTop />
 
-      <main aria-label="Main content">
+        {/* Non-lazy routes */}
         <Header />
         <About />
+        <Contact />
 
-        <Suspense fallback={<div>Loading...</div>}>
-          <Project />
-          <Services />
-          <Contact />
-        </Suspense>
+        {/* Lazy-loaded routes wrapped in Suspense */}
+              <Routes>
+        <Route
+          path="/Projects"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Project />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Services"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Services />
+            </Suspense>
+          }
+        />
         
-        <ScrollToTop />
-      </main>
+      </Routes>
 
-      <footer aria-label="Footer">
-        <Footer />
-      </footer>
-    </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

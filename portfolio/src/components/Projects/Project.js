@@ -20,7 +20,7 @@ const Project = () => {
 
   return (
     <>
-      <div className="main-project-page" id='Projects'>
+      <div className="main-project-page" >
         <div className="project-container"> 
           <h1>PROJECTS</h1>
           <h2>01 - PERSONAL PROJECTS</h2>

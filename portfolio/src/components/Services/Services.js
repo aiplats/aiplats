@@ -5,7 +5,7 @@ import { services } from './../assets/assets'
 const Services = () => {
   return (
     <>
-        <div className="main-services-page" id="Services">
+        <div className="main-services-page">
             <div className="services-container">
                 <h1>SERVICES</h1>
                 <div className="service-tags">

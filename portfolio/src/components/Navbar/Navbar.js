@@ -1,5 +1,6 @@
 import React, { useState, useRef} from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 import linkedin from './../assets/icons8-linkedin-48.png'
 import whatsapp from './../assets/icons8-whatsapp-48.png'
 
@@ -36,28 +37,16 @@ export const Navbar = () => {
             <div className="navbar-right">
                 <ul>
                     <li className={activeSection === 'About' ? 'active' : ''}>
-                        <a href="#About" onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigationClick('About', 'About');
-                        }}>About</a>
+                        <Link to="/">About</Link>
                     </li>
                     <li className={activeSection === 'Projects' ? 'active' : ''}>
-                        <a href="#Projects" onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigationClick('Projects', 'Projects');
-                        }}>Projects</a>
+                        <Link to="/Projects">Projects</Link>
                     </li>
                     <li className={activeSection === 'Services' ? 'active' : ''}>
-                        <a href="#Services" onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigationClick('Services', 'Services');
-                        }}>Services</a>
+                        <Link to="/Services">Services</Link>
                     </li>
                     <li className={activeSection === 'Contact' ? 'active' : ''}>
-                        <a href="#Contact" onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigationClick('Contact', 'Contact');
-                        }}>Contact</a>
+                        <Link to="/Contact">Contact</Link>
                     </li>
                 </ul>
             </div>
@@ -74,28 +63,16 @@ export const Navbar = () => {
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
             <ul>
                 <li className={activeSection === 'About' ? 'active' : ''}>
-                    <a href="#About" onClick={(e) => {
-                        e.preventDefault();
-                        handleNavigationClick('About', 'About');
-                    }}>About</a>
+                    <Link to="/">About</Link>
                 </li>
                 <li className={activeSection === 'Projects' ? 'active' : ''}>
-                    <a href="#Projects" onClick={(e) => {
-                        e.preventDefault();
-                        handleNavigationClick('Projects', 'Projects');
-                    }}>Projects</a>
+                    <Link to="/Projects">Projects</Link>
                 </li>
                 <li className={activeSection === 'Services' ? 'active' : ''}>
-                        <a href="#Services" onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigationClick('Services', 'Services');
-                        }}>Services</a>
-                    </li>
+                    <Link to="/Services">Services</Link>
+                </li>
                 <li className={activeSection === 'Contact' ? 'active' : ''}>
-                    <a href="#Contact" onClick={(e) => {
-                        e.preventDefault();
-                        handleNavigationClick('Contact', 'Contact');
-                    }}>Contact</a>
+                    <Link to="/Contact">Contact</Link>
                 </li>
             </ul>
             
