@@ -36,6 +36,9 @@ export const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="navbar-right">
                 <ul>
+                    <li className={activeSection === 'Home' ? 'active' : ''}>
+                        <Link to="/">Home</Link>
+                    </li>
                     <li className={activeSection === 'About' ? 'active' : ''}>
                         <Link to="/">About</Link>
                     </li>
@@ -62,6 +65,9 @@ export const Navbar = () => {
 
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
             <ul>
+                <li className={activeSection === 'Home' ? 'active' : ''}>
+                    <Link to="/">Home</Link>
+                </li>
                 <li className={activeSection === 'About' ? 'active' : ''}>
                     <Link to="/">About</Link>
                 </li>

@@ -1,8 +1,9 @@
 import React from 'react'
 import './Services.css'
 import { services } from './../assets/assets'
+import { Contact } from '../Contact/Contact';
 
-const Services = () => {
+function Services() {
   return (
     <>
         <div className="main-services-page">
@@ -10,7 +11,7 @@ const Services = () => {
                 <h1>SERVICES</h1>
                 <div className="service-tags">
                     <h1>WHAT I PROVIDE</h1>
-                    <p>"As a passionate IT graduate, I offer a range of services in web development, software troubleshooting, and system support. Whether you're a small business or a startup, I'm excited to help bring ideas to life."</p>
+                    <p>"As a passionate developer, I offer a range of services in web development, software troubleshooting, and system support. Whether you're a small business or a startup, I'm excited to help bring ideas to life."</p>
                 </div>
 
                 <div className="services-grid">
@@ -29,6 +30,8 @@ const Services = () => {
                 </div>
             </div>
         </div>
+
+        <Contact />
     </>
   )
 }

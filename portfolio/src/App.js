@@ -5,26 +5,32 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
 import { About } from './components/About/About';
+import { Contact } from './components/Contact/Contact';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
 
 const Project = lazy(() => import('./components/Projects/Project'));
 const Services = lazy(() => import('./components/Services/Services'));
-const Contact = lazy(() => import('./components/Contact/Contact'));
 
 function App() {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter>
       <Navbar />
       <ScrollToTop />
 
-        {/* Non-lazy routes */}
-        <Header />
-        <About />
-        <Contact />
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={<Header />} />
 
-        {/* Lazy-loaded routes wrapped in Suspense */}
-              <Routes>
+        {/* Lazy-loaded pages */}
+        <Route
+          path="/About"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <About />
+            </Suspense>
+          }
+        />
         <Route
           path="/Projects"
           element={
@@ -41,7 +47,14 @@ function App() {
             </Suspense>
           }
         />
-        
+        <Route
+          path="/Contact"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <Contact />
+            </Suspense>
+          }
+        />
       </Routes>
 
       <Footer />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom';
 
 import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2";
 
@@ -61,11 +62,11 @@ export const Header = () => {
 
                 <div className="grid-right">
                   <div className="typing-block">
-                    <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
                     <h2>"Progress over Perfection"</h2>
-                    <h3>Connect with me!</h3>
+                    <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
                     <div className="grid-right-buttons">
-                      <a href="#About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></a>
+                      <Link to="/About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></Link>
+                      <Link to="/Projects"><button><span><HiArrowRightEndOnRectangle size={30}/>Explore Projects</span></button></Link>
                       {/* <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a> */}
                     </div>
                   </div>

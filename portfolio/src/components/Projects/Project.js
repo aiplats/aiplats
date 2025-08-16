@@ -4,7 +4,7 @@ import { projects, freelance, skillsIcons } from '../assets/assets'
 
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
 
-const Project = () => {
+function Project() {
 
   const getIconByTitle = (title) => {
     // Normalize both the input title and skill titles for comparison
