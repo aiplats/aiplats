@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2";
 
 import me from './../assets/IMG_3093.PNG'
+import { providedServices } from '../assets/assets';
+import { FaArrowRight } from 'react-icons/fa';
 
 export const Header = () => {
 
     const phrases = [
         "Full-Stack Developer.", 
-        "Front-End Developer.", 
-        "Back-End Developer.", 
-        "UI/UX Designer.", 
+
     ]
 
     const [text, setText] = useState('');
@@ -48,31 +48,56 @@ export const Header = () => {
 
   return (
     <>
-        <div className="header">
-            <div className="grid">
-                <div className="grid-left">
-                  <h1 className="fullscreen-header">ALEXANDER<br /> ISAAC <br />PLATON</h1>
+      <div className="header">
+        <div className="grid">
+            <div className="grid-left">
+              <h1 className="fullscreen-header">ALEXANDER<br /> ISAAC <br />PLATON</h1>
+            </div>
+            <div className="grid-center">
+              <div className="image-wrapper">
+                <img src={me} alt="Alex" />
+              </div>
+            </div>
+            <div className="grid-right">
+              <div className="typing-block">
+                <h2>"Progress over Perfection"</h2>
+                <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
+                <div className="grid-right-buttons">
+                  <Link to="/About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></Link>
+                  <Link to="/Projects"><button><span><HiArrowRightEndOnRectangle size={30}/>Explore Projects</span></button></Link>
+                  {/* <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a> */}
                 </div>
-
-                <div className="grid-center">
-                  <div className="image-wrapper">
-                    <img src={me} alt="Alex" />
-                  </div>
-                </div>
-
-                <div className="grid-right">
-                  <div className="typing-block">
-                    <h2>"Progress over Perfection"</h2>
-                    <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
-                    <div className="grid-right-buttons">
-                      <Link to="/About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></Link>
-                      <Link to="/Projects"><button><span><HiArrowRightEndOnRectangle size={30}/>Explore Projects</span></button></Link>
-                      {/* <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a> */}
-                    </div>
-                  </div>
-                </div>
+              </div>
             </div>
         </div>
+        
+        <div className="container">
+          <div className="text-tag">
+            <p>Insights</p>
+            <h3>Combining technical skill and creative design, I build dynamic, visually engaging, and optimized web solutions that connect with audiences and drive results.</h3>
+          </div>
+          <div className="sub-container">
+            <div className="sub-header">
+              {providedServices.map((providedServices, index) => (
+                <div key={index} className="services">
+                  <div className="services-icon">
+                    <img src={providedServices.icon} alt={providedServices.name} />
+                  </div>
+                  <div className="services-details">
+                    <h3>{providedServices.name}</h3>
+                    <p>{providedServices.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="sub-header-text">
+            <Link to="/Services"><button><span>Need help on your website?<FaArrowRight size={20}/></span></button></Link>
+            <Link to="/About"><button><span>Learn More About My Technology<FaArrowRight size={20}/></span></button></Link>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

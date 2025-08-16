@@ -40,7 +40,7 @@ export const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li className={activeSection === 'About' ? 'active' : ''}>
-                        <Link to="/">About</Link>
+                        <Link to="/About">About</Link>
                     </li>
                     <li className={activeSection === 'Projects' ? 'active' : ''}>
                         <Link to="/Projects">Projects</Link>
@@ -69,7 +69,7 @@ export const Navbar = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li className={activeSection === 'About' ? 'active' : ''}>
-                    <Link to="/">About</Link>
+                    <Link to="/About">About</Link>
                 </li>
                 <li className={activeSection === 'Projects' ? 'active' : ''}>
                     <Link to="/Projects">Projects</Link>

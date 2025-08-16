@@ -15,7 +15,7 @@ import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import tailwind from './../assets/icons8-tailwind-css-48.png'
-import web from './../assets/icons8-webw-50.png'
+import seo from './../assets/icons8-seo-60.png'
 import api from './../assets/icons8-api-64.png'
 
 import responsive from './../assets/icons8-responsive-design-50.png'
@@ -235,6 +235,30 @@ export const freelance = [
   },
 ]
 
+export const providedServices = [
+  {
+    icon: frontend,
+    name: "Front-End Development",
+    desc: "Creating visually appealing, interactive, and responsive websites using HTML, CSS, JavaScript, and modern frameworks."
+  },
+  {
+    icon: server,
+    name: "Back-End Development",
+    desc: "Building secure, scalable, and efficient server-side applications to power dynamic web experiences."
+  },
+  {
+    icon: responsive,
+    name: "UI/UX Design",
+    desc: "Designing intuitive and engaging interfaces that enhance user satisfaction and accessibility."
+  },
+  {
+    icon: seo,
+    name: "Basic SEO",
+    desc: "Optimizing websites for better visibility and ranking on search engines through best practices."
+  }, 
+
+]
+
 export const services = [
   {
     number: "01",
@@ -257,7 +281,7 @@ export const services = [
   {
     number: "04",
     icon: paint,
-    name: "UI/UX Design",
+    name: "Web Design",
     desc: "Create visually appealing and user-centered designs using Framer, WordPress and Tailwind CSS"
   }
 ]
