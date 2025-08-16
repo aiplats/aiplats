@@ -407,9 +407,69 @@
     margin: 0 auto;
   }
 
-  /* Mobile services layout */
+  .text-tag {
+    font-size: 14px;
+  }
+
+  .text-tag p {
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-size: 13px;
+  }
+
+  .text-tag h3 {
+    width: 70%;
+  }
+
+  .container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sub-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .services {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
+    padding: 20px;
+    max-width: 250px;
+  }
+
+  .services-icon img {
+    max-width: 60px;
+  }
+
+  .services-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .services-details p {
+    font-size: 0.9rem;
+  }
+
+  .sub-header-text {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .sub-header-text button {
+    padding: 8px 10px;
+  }
+
+  .sub-header-text button span {
+    font-size: 13px;
   }
 }
 
