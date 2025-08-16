@@ -65,6 +65,8 @@
     padding: 20px;
     border: 2px solid white;
     border-radius: 50px;
+    position: relative;
+    left: 100px;
     /* Add subtle background to the navigation container */
     background-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
@@ -137,6 +139,37 @@
 
 .navbar-righter img:hover {
     transform: translateY(-5px);
+}
+
+.curriculum-vitae button {
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+}
+
+.curriculum-vitae button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+    background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+.curriculum-vitae button:active {
+    transform: translateY(-1px);
+}
+
+.curriculum-vitae button span {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
 /* Mobile menu button */

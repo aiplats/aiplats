@@ -7,6 +7,7 @@ import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2"
 import me from './../assets/IMG_3093.PNG'
 import { providedServices } from '../assets/assets';
 import { FaArrowRight } from 'react-icons/fa';
+import { Contact } from '../Contact/Contact';
 
 export const Header = () => {
 
@@ -97,6 +98,8 @@ export const Header = () => {
             <Link to="/About"><button><span>Learn More About My Technology<FaArrowRight size={20}/></span></button></Link>
           </div>
         </div>
+
+        <Contact />
       </div>
     </>
   )

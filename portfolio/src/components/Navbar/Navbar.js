@@ -2,8 +2,7 @@ import React, { useState, useRef} from 'react'
 import './Navbar.css'
 import aiplatslogo from './../assets/aiplatslogo.jpeg'
 import { Link } from 'react-router-dom'
-import linkedin from './../assets/icons8-linkedin-48.png'
-import whatsapp from './../assets/icons8-whatsapp-48.png'
+import { HiArrowDownCircle } from 'react-icons/hi2';
 
 export const Navbar = () => {
 
@@ -55,6 +54,10 @@ export const Navbar = () => {
                 </ul>
             </div>
 
+            <div className="curriculum-vitae">
+                <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><HiArrowDownCircle size={30} style={{marginRight: '10px'}}/>Download CV</button></a>
+            </div>
+
             <div className="mobile-menu-button" onClick={toggleMobileMenu}>
                 <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
                     <span></span>
@@ -82,14 +85,6 @@ export const Navbar = () => {
                     <Link to="/Contact">Contact</Link>
                 </li>
             </ul>
-            
-            {/* Mobile Social Links */}
-            <div className="mobile-social">
-                <a href="https://www.linkedin.com/in/aiplats" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedin} alt="LinkedIn" style={{width: '40px', height: '40px'}}/>
-                </a>
-                <img src={whatsapp} alt="WhatsApp" style={{width: '40px', height: '40px'}}/>
-            </div>
         </div>
     </div>
     </>
