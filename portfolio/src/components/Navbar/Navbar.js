@@ -1,5 +1,6 @@
 import React, { useState, useRef} from 'react'
 import './Navbar.css'
+import aiplatslogo from './../assets/aiplatslogo.jpeg'
 import { Link } from 'react-router-dom'
 import linkedin from './../assets/icons8-linkedin-48.png'
 import whatsapp from './../assets/icons8-whatsapp-48.png'
@@ -29,9 +30,9 @@ export const Navbar = () => {
     <>
     <div className='main-nav'>
         <div className="navbar">
-            {/* <div className="navbar-left">
-                <p><a href="/">AIPLATS</a></p>
-            </div> */}
+            <div className="navbar-left">
+                <a href="/"><img src={aiplatslogo} style={{width: '50px', borderRadius: '50%'}} alt="aiplats logo"/></a>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="navbar-right">
