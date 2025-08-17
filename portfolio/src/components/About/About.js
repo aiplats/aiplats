@@ -25,6 +25,7 @@ import paint from './../assets/icons8-paint-50.png'
 import web from './../assets/icons8-webw-50.png'
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import GitHubContributions from '../GitHubContirbution/GitHubContribution';
+import { Contact } from '../Contact/Contact';
 
 export const About = () => {
 
@@ -374,7 +375,9 @@ export const About = () => {
 
           </div>
 
-        </div>                
+        </div>     
+
+        <Contact />           
       </div>
     </>
   )
