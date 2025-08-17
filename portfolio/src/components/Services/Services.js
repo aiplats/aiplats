@@ -14,7 +14,7 @@ function Services() {
         <div className="main-services-page">
             <div className="services-container">
                 <div className="service-tags">
-                    <h1>WHAT I PROVIDE</h1>
+                    <h1>WHAT <span className="highlight">ALEX</span> CAN PROVIDE</h1>
                     <p>"As a passionate developer, I offer a range of services in web development, software troubleshooting, and system support. Whether you're a small business or a startup, I'm excited to help bring ideas to life."</p>
                 </div>
 

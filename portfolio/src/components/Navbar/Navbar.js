@@ -8,9 +8,6 @@ export const Navbar = () => {
 
     const [activeSection, setActiveSection] = useState('About');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const aboutRef = useRef(null);
-    const projectsRef = useRef(null);
-    const contactRef = useRef(null);
     
     const handleNavigationClick = (id, section) => {
       setActiveSection(section);
@@ -60,7 +57,7 @@ export const Navbar = () => {
                             if (element) {
                               element.scrollIntoView({ behavior: 'smooth' });
                             }
-                          }}
+                          }}                    
                         >
                           Contact
                         </a>

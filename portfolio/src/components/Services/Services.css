@@ -12,35 +12,29 @@
   z-index: 2;
 }
 
-.services-container h1 {
-  text-align: center;
-  font-size: 30px;
-  margin-top: -70px;
-  color: #ffffff;
-}
-
 .service-tags {
-  text-align: center;
-  margin-bottom: 80px;
+  text-align: left;
+  margin-bottom: 50px;
 }
 
 .service-tags h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
   position: relative;
+  margin-top: -70px;
 }
 
 .service-tags h1::after {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 50%;
+  left: 30%;
   transform: translateX(-50%);
-  width: 35%;
+  width: 60%;
   height: 3px;
   background: linear-gradient(90deg, #ffd700, #ffed4a);
   border-radius: 2px;
@@ -50,15 +44,14 @@
   font-size: 1.2rem;
   line-height: 1.6;
   color: #b0b0b0;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 50px;
   font-weight: 300;
 }
 
 /* Timeline Layout */
 .services-timeline {
   position: relative;
-  padding: 40px 0;
 }
 
 /* Central Timeline Line */
@@ -300,7 +293,6 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px 0px 0px;
   gap: 20px;
   width: 100%;
   text-align: center;
@@ -319,14 +311,12 @@
 }
 
 .arrow-down {
-  margin-top: 10px;
   animation: bounceFade 1.5s infinite;
 }
 
 .arrow-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .service-buttons button {
