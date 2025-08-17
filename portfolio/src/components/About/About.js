@@ -3,16 +3,10 @@ import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
 import { motion } from 'framer-motion';
 
-import { FiAward, FiMail, FiUser } from 'react-icons/fi';
+import { FiAward, FiUser } from 'react-icons/fi';
 import { FaCode } from 'react-icons/fa';
-import { HiArrowDownCircle } from 'react-icons/hi2';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
-import faith from './../assets/FAITH-Colleges-Logo.png'
-
-import profile from './../assets/icons8-profile-48.png'
-import skills from './../assets/icons8-skills-48.png'
-import certificate from './../assets/icons8-certificate-48.png'
 
 import github from './../assets/icons8-githubw-50.png'
 import instagram from './../assets/icons8-instagram-48.png'
@@ -27,7 +21,7 @@ import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import GitHubContributions from '../GitHubContirbution/GitHubContribution';
 import { Contact } from '../Contact/Contact';
 
-export const About = () => {
+function About() {
 
   const [activeSection, setActiveSection] = useState('AboutMe');
   const [isScrolling, setIsScrolling] = useState(false);
@@ -384,3 +378,5 @@ export const About = () => {
     </>
   )
 }
+
+export default About;

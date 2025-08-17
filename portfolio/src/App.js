@@ -4,13 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
-import { About } from './components/About/About';
-import { Contact } from './components/Contact/Contact';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
 
+const About = lazy(() => import('./components/About/About'));
 const Project = lazy(() => import('./components/Projects/Project'));
 const Services = lazy(() => import('./components/Services/Services'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
 
 function App() {
   return (
@@ -19,10 +19,8 @@ function App() {
       <ScrollToTop />
 
       <Routes>
-        {/* Home Page */}
         <Route path="/" element={<Header />} />
 
-        {/* Lazy-loaded pages */}
         <Route
           path="/About"
           element={
