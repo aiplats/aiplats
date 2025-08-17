@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom';
 
-import { HiArrowDownCircle, HiArrowRightEndOnRectangle  } from "react-icons/hi2";
+import { HiArrowRightEndOnRectangle  } from "react-icons/hi2";
 
 import me from './../assets/IMG_3093.PNG'
+import Statistics from '../Statistics/Statistics';
 import { freelance, projects, providedServices } from '../assets/assets';
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Contact } from '../Contact/Contact';
@@ -116,6 +117,7 @@ export const Header = () => {
         </div>
 
         <div className="project-container">
+          <Statistics />
           <div className="text-tag">
             <p>Project Showcase</p>
             <h3>Where innovation meets execution—each project is a testament to my ability to transform ideas into functional, visually stunning digital experiences. By blending cutting-edge technology with user-centric design, I deliver solutions that not only captivate audiences but also drive measurable success. Explore my work to see how I turn challenges into opportunities and visions into reality.</h3>
