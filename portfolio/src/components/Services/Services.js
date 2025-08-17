@@ -1,5 +1,10 @@
 import React from 'react'
 import './Services.css'
+
+import { Link } from 'react-router-dom';
+import { FaArrowDown, FaArrowRight } from 'react-icons/fa';
+
+
 import { services } from './../assets/assets'
 import { Contact } from '../Contact/Contact';
 
@@ -83,6 +88,26 @@ function Services() {
                             </div>
                         );
                     })}
+                </div>
+
+                <div className="service-buttons">
+                  <Link to="/About"><button>Learn More About My Technology</button></Link>
+                  <a
+                          href="#contact-section"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            
+                            const element = document.getElementById('contact-section');
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                        >
+                          <button>Need help on your website?</button>
+                        </a>
+                  <div className="arrow-container">
+                    <FaArrowDown size={30} className="arrow-down"/>
+                  </div>
                 </div>
             </div>
         </div>

@@ -296,6 +296,70 @@
   font-weight: bold;
 }
 
+.service-buttons {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 0px 0px;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@keyframes bounceFade {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.arrow-down {
+  margin-top: 10px;
+  animation: bounceFade 1.5s infinite;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.service-buttons button {
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+}
+
+.service-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+  background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+.service-buttons button:active {
+  transform: translateY(-1px);
+}
+
+.service-buttons button span {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
 /* Tablet Styles */
 @media (max-width: 1024px) {
   .services-container {
