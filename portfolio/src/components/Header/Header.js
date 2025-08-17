@@ -132,7 +132,7 @@ export const Header = () => {
           </div>
 
           <button className="arrow left" onClick={prevSlide}>
-            <FaChevronLeft size={30}/>
+            <FaChevronLeft size={30} className="react-icon-arrow"/>
           </button>
 
           <div className="project-slide">
@@ -147,7 +147,7 @@ export const Header = () => {
           </div>
 
           <button className="arrow right" onClick={nextSlide}>
-            <FaChevronRight size={30}/>
+            <FaChevronRight size={30} className="react-icon-arrow"/>
           </button>
 
           <div className="dots">

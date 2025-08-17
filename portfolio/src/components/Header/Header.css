@@ -273,7 +273,7 @@
   align-items: center;
   overflow: hidden;
   width: 100%;      
-  max-width: 800px;   
+  max-width: 900px;   
   margin: auto;
 }
 
@@ -284,9 +284,11 @@
 }
 
 .project-slide-inner img {
-  width: 100%;       
-  flex-shrink: 0;   
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .arrow {
@@ -456,6 +458,10 @@
   .grid-right-buttons a {
     font-size: 18px;
   }
+
+  .project-slide {
+    max-width: 700px;
+  }
 }
 
 /* Mobile Responsive Styles */
@@ -521,10 +527,6 @@
     margin: 0 auto;
   }
 
-  .text-tag {
-    font-size: 14px;
-  }
-
   .text-tag p {
     margin-bottom: 10px;
     margin-top: 40px;
@@ -533,6 +535,7 @@
 
   .text-tag h3 {
     width: 70%;
+    font-size: 13px;
   }
 
   .container {
@@ -586,8 +589,31 @@
     font-size: 13px;
   }
 
+  .project-slide {
+    max-width: 500px;
+  }
+
+  .project-slide-inner img {
+    border-radius: 10px;
+  }
+
   .single-slide-image {
-    max-width: 90%;
+    max-width: 100%;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .react-icon-arrow {
+    width: 15px;
+  }
+
+  .arrow {
+    width: 30%;
+    top: 86%;
+    background: none;
   }
 
   .arrow.left {
@@ -595,6 +621,14 @@
   }
   .arrow.right {
     right: 5px;
+  }
+
+  .project-buttons {
+    font-size: 13px;
+  }
+
+  .project-buttons button {
+    padding: 6px 8px;
   }
 }
 
@@ -611,5 +645,13 @@
   .grid-right button {
     font-size: small;
     padding: 8px 15px;
+  }
+
+  .project-slide {
+    max-width: 90%;
+  }
+
+  .project-slide-inner img {
+    border-radius: 8px;
   }
 }
