@@ -92,7 +92,7 @@ function Services() {
 
                 <section className="cta-section">
                     <div className="cta-details">
-                        <h2>Reday to start your project?</h2>
+                        <h2>Ready to start your project?</h2>
                         <p>I design beautiful, functional website that will help your business grow.</p>
                     </div>
                     <div class="cta-buttons">

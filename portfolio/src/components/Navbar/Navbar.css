@@ -359,6 +359,10 @@
     .mobile-social {
         display: none;
     }
+
+    .contact-button {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {

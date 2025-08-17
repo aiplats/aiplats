@@ -1,3 +1,12 @@
+.highlight {
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    background-clip: text;
+    color: transparent;
+}
+
 .main-contact-page {
     padding: 0 20px; 
     background: rgba(255, 255, 255, 0.05);

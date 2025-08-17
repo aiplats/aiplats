@@ -132,7 +132,7 @@
   position: absolute;
   left: calc(50% + 30px);
   top: 50%;
-  width: calc(10% - 30px);
+  width: calc(10% - 75px);
   height: 2px;
   background: linear-gradient(90deg, #ffd700, rgba(255, 215, 0, 0.3));
   transform: translateY(-50%);
@@ -144,7 +144,7 @@
   position: absolute;
   right: calc(50% + 30px);
   top: 50%;
-  width: calc(10% - 30px);
+  width: calc(10% - 55px);
   height: 2px;
   background: linear-gradient(-90deg, #ffd700, rgba(255, 215, 0, 0.3));
   transform: translateY(-50%);
@@ -209,9 +209,7 @@
 }
 
 .service-card-timeline:hover .service-icon {
-  
   border-color: rgba(255, 215, 0, 0.6);
-  transform: scale(1.1) rotate(5deg);
 }
 
 .service-icon img {
@@ -462,7 +460,7 @@
   .key-activities-opposite {
     position: static;
     width: 100%;
-    margin-top: 20px;
+    margin-left: 20px;
     transform: none;
   }
   
@@ -477,9 +475,31 @@
   .service-content {
     text-align: left;
   }
+
+  .service-content p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
   
   .service-icon {
     margin: 0 0 20px 0;
+    padding: 0px;
+  }
+
+  .service-tags {
+    margin-top: 20px;
+  }
+
+  .service-tags h1 {
+    font-size: 1.5rem;
+  }
+
+  .service-tags p, .service-content h3 {
+    font-size: 1rem;
+  }
+
+  .arrow-down {
+    width: 35px;
   }
 }
 
