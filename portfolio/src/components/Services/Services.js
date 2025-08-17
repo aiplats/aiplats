@@ -31,7 +31,9 @@ function Services() {
             </div>
         </div>
 
-        <Contact />
+        <div id="contact-section">
+          <Contact />
+        </div>
     </>
   )
 }

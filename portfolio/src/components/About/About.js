@@ -377,7 +377,9 @@ export const About = () => {
 
         </div>     
 
-        <Contact />           
+        <div id="contact-section">
+          <Contact />
+        </div>    
       </div>
     </>
   )

@@ -166,7 +166,9 @@ export const Header = () => {
           </div>
         </div>
 
-        <Contact />
+        <div id="contact-section">
+          <Contact />
+        </div>
       </div>
     </>
   )

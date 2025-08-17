@@ -49,7 +49,21 @@ export const Navbar = () => {
                         <Link to="/Services">Services</Link>
                     </li>
                     <li className={activeSection === 'Contact' ? 'active' : ''}>
-                        <Link to="/Contact">Contact</Link>
+                        <a
+                          href="#contact-section"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setActiveSection('Contact');
+                            setIsMobileMenuOpen(false);
+                            
+                            const element = document.getElementById('contact-section');
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                        >
+                          Contact
+                        </a>
                     </li>
                 </ul>
             </div>

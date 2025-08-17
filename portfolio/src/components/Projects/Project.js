@@ -103,7 +103,9 @@ function Project() {
           </div>
         </div>
 
-        <Contact />
+        <div id="contact-section">
+          <Contact />
+        </div>
       </div>
     </>
   )
