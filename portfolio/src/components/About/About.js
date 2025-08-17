@@ -369,12 +369,13 @@ function About() {
 
           </div>
 
-        </div>     
-
-        <div id="contact-section">
-          <Contact />
-        </div>    
+        </div>        
       </div>
+      
+
+      <div id="contact-section">
+        <Contact />
+      </div> 
     </>
   )
 }

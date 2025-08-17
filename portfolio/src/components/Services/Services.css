@@ -289,15 +289,75 @@
   font-weight: bold;
 }
 
-.service-buttons {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
+.cta-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
   text-align: center;
+  border-radius: 8px;
+  margin: 3rem 0;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.cta-details {
+  margin-bottom: 1.5rem;
+}
+
+.cta-section h2 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.cta-section p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  max-width: 600px;
   margin: 0 auto;
 }
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  color: #000;
+  border: none;
+  box-shadow: 0 2px 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(-90deg, #ffc800, #ffd700);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffc800;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
 
 @keyframes bounceFade {
   0%, 100% {
@@ -317,6 +377,7 @@
 .arrow-container {
   display: flex;
   justify-content: center;
+  margin-top: -50px;
 }
 
 .service-buttons button {

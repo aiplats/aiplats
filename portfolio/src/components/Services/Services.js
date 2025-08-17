@@ -90,24 +90,29 @@ function Services() {
                     })}
                 </div>
 
-                <div className="service-buttons">
-                  <Link to="/About"><button>Learn More About My Technology</button></Link>
-                  <a
+                <section className="cta-section">
+                    <div className="cta-details">
+                        <h2>Reday to start your project?</h2>
+                        <p>I design beautiful, functional website that will help your business grow.</p>
+                    </div>
+                    <div class="cta-buttons">
+                      <a
                           href="#contact-section"
+                          className="btn btn-primary"
                           onClick={(e) => {
-                            e.preventDefault();
-                            
+                            e.preventDefault()  
                             const element = document.getElementById('contact-section');
                             if (element) {
                               element.scrollIntoView({ behavior: 'smooth' });
                             }
                           }}
-                        >
-                          <button>Need help on your website?</button>
-                        </a>
-                  <div className="arrow-container">
-                    <FaArrowDown size={30} className="arrow-down"/>
-                  </div>
+                        >Request a Service</a>
+                      <a href="/portfolio" className="btn btn-secondary">View My Portfolio</a>
+                    </div>
+                </section>
+                
+                <div className="arrow-container">
+                  <FaArrowDown size={50} className="arrow-down"/>
                 </div>
             </div>
         </div>
