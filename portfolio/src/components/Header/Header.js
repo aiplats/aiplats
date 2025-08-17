@@ -50,6 +50,14 @@ export const Header = () => {
         return () => clearTimeout(timeout);
     }, [charIndex, isDeleting, phraseIndex]);
 
+    useEffect(() => {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 4000); 
+    
+      return () => clearInterval(interval);
+    }, [currentIndex]);
+
     const nextSlide = () => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     };
@@ -128,11 +136,14 @@ export const Header = () => {
           </button>
 
           <div className="project-slide">
-            <img
-              src={slides[currentIndex]}
-              alt={`Slide ${currentIndex}`}
-              className="single-slide-image"
-            />
+            <div
+              className="project-slide-inner"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <img key={index} src={slide} alt={`Slide ${index}`} className="single-slide-image"/>
+              ))}
+            </div>
           </div>
 
           <button className="arrow right" onClick={nextSlide}>
@@ -140,10 +151,10 @@ export const Header = () => {
           </button>
 
           <div className="dots">
-            {[0, 1, 2].map((dotIndex) => (
+            {slides.map((_, dotIndex) => (
               <span
                 key={dotIndex}
-                className={`dot ${dotIndex === currentIndex % 3 ? 'active' : ''}`}
+                className={`dot ${dotIndex === currentIndex ? "active" : ""}`}
                 onClick={() => goToSlide(dotIndex)}
               ></span>
             ))}
