@@ -109,6 +109,7 @@
 /* Service Card Timeline */
 .service-card-timeline {
   background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -163,10 +164,8 @@
   top: 50%;
   transform: translateY(-50%);
   width: 40%;
-  background: rgba(255, 255, 255, 0.03);
   border-radius: 15px;
   padding: 25px;
-  border: 1px solid rgba(255, 215, 0, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease;
@@ -178,12 +177,13 @@
 }
 
 /* For right-side service cards, put key activities on the LEFT side */
-.timeline-item.right .key-activities-opposite {
+.timeline-item.right .key-activities-opposite .key-activities {
   right: calc(50% + 50px);
+  border-right: 3px solid #ffd700;
+  border-left: none;
 }
 
 .key-activities-opposite:hover {
-  background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 215, 0, 0.4);
   transform: translateY(-50%) scale(1.02);
 }
@@ -191,7 +191,6 @@
 /* Hover Effects */
 .service-card-timeline:hover {
   transform: translateY(-10px) scale(1.02);
-  background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 215, 0, 0.4);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -217,7 +216,7 @@
 }
 
 .service-card-timeline:hover .service-icon {
-  background: rgba(255, 215, 0, 0.2);
+  
   border-color: rgba(255, 215, 0, 0.6);
   transform: scale(1.1) rotate(5deg);
 }
