@@ -3,6 +3,7 @@ import './Navbar.css'
 import aiplatslogo from './../assets/aiplatslogo.jpeg'
 import { Link } from 'react-router-dom'
 import { HiArrowDownCircle } from 'react-icons/hi2';
+import { FaRegMessage } from 'react-icons/fa6';
 
 export const Navbar = () => {
 
@@ -30,7 +31,6 @@ export const Navbar = () => {
                 <a href="/"><img src={aiplatslogo} style={{width: '50px', borderRadius: '50%'}} alt="aiplats logo"/></a>
             </div>
 
-            {/* Desktop Navigation */}
             <div className="navbar-right">
                 <ul>
                     <li className={activeSection === 'Home' ? 'active' : ''}>
@@ -45,28 +45,24 @@ export const Navbar = () => {
                     <li className={activeSection === 'Services' ? 'active' : ''}>
                         <Link to="/Services">Services</Link>
                     </li>
-                    <li className={activeSection === 'Contact' ? 'active' : ''}>
-                        <a
-                          href="#contact-section"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setActiveSection('Contact');
-                            setIsMobileMenuOpen(false);
-                            
-                            const element = document.getElementById('contact-section');
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' });
-                            }
-                          }}                    
-                        >
-                          Contact
-                        </a>
-                    </li>
                 </ul>
             </div>
 
-            <div className="curriculum-vitae">
-                <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><HiArrowDownCircle size={30} style={{marginRight: '10px'}}/>Download CV</button></a>
+            <div className="contact-button">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveSection('Contact');
+                  setIsMobileMenuOpen(false);
+                
+                  const element = document.getElementById('contact-section');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                CONTACT <FaRegMessage size={20} />
+              </button>
             </div>
 
             <div className="mobile-menu-button" onClick={toggleMobileMenu}>

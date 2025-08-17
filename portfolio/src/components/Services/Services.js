@@ -107,7 +107,7 @@ function Services() {
                             }
                           }}
                         >Request a Service</a>
-                      <a href="/portfolio" className="btn btn-secondary">View My Portfolio</a>
+                      <a href="/Projects" className="btn btn-secondary">View My Work</a>
                     </div>
                 </section>
                 
