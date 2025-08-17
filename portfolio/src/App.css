@@ -7,7 +7,6 @@
   background-image: url("./../src/components/assets/blackbg-croped.jpg");
   background-size: contain;
   font-family: 'Poppins', 'Inter', sans-serif;
-  overflow-x: hidden;
 }
 
 html {
