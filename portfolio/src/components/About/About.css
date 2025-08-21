@@ -412,7 +412,6 @@
 
 .cert-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -436,7 +435,7 @@
 }
 
 .icon-img {
-    width: 40%;
+    width: 18%;
     border: none;
     border-radius: 50%;
 }
@@ -450,12 +449,11 @@
 .cert-icons {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -473,23 +471,25 @@
 }
 
 .cert-details {
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    flex-grow: 1;
+    text-align: left;
 }
 
-.cert-details a {
+.cert-icons a {
     text-decoration: none; 
 }
 
-.cert-details button {
+.cert-button {
+    margin-left: auto; 
+}
+
+.cert-icons button {
     display: flex;
     align-items: center;
     gap: 10px;
     background: linear-gradient(135deg, #FDCB6E, #E17055);
     color: white;
-    padding: 10px 30px;
+    padding: 8px 15px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -501,13 +501,13 @@
     box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
 }
 
-.cert-details button:hover {
+.cert-icons button:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
     background: linear-gradient(135deg, #E17055, #FDCB6E);
 }
 
-.cert-details button:active {
+.cert-icons button:active {
     transform: translateY(-1px);
 }
 

@@ -203,8 +203,8 @@ function About() {
                           <h2>{cert.title}</h2>
                           <h2>{cert.issuer} {cert.company}</h2>
                           <h3>{cert.credential} {cert.id}</h3>
-                          <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button><HiArrowTopRightOnSquare size={30}/>View Certificate</button></a>
                         </div>
+                        <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button><HiArrowTopRightOnSquare size={30}/>View Certificate</button></a>
                       </div>
                     </React.Fragment>
                   ))}

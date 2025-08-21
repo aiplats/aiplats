@@ -42,7 +42,10 @@ function GitHubContributions() {
       const query = `
         {
           user(login: "${username}") {
-            repositories(first: 1) {
+            repositories(first: 100) {
+              totalCount
+            }
+            repositoriesPrivate: repositories(privacy: PRIVATE) {
               totalCount
             }
             followers {
@@ -78,9 +81,11 @@ function GitHubContributions() {
         }
 
         const userData = data.data.user;
+
         setGithubStats({
           totalContributions: userData.contributionsCollection.contributionCalendar.totalContributions,
-          totalRepositories: userData.repositories.totalCount,
+          totalRepositories: 
+            userData.repositories.totalCount + userData.repositoriesPrivate.totalCount,
           totalFollowers: userData.followers.totalCount
         });
       } catch (err) {
