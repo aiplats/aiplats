@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './About.css'
 import { skillsIcons, certifications } from './../assets/assets'
+import AboutSkills from './About-Skills/AboutSkills';
 import { motion } from 'framer-motion';
 
 import { FiAward, FiUser } from 'react-icons/fi';
@@ -180,162 +181,6 @@ function About() {
                 </div>
                 </motion.div>
               </div>
-
-              {/* <div className="skills-container scroll-section" ref={skillsRef} id='Skills'>
-                <motion.div
-                  className="skills-container scroll-section"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.8 }}
-                >
-                <h1>SKILLS & TECHNOLOGIES</h1>
-                <h2>01 - TECHNICAL SKILLS</h2>
-
-                <div className="skills-content">
-                  <div className="skills-grid">
-                    <div className="category-container">
-                      <img src={frontend} className="skill-category" alt='frontend'/>
-                      <p>Front-End</p>
-                      <div className="skills-icon">
-                      {skillsIcons
-                      .filter(skill => skill.category === "Front-End")
-                      .map((skill, index) => (
-                        <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
-                          </motion.div>
-                      ))}
-                      </div>
-                    </div>
-
-                    <div className="skills-title">
-                        {skillsIcons
-                        .filter(skill => skill.category === "Front-End")
-                        .map((skill, index) => (
-                          <div key={index} className="icon-title" style={{ textAlign: 'right'}}>
-                            <h2>{skill.title}</h2>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-
-                  <div className="skills-grid">
-                    <div className="skills-title">
-                      {skillsIcons
-                      .filter(skill => skill.category === "Back-End")
-                      .map((skill, index) => (
-                        <div key={index} className="icon-title" style={{ textAlign: 'left'}}>
-                          <h2>{skill.title}</h2>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="category-container">
-                      <img src={frontend} className="skill-category" alt='frontend'/>
-                      <p>Back-End</p>
-                      <div className="skills-icon">
-                        {skillsIcons
-                        .filter(skill => skill.category === "Back-End")
-                        .map((skill, index) => (
-                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="skills-grid">
-                    <div className="category-container">
-                      <img src={server} className="skill-category" alt='server'/>
-                      <p>Database</p>
-                      <div className="skills-icon">
-                        {skillsIcons
-                        .filter(skill => skill.category === "Database")
-                        .map((skill, index) => (
-                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="skills-title">
-                      {skillsIcons
-                      .filter(skill => skill.category === "Database")
-                      .map((skill, index) => (
-                        <div key={index} className="icon-title" style={{ textAlign: 'right'}}>
-                          <h2>{skill.title}</h2>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="skills-grid">          
-                    <div className="skills-title">
-                      {skillsIcons
-                      .filter(skill => skill.category === "Design")
-                      .map((skill, index) => (
-                        <div key={index} className="icon-title" style={{ textAlign: 'left'}}>
-                          <h2>{skill.title}</h2>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="category-container">
-                      <img src={paint} className="skill-category" alt='paint'/>
-                      <p>Design</p>
-                      <div className="skills-icon">
-                        {skillsIcons
-                        .filter(skill => skill.category === "Design")
-                        .map((skill, index) => (
-                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.05, duration: 0.7 }}>
-                              <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="skills-grid">
-                    <div className="category-container">
-                      <img src={web} className="skill-category" alt='web'/>
-                      <p>DevOps & Tools</p>
-                      <div className="skills-icon">
-                        {skillsIcons
-                        .filter(skill => skill.category === "DevOps & Tools")
-                        .map((skill, index) => (
-                          <motion.div key={index} className="icon-image" initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.05, duration: 0.7 }}>
-                            <img src={skill.icon} alt={skill.name || `Skill ${index}`} title={skill.title || `Skill ${index}`}/>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="skills-title">
-                      {skillsIcons
-                      .filter(skill => skill.category === "DevOps & Tools")
-                      .map((skill, index) => (
-                        <div key={index} className="icon-title" style={{ textAlign: 'right'}}>
-                          <h2>{skill.title}</h2>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                </div>
-                </motion.div>
-              </div> */}
             
               <div className="about-certification scroll-section" ref={certificationsRef} id='Certifications'>
                 <motion.div
@@ -370,6 +215,39 @@ function About() {
             </div>
 
           </div>
+
+        <div className="skills-carousel-container" id="Skills">
+          <h1>SKILLS & TECHNOLOGIES</h1>
+          <AboutSkills 
+            title="Front-End"
+            icon={frontend}
+            skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
+          />
+
+          <AboutSkills
+            title="Back-End"
+            icon={server}
+            skills={skillsIcons.filter(skill => skill.category === "Back-End")}
+          />
+        
+          <AboutSkills
+            title="Database"
+            icon={server}
+            skills={skillsIcons.filter(skill => skill.category === "Database")}
+          />
+        
+          <AboutSkills
+            title="Design"
+            icon={paint}
+            skills={skillsIcons.filter(skill => skill.category === "Design")}
+          />
+        
+          <AboutSkills
+            title="DevOps & Tools"
+            icon={web}
+            skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
+          />
+        </div>
 
         </div>        
       </div>
