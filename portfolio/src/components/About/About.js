@@ -216,37 +216,53 @@ function About() {
 
           </div>
 
-        <div className="skills-carousel-container" id="Skills">
-          <h1>SKILLS & TECHNOLOGIES</h1>
-          <AboutSkills 
-            title="Front-End"
-            icon={frontend}
-            skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
-          />
+        <div className="skills-carousel-main-container" id="Skills">
+          <div className="skills-text">
+            <h1>SKILLS & TECHNOLOGIES</h1>     
+            <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2>
+          </div>
 
-          <AboutSkills
-            title="Back-End"
-            icon={server}
-            skills={skillsIcons.filter(skill => skill.category === "Back-End")}
-          />
-        
-          <AboutSkills
-            title="Database"
-            icon={server}
-            skills={skillsIcons.filter(skill => skill.category === "Database")}
-          />
-        
-          <AboutSkills
-            title="Design"
-            icon={paint}
-            skills={skillsIcons.filter(skill => skill.category === "Design")}
-          />
-        
-          <AboutSkills
-            title="DevOps & Tools"
-            icon={web}
-            skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
-          />
+          <div className="text-tag">
+            <p>Skills Showcase</p>
+          </div>
+          
+          <div className="skills-container">
+            <AboutSkills 
+              title="Front-End"
+              icon={frontend}
+              direction="left"
+              skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
+            />
+
+            <AboutSkills
+              title="Back-End"
+              icon={server}
+              direction="right"
+              skills={skillsIcons.filter(skill => skill.category === "Back-End")}
+            />
+
+            <AboutSkills
+              title="Database"
+              icon={server}
+              direction="left"
+              skills={skillsIcons.filter(skill => skill.category === "Database")}
+            />
+
+            <AboutSkills
+              title="Design"
+              icon={paint}
+              direction="right"
+              skills={skillsIcons.filter(skill => skill.category === "Design")}
+            />
+
+            <AboutSkills
+              title="DevOps & Tools"
+              icon={web}
+              direction="left"
+              skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
+            />
+          </div>
+
         </div>
 
         </div>        

@@ -321,6 +321,26 @@
 
 /* SKILLS SECTION*/
 
+.skills-container {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: -50px;
+}
+
+.skills-text h1 h2 {
+    text-align: left;
+}
+
+.skills-text H1 {
+    font-size: 60px;
+}
+
+.skills-text h2 {
+    font-weight: 500;
+    width: 80%;
+}
+
 .skills-content {
     display: block;
     max-width: auto;
@@ -693,6 +713,10 @@
 
     .skills-content {
         padding: 0%;
+    }
+
+    .skills-container {
+        width: 90%;
     }
     
     .skills-container h1 {
