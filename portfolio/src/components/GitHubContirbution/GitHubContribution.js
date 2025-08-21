@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import './GitHubContribution.css';
-import { HiArrowDownCircle } from 'react-icons/hi2';
-import { FiMail } from 'react-icons/fi';
 
 function GitHubContributions() {
   const [calendar, setCalendar] = useState(null);

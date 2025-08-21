@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 
 import { FiAward, FiUser } from 'react-icons/fi';
 import { FaCode } from 'react-icons/fa';
+import { HiArrowDownCircle } from 'react-icons/hi2';
+import { FiMail } from 'react-icons/fi';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
 
@@ -174,7 +176,6 @@ function About() {
                   <div className="about-description">
                     <div className="about-text">
                       <h1><b>Alexander Isaac P. Platon</b></h1>
-
                       <p>"I am a dedicated Full-Stack Web Developer with a strong focus on building responsive, user-centric web applications using modern technologies, particularly React. I’ve delivered diverse projects for clients and continuously expand my skills through ongoing development. With experience across the full development lifecycle—from intuitive UI design to robust backend architecture—I create end-to-end solutions that align with both user needs and business goals."</p>
                     </div>
 
@@ -266,7 +267,25 @@ function About() {
           </div>
         </div>        
       </div>
-     
+
+      <section className="about-cta-section">
+        <div className="about-cta-details">
+          <h2>Want to know more about <span className="highlight">ALEX?</span></h2>
+          <p>My professional background is an open book. Feel free to take a closer look.</p>
+        </div>
+        <div className="about-cta-buttons">
+          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-primary" download="Platon_Alexander_CV.pdf"><HiArrowDownCircle size={30} style={{marginRight: '10px', verticalAlign: "middle"}}/>Download CV</a>
+          <a href="#contact-section"
+            className="about-btn btn-primary"
+            onClick={(e) => {
+              e.preventDefault()  
+              const element = document.getElementById('contact-section');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}><FiMail size={30} style={{marginRight: '10px', verticalAlign: "middle"}}/>Work with Me</a>
+        </div>
+      </section>
 
       <div id="contact-section">
         <Contact />
