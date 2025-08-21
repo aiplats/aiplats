@@ -94,6 +94,8 @@ function About() {
             <h1 className="section-title">
               ABOUT <span className="highlight">ALEX</span>
             </h1>
+            
+            <h2>I’m a passionate Full-Stack Web Developer dedicated to creating responsive, user-focused applications that bridge intuitive design with powerful backend solutions.</h2>
             <div className="line"></div>
           </div>
 
@@ -179,7 +181,7 @@ function About() {
                 </motion.div>
               </div>
 
-              <div className="skills-container scroll-section" ref={skillsRef} id='Skills'>
+              {/* <div className="skills-container scroll-section" ref={skillsRef} id='Skills'>
                 <motion.div
                   className="skills-container scroll-section"
                   initial={{ opacity: 0, y: 50 }}
@@ -333,7 +335,7 @@ function About() {
 
                 </div>
                 </motion.div>
-              </div>
+              </div> */}
             
               <div className="about-certification scroll-section" ref={certificationsRef} id='Certifications'>
                 <motion.div

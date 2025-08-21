@@ -22,9 +22,6 @@
 }
 
 .about-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 1rem;
 }
 
@@ -32,6 +29,11 @@
     margin: 0;
     font-size: 60px;
     white-space: nowrap;
+}
+
+.about-heading h2 {
+    width: 80%;
+    font-weight: 500;
 }
 
 .about-container {
