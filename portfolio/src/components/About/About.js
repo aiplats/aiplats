@@ -100,6 +100,10 @@ function About() {
             <div className="line"></div>
           </div>
 
+          <div className="text-tag">
+            <p>Insights</p>
+          </div>
+
           <div className="about-page-container">
             <div className="about-navigation">
               <div className="about-info">
@@ -185,7 +189,7 @@ function About() {
               <div className="skills-carousel-main-container" ref={skillsRef} id="Skills">
                 <div className="skills-text">
                   <h1>SKILLS & TECHNOLOGIES</h1>     
-                  {/* <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2> */}
+                  <h3>A comprehensive overview of my technical experiences</h3>
                 </div>
 
                 <div className="skills-container">
@@ -245,8 +249,8 @@ function About() {
                         <img src={cert.icon} className="icon-img" alt={`Certification ${index + 1}`} />
 
                         <div className="cert-details">
-                          <h2>{cert.title}</h2>
-                          <h2>{cert.issuer} {cert.company}</h2>
+                          <h3>{cert.title}</h3>
+                          <h3>{cert.issuer} {cert.company}</h3>
                           <h3>{cert.credential} {cert.id}</h3>
                         </div>
                         <a href={cert.url} target="_blank" rel="noopener noreferrer" className="cert-button"><button><HiArrowTopRightOnSquare size={30}/>View Certificate</button></a>
