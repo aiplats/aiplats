@@ -632,9 +632,18 @@
     .about-sub-page {
         padding: 40px 10px;
     }
+
+    .about-heading {
+        padding: 10px;
+        width: 100%;
+    }
     
     .about-heading h1 {
         font-size: 2.5rem;
+    }
+
+    .about-heading h2 {
+        font-size: 16px;
     }
     
     .about-container {
@@ -725,6 +734,19 @@
     
     .skills-container h2 {
         font-size: 1.3rem;
+    }
+
+    .skills-text {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .skills-text h1 {
+        font-size: 30px;
+    }
+
+    .skills-text h2 {
+        font-size: 16px;
     }
     
     .skills-grid {

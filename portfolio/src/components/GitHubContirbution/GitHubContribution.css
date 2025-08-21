@@ -6,11 +6,64 @@ body {
 .contribution-column { 
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  margin-top: -20px;
+  gap: 40px;
+  margin-top: -10px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
+
+/* Contribution Details Card */
+.contribution-details {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: #f0f6fc;
+}
+
+.stat-card {
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  background-color: #1e2633;
+}
+
+.stat-card .icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.stat-card .value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.stat-card .label {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #9ca3af;
+}
+
+select { 
+  position: relative;
+  top: 40px;
+  height: 30px;
+  padding: 5px 8px; 
+  border: 1px solid white; 
+  border-radius: 5px; background-color: #161b22; color: white; 
+  margin-left: 15px; 
+}
+
 
 /* Calendar Layout */
 .contribution-calendar {
@@ -19,9 +72,11 @@ body {
   gap: 3px;
   align-items: flex-start;
   flex-wrap: nowrap;
-  border: 1px solid gray;
-  border-radius: 8px;
-  padding: 10px 10px 10px 10px;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #0d1117;
+  overflow-x: auto;
 }
 
 .week {
@@ -36,44 +91,33 @@ body {
   width: 12px;
   height: 12px;
   flex-shrink: 0;
+  border-radius: 2px;
 }
 
 .day:hover {
   transform: scale(1.2);
 }
 
-.contribution-details {
-  min-width: 220px;
-  flex: 1;
-}
-
-.contribution-details select {
-  display: none;
-}
-
-.about-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.about-contact button {
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-
-/* Dropdown Year Selector */
-select {
-  padding: 5px 8px;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: #161b22;
-  color: white;
-  margin-left: 15px;
-}
-
 /* ======= MEDIA QUERIES ======= */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .contribution-column {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .contribution-details {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .contribution-calendar {
+    max-width: 100%;
+  }
+}
 
 /* Mobile phones */
 @media (max-width: 768px) {
@@ -84,68 +128,38 @@ select {
     text-align: center;
   }
 
-  .about-contact {
-    order: -1; 
-    width: 100%;
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  .about-contact button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-  }
-
-  .about-contact select {
-    display: flex;
-    padding: 4px 8px;
-  }
-
   .contribution-details {
-    flex-direction: column;
-    align-items: center;
-    order: 0; 
-    margin-bottom: 15px;
+    padding: 16px;
+    font-size: 14px;
   }
 
   .contribution-details h2 {
     font-size: 18px;
   }
 
-  .contribution-details select {
-    display: flex;
-    margin-left: 75px;
-  }
-
-  .contribution-calendar {
-    max-width: 80vw;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    margin-top: 10px;
-  }
-}
-
-/* Small mobile phones */
-@media (max-width: 480px) {
   .day {
     width: 10px;
     height: 10px;
   }
+
   .contribution-calendar {
-    max-width: 78vw;
-  }
-  .contribution-calendar select {
-    display: none;
+    max-width: 90vw;
+    padding: 8px;
   }
 }
 
-/* Extra small mobile */
-@media (max-width: 350px) {
+/* Extra small phones */
+@media (max-width: 400px) {
   .day {
     width: 8px;
     height: 8px;
   }
+
+  .contribution-details {
+    padding: 12px;
+  }
+
   .contribution-calendar {
-    max-width: 80vw;
+    max-width: 92vw;
   }
 }
