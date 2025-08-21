@@ -181,6 +181,51 @@ function About() {
                 </div>
                 </motion.div>
               </div>
+
+              <div className="skills-carousel-main-container" ref={skillsRef} id="Skills">
+                <div className="skills-text">
+                  <h1>SKILLS & TECHNOLOGIES</h1>     
+                  <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2>
+                </div>
+
+                <div className="skills-container">
+                  <AboutSkills 
+                    title="Front-End"
+                    icon={frontend}
+                    direction="left"
+                    skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
+                  />
+
+                  <AboutSkills
+                    title="Back-End"
+                    icon={server}
+                    direction="right"
+                    skills={skillsIcons.filter(skill => skill.category === "Back-End")}
+                  />
+
+                  <AboutSkills
+                    title="Database"
+                    icon={server}
+                    direction="left"
+                    skills={skillsIcons.filter(skill => skill.category === "Database")}
+                  />
+
+                  <AboutSkills
+                    title="Design"
+                    icon={paint}
+                    direction="right"
+                    skills={skillsIcons.filter(skill => skill.category === "Design")}
+                  />
+
+                  <AboutSkills
+                    title="DevOps & Tools"
+                    icon={web}
+                    direction="left"
+                    skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
+                  />
+                </div>
+
+              </div>
             
               <div className="about-certification scroll-section" ref={certificationsRef} id='Certifications'>
                 <motion.div
@@ -215,59 +260,9 @@ function About() {
             </div>
 
           </div>
-
-        <div className="skills-carousel-main-container" id="Skills">
-          <div className="skills-text">
-            <h1>SKILLS & TECHNOLOGIES</h1>     
-            <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2>
-          </div>
-
-          <div className="text-tag">
-            <p>Skills Showcase</p>
-          </div>
-          
-          <div className="skills-container">
-            <AboutSkills 
-              title="Front-End"
-              icon={frontend}
-              direction="left"
-              skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
-            />
-
-            <AboutSkills
-              title="Back-End"
-              icon={server}
-              direction="right"
-              skills={skillsIcons.filter(skill => skill.category === "Back-End")}
-            />
-
-            <AboutSkills
-              title="Database"
-              icon={server}
-              direction="left"
-              skills={skillsIcons.filter(skill => skill.category === "Database")}
-            />
-
-            <AboutSkills
-              title="Design"
-              icon={paint}
-              direction="right"
-              skills={skillsIcons.filter(skill => skill.category === "Design")}
-            />
-
-            <AboutSkills
-              title="DevOps & Tools"
-              icon={web}
-              direction="left"
-              skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
-            />
-          </div>
-
-        </div>
-
         </div>        
       </div>
-      
+     
 
       <div id="contact-section">
         <Contact />
