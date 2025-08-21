@@ -185,7 +185,7 @@ function About() {
               <div className="skills-carousel-main-container" ref={skillsRef} id="Skills">
                 <div className="skills-text">
                   <h1>SKILLS & TECHNOLOGIES</h1>     
-                  <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2>
+                  {/* <h2>My technical expertise spans across front-end development, back-end systems, databases, and modern DevOps tools. By leveraging this diverse skillset, I am able to design and implement solutions that are both scalable and user-focused, ensuring that every project I deliver aligns with business objectives and industry standards.</h2> */}
                 </div>
 
                 <div className="skills-container">
