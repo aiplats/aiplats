@@ -91,7 +91,6 @@ export const Header = () => {
                 <div className="grid-right-buttons">
                   <Link to="/About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></Link>
                   <Link to="/Projects"><button><span><HiArrowRightEndOnRectangle size={30}/>Explore Projects</span></button></Link>
-                  {/* <a href="/Platon_Alexander_CV.pdf" download="Platon_Alexander_CV.pdf"><button><span><HiArrowDownCircle size={30}/>Download CV</span></button></a> */}
                 </div>
               </div>
             </div>

@@ -535,7 +535,7 @@
 
   .text-tag h3 {
     width: 70%;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .container {
@@ -568,11 +568,11 @@
   }
 
   .services-details h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .services-details p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .sub-header-text {
@@ -582,11 +582,11 @@
   }
 
   .sub-header-text button {
-    padding: 8px 10px;
+    padding: 8px 12px;
   }
 
   .sub-header-text button span {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .project-slide {
@@ -635,16 +635,16 @@
 /* Extra small screens */
 @media (max-width: 480px) {
   .typing-text {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .grid-right h2 {
-    font-size: large;
+    font-size: 16px;
   }
 
   .grid-right button {
     font-size: small;
-    padding: 8px 15px;
+    padding: 8px 12px;
   }
 
   .project-slide {
