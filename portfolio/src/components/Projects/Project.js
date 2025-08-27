@@ -21,9 +21,13 @@ function Project() {
 
   return (
     <>
-      <div className="main-project-page" >
+      <div className="main-project-page">
+        <div className="project-tags">
+            <h1>FEATURED PROJECTS</h1>
+            <p>"A showcase of ideas brought to life — blending creativity and code into meaningful digital experiences."</p>
+          </div>
+
         <div className="project-container"> 
-          <h1>PROJECTS</h1>
           <h2>01 - PERSONAL PROJECTS</h2>
           <div className="project-sub-container">
               {projects.map((proj, index) => {
