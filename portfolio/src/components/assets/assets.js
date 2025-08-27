@@ -1,12 +1,8 @@
-import gradpic from './PLATON-GRAD.jpg'
 import itflogo from './../assets/itflogo2.png'
 import adscert from './../assets/adscert.png'
 
 import github from './../assets/icons8-githubw-50.png'
-import instagram from './../assets/icons8-instagram-48.png'
-import facebook from './../assets/icons8-facebook-48.png'
 
-import linkedin from './../assets/icons8-linkedin-48.png'
 import gmail from './../assets/icons8-gmail-48.png'
 import whatsapp from './../assets/icons8-whatsapp-48.png'
 import map from './../assets/icons8-map-48.png'

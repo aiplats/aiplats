@@ -1,8 +1,7 @@
 import React from 'react'
 import './Services.css'
 
-import { Link } from 'react-router-dom';
-import { FaArrowDown, FaArrowRight } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 
 import { services } from './../assets/assets'

@@ -536,7 +536,7 @@
   border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
-.about-cta-details {
+.about-cta-details, .projects-cta-details {
   margin-bottom: 1.5rem;
 }
 
@@ -547,21 +547,21 @@
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
-.about-cta-section p {
+.about-cta-section p, .projects-cta-details p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.about-cta-buttons {
+.about-cta-buttons, .projects-cta-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.about-btn {
+.about-btn, .projects-cta-buttons button {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
@@ -594,6 +594,29 @@
   background: rgba(255, 215, 0, 0.1);
   transform: translateY(-2px);
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.projects-btn {
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+  gap: 10px;                
+  background: linear-gradient(135deg, #FDCB6E, #E17055);
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(255, 215, 0, 0.4);
+}
+
+.projects-btn:hover {
+  background: linear-gradient(-90deg, #ffc800, #ffd700);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.6);
 }
 
 

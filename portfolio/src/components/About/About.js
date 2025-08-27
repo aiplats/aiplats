@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 import { FiAward, FiUser } from 'react-icons/fi';
 import { FaCode } from 'react-icons/fa';
-import { HiArrowDownCircle } from 'react-icons/hi2';
+import { HiArrowDownCircle, HiArrowRightEndOnRectangle } from 'react-icons/hi2';
 import { FiMail } from 'react-icons/fi';
 
 import gradpic from './../assets/PLATON-GRAD.jpg'
@@ -23,6 +23,7 @@ import web from './../assets/icons8-webw-50.png'
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import GitHubContributions from '../GitHubContirbution/GitHubContribution';
 import { Contact } from '../Contact/Contact';
+import { Link } from 'react-router-dom';
 
 function About() {
 
@@ -100,10 +101,6 @@ function About() {
             
             <h2>I’m a passionate Full-Stack Web Developer dedicated to creating responsive, user-focused applications that bridge intuitive design with powerful backend solutions.</h2>
             <div className="line"></div>
-          </div>
-
-          <div className="text-tag">
-            <p>Insights</p>
           </div>
 
           <div className="about-page-container">
@@ -274,7 +271,7 @@ function About() {
           <p>My professional background is an open book. Feel free to take a closer look.</p>
         </div>
         <div className="about-cta-buttons">
-          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-primary" download="Platon_Alexander_CV.pdf"><HiArrowDownCircle size={30} style={{marginRight: '10px', verticalAlign: "middle"}}/>Download CV</a>
+          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-primary" download="Platon_Alexander_CV.pdf"><HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Download CV</a>
           <a href="#contact-section"
             className="about-btn btn-primary"
             onClick={(e) => {
@@ -283,7 +280,23 @@ function About() {
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
-            }}><FiMail size={30} style={{marginRight: '10px', verticalAlign: "middle"}}/>Work with Me</a>
+            }}><FiMail size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>Work with Me</a>
+        </div>
+
+        <br />
+
+        <div className="projects-cta-subsection">
+          <div className="projects-cta-details">
+            <p>From concepts to creations, my work speaks louder than words. Discover the projects that shaped my journey.</p>
+          </div>
+          <div className="projects-cta-buttons">
+            <Link to="/Projects" className="projects-link">
+              <button className="projects-btn">
+                <HiArrowRightEndOnRectangle size={24} style={{marginRight: '10px', verticalAlign: 'middle'}}/>
+                <span>Explore Projects</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
 
