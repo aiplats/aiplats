@@ -432,6 +432,10 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .services-timeline {
+    width: 90%;
+  }
+
   .timeline-item.left::after, 
   .timeline-item.right::after {
     display: none;
@@ -441,6 +445,7 @@
   .key-activities-opposite 
   .key-activities {
     border-left: 3px solid #ffd700;
+    border-right: none;
   }
 
   .services-timeline::before {
@@ -524,6 +529,7 @@
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
+
   .timeline-item.left::after, 
   .timeline-item.right::after {
     display: none;
