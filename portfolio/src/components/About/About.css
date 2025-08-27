@@ -549,7 +549,7 @@
 
 .about-cta-section p, .projects-cta-details p {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
+  font-size: 1rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -839,6 +839,7 @@
 
     .skills-container {
         width: 90%;
+        margin-top: 20px;
     }
     
     .skills-container h1 {
@@ -932,6 +933,10 @@
     .about-content::-webkit-scrollbar {
         display: none;
     }
+
+    .projects-cta-details p {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -959,7 +964,7 @@
     
     .about-text p {
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: left;
     }
 
@@ -1005,6 +1010,10 @@
         width: 35px;
         height: 35px;
     }
+
+    .about-certification {
+        padding: 0px;
+    }
     
     .about-certification h1 {
         font-size: 2rem;
@@ -1021,12 +1030,11 @@
     }
     
     .cert-details {
-        font-size: 1rem;
         text-align: center;
     }
     
     .cert-details h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .cert-details button {

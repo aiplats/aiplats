@@ -213,13 +213,21 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .header-line {
+    margin: 0;
+  }
+
   .skills-section {
     padding: 2rem 0rem;
   }
 
+  .skills-category-header {
+    gap: 0px;
+    margin-top: 15px;
+  }
+
   .header-content {
     justify-content: center !important;
-    text-align: center;
   }
 
   .skills-category-header.right .header-content,
@@ -229,6 +237,14 @@
 
   .category-title {
     font-size: 1.3rem;
+  }
+
+  .category-icon-wrapper {
+    height: auto;
+  }
+
+  .category-icon {
+    width: 70%;
   }
 
   .skills-count {
