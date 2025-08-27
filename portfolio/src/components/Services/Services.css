@@ -432,6 +432,17 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .timeline-item.left::after, 
+  .timeline-item.right::after {
+    display: none;
+  }
+
+  .timeline-item.right 
+  .key-activities-opposite 
+  .key-activities {
+    border-left: 3px solid #ffd700;
+  }
+
   .services-timeline::before {
     left: 30px;
   }
@@ -478,7 +489,7 @@
 
   .service-content p {
     margin-bottom: 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   .service-icon {
@@ -501,10 +512,23 @@
   .arrow-down {
     width: 35px;
   }
+
+  .cta-section h2 {
+    font-size: 22px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
 }
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
+  .timeline-item.left::after, 
+  .timeline-item.right::after {
+    display: none;
+  }
+
   .services-container {
     padding: 0 15px;
   }
