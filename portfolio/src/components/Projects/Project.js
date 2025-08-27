@@ -3,6 +3,7 @@ import './Project.css'
 import { projects, freelance, skillsIcons } from '../assets/assets'
 
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2'
+import { FiMail, FiBriefcase } from 'react-icons/fi';
 import { Contact } from '../Contact/Contact';
 
 function Project() {
@@ -24,10 +25,10 @@ function Project() {
       <div className="main-project-page">
         <div className="project-tags">
             <h1>FEATURED PROJECTS</h1>
-            <p>"A showcase of ideas brought to life — blending creativity and code into meaningful digital experiences."</p>
+            <p>"A showcase of ideas brought to life — blending creativity and code into meaningful digital experiences, each project crafted with the goal of solving real problems, pushing boundaries, and leaving a lasting impact."</p>
           </div>
 
-        <div className="project-container"> 
+        <div className="projects-container"> 
           <h2>01 - PERSONAL PROJECTS</h2>
           <div className="project-sub-container">
               {projects.map((proj, index) => {
@@ -67,7 +68,7 @@ function Project() {
           </div>
         </div>
 
-        <div className="project-container"> 
+        <div className="projects-container"> 
           <h2>02 - FREELANCE PROJECT</h2>
           <div className="project-sub-container">
               {freelance.map((proj, index) => {
@@ -106,11 +107,33 @@ function Project() {
               })}
           </div>
         </div>
+
+        <section className="project-cta-section">
+          <div className="project-cta-details">
+            <h2>Want to start your own website?</h2>
+            <p>Explore the different ways I can help bring your website idea to life.</p>
+          </div>
+          <div className="project-cta-buttons">
+            <a href="/Services" className="btn btn-primary"><FiBriefcase size={22} style={{ marginRight: '10px', verticalAlign: 'middle' }} />
+            What I offer</a>
+            <a
+              href="#contact-section"
+              className="btn btn-secondary"
+              onClick={(e) => {
+                e.preventDefault()  
+                const element = document.getElementById('contact-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            ><FiMail size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>Let's Work Together!</a>
+          </div>
+        </section>
       </div>
 
       <div id="contact-section">
-          <Contact />
-        </div>
+        <Contact />
+      </div>
     </>
   )
 }
