@@ -270,30 +270,34 @@ function About() {
           <h2>Want to know more about <span className="highlight">ALEX?</span></h2>
           <p>My professional background is an open book. Feel free to take a closer look.</p>
         </div>
-        <div className="about-cta-buttons">
-          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-primary" download="Platon_Alexander_CV.pdf"><HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Download CV</a>
+        <div className="about-cta-buttons">            
           <a href="#contact-section"
             className="about-btn btn-primary"
             onClick={(e) => {
-              e.preventDefault()  
+              e.preventDefault();
               const element = document.getElementById('contact-section');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
               }
-            }}><FiMail size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>Work with Me</a>
+            }}>
+            <FiMail size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>Let's Work Together!
+          </a>
+          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-secondary" download="Platon_Alexander_CV.pdf">
+            <HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Grab My CV
+          </a>
         </div>
-
+          
         <br />
-
+          
         <div className="projects-cta-subsection">
           <div className="projects-cta-details">
             <p>From concepts to creations, my work speaks louder than words. Discover the projects that shaped my journey.</p>
           </div>
           <div className="projects-cta-buttons">
             <Link to="/Projects" className="projects-link">
-              <button className="projects-btn">
-                <HiArrowRightEndOnRectangle size={24} style={{marginRight: '10px', verticalAlign: 'middle'}}/>
-                <span>Explore Projects</span>
+              <button className="projects-btn btn-secondary">
+                <HiArrowRightEndOnRectangle size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>
+                <span>See My Work in Action</span>
               </button>
             </Link>
           </div>
