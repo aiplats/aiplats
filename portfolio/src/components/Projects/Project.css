@@ -373,7 +373,15 @@
   }
   
   .tech-text {
-      font-size: 12px;
+    font-size: 12px;
+  }
+
+  .project-cta-section h2 {
+    font-size: 22px;
+  }
+
+  .project-cta-section p {
+    font-size: 16px;
   }
 }
 
@@ -382,17 +390,27 @@
   br {
     display: none;
   }
+
   .project-container {
-      padding: 20px 5px;
+    padding: 20px 5px;
   }
   
   .main-project-page h1 {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 30px;
+  }
+
+  .main-project-page h1::after {
+    top: 180px;
+    left: 28%;
+  }
+
+  .project-tags p {
+    font-size: 16px;
   }
   
   .project-details {
-      padding: 10px;
+    padding: 10px;
   }
   
   .project-details button {
@@ -401,20 +419,28 @@
   }
   
   .project-details p:first-child {
-      font-size: 18px;
+    font-size: 18px;
   }
   
   .project-details p:nth-child(2) {
-      font-size: 14px;
+    font-size: 16px;
   }
   
   .tech-icon,
   .techstack-icons img {
-      width: 30px;
-      height: 30px;
+    width: 30px;
+    height: 30px;
   }
   
   .tech-text {
-      font-size: 11px;
+    font-size: 13px;
+  }
+
+  .project-cta-section h2 {
+    font-size: 22px;
+  }
+
+  .project-cta-section p {
+    font-size: 16px;
   }
 }
