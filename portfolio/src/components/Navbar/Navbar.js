@@ -5,30 +5,27 @@ import { Link } from 'react-router-dom'
 import { FaRegMessage } from 'react-icons/fa6';
 
 export const Navbar = () => {
-
-    const [activeSection, setActiveSection] = useState('Home');
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    
-    const handleNavigationClick = (id, section) => {
-      setActiveSection(section);
-      setIsMobileMenuOpen(false);
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-
-    const toggleMobileMenu = () => {
-      setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
-
-    useEffect(() => {
-      if (isMobileMenuOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
-    }, [isMobileMenuOpen]);
+  const [activeSection, setActiveSection] = useState('Home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const handleNavigationClick = (id, section) => {
+    setActiveSection(section);
+    setIsMobileMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMobileMenuOpen]);
 
   return (
     <>

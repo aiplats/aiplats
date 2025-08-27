@@ -26,7 +26,6 @@ function GitHubContributions() {
     }
   };
 
-  // Fetch overall stats (lifetime contributions + combined repos)
   useEffect(() => {
     const fetchOverallStats = async () => {
       const token = process.env.REACT_APP_GITHUB_TOKEN;
@@ -164,7 +163,7 @@ function GitHubContributions() {
   }
 
   return (
-    <div>
+    <div className="github-contributions">
       <h2>GitHub Activity</h2>
       <div className="contribution-column">
         <div className="contribution-details">
@@ -192,6 +191,14 @@ function GitHubContributions() {
             ))}
           </select>
         </div>
+      </div>
+
+      <div className="mobile-select">
+        <select value={year} onChange={(e) => setYear(Number(e.target.value))}>
+          {[2025, 2024, 2023, 2022].map((y) => (
+            <option key={y} value={y}>{y}</option>
+          ))}
+        </select>
       </div>
 
       <div className="contribution-calendar">

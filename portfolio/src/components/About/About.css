@@ -215,6 +215,12 @@
     box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 }
 
+.about-description {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; 
+}
+
 .about-text {
     padding: 5px;
 }
@@ -765,6 +771,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .about-content {
@@ -784,12 +793,16 @@
         box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
     }
     
-    .about-text {
-        padding: 0;
+    .about-description {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .about-text h1 {
         font-size: 1.8rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .about-text p {
@@ -801,14 +814,6 @@
     .socials {
         display: flex;
         justify-content: center;
-    }
-
-    .about-profile {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
     }
 
     .about-profile figcaption {
