@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import aiplatslogo from './../assets/aiplatslogo.jpeg'
 import { Link } from 'react-router-dom'
@@ -6,12 +6,12 @@ import { FaRegMessage } from 'react-icons/fa6';
 
 export const Navbar = () => {
 
-    const [activeSection, setActiveSection] = useState('About');
+    const [activeSection, setActiveSection] = useState('Home');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     
     const handleNavigationClick = (id, section) => {
       setActiveSection(section);
-      setIsMobileMenuOpen(false); // Close mobile menu when clicking a link
+      setIsMobileMenuOpen(false);
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -21,6 +21,14 @@ export const Navbar = () => {
     const toggleMobileMenu = () => {
       setIsMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    useEffect(() => {
+      if (isMobileMenuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -74,23 +82,46 @@ export const Navbar = () => {
         </div>
 
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-            <ul>
-                <li className={activeSection === 'Home' ? 'active' : ''}>
-                    <Link to="/">Home</Link>
-                </li>
-                <li className={activeSection === 'About' ? 'active' : ''}>
-                    <Link to="/About">About</Link>
-                </li>
-                <li className={activeSection === 'Projects' ? 'active' : ''}>
-                    <Link to="/Projects">Projects</Link>
-                </li>
-                <li className={activeSection === 'Services' ? 'active' : ''}>
-                    <Link to="/Services">Services</Link>
-                </li>
-                <li className={activeSection === 'Contact' ? 'active' : ''}>
-                    <Link to="/Contact">Contact</Link>
-                </li>
-            </ul>
+          <ul>
+            <li className={activeSection === 'Home' ? 'active' : ''}>
+              <Link 
+                to="/" 
+                onClick={() => handleNavigationClick('home-section', 'Home')}>
+                Home
+              </Link>
+            </li>
+            <li className={activeSection === 'About' ? 'active' : ''}>
+              <Link 
+                to="/About"
+                onClick={() => handleNavigationClick('about-section', 'About')}>
+                About
+              </Link>
+            </li>
+            <li className={activeSection === 'Projects' ? 'active' : ''}>
+              <Link 
+                to="/Projects"
+                onClick={() => handleNavigationClick('projects-section', 'Projects')}>
+                Projects
+              </Link>
+            </li>
+            <li className={activeSection === 'Services' ? 'active' : ''}>
+              <Link 
+                to="/Services"
+                onClick={() => handleNavigationClick('services-section', 'Services')}>
+                Services
+              </Link>
+            </li>
+            <li className={activeSection === 'Contact' ? 'active' : ''}>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigationClick('contact-section', 'Contact');
+                }}>
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
     </div>
     </>
