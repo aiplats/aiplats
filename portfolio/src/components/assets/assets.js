@@ -24,6 +24,7 @@ import graphql from './../assets/icons8-graphql-50.png'
 import restapi from './../assets/icons8-rest-api-50.png'
 import vscode from './../assets/icons8-vs-code-48.png'
 import vercel from './../assets/icons8-vercel-50.png'
+import render from './../assets/Render-logomark-Black.png'
 
 import css from './../assets/icons8-css3-48.png'
 import html from './../assets/icons8-html5-48.png'
@@ -154,7 +155,11 @@ export const skillsIcons = [
     icon: vercel,
     title: "Vercel"
   },
-  
+  {
+    category: "DevOps & Tools",
+    icon: render,
+    title: "Render"
+  },
 ];
 
 export  const certifications = [
