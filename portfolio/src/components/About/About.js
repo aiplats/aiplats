@@ -192,37 +192,44 @@ function About() {
 
                 <div className="skills-container">
                   <AboutSkills 
-                    title="Front-End"
+                    title="Languages"
                     icon={frontend}
                     direction="left"
+                    skills={skillsIcons.filter(skill => skill.category === "Languages")} 
+                  />
+
+                  <AboutSkills 
+                    title="Front-End"
+                    icon={frontend}
+                    direction="right"
                     skills={skillsIcons.filter(skill => skill.category === "Front-End")} 
                   />
 
                   <AboutSkills
                     title="Back-End"
                     icon={server}
-                    direction="right"
+                    direction="left"
                     skills={skillsIcons.filter(skill => skill.category === "Back-End")}
                   />
 
                   <AboutSkills
                     title="Database"
                     icon={server}
-                    direction="left"
+                    direction="right"
                     skills={skillsIcons.filter(skill => skill.category === "Database")}
                   />
 
                   <AboutSkills
                     title="Design"
                     icon={paint}
-                    direction="right"
+                    direction="left"
                     skills={skillsIcons.filter(skill => skill.category === "Design")}
                   />
 
                   <AboutSkills
                     title="DevOps & Tools"
                     icon={web}
-                    direction="left"
+                    direction="right"
                     skills={skillsIcons.filter(skill => skill.category === "DevOps & Tools")}
                   />
                 </div>

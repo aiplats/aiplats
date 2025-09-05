@@ -11,7 +11,7 @@ import frontend from './../assets/icons8-frontend-50.png'
 import server from './../assets/icons8-server-50.png'
 import paint from './../assets/icons8-paint-50.png'
 import tailwind from './../assets/icons8-tailwind-css-48.png'
-import seo from './../assets/icons8-seo-60.png'
+import seo from './../assets/icons8-seo-50.png'
 import api from './../assets/icons8-api-64.png'
 
 import responsive from './../assets/icons8-responsive-design-50.png'
@@ -26,6 +26,9 @@ import vscode from './../assets/icons8-vs-code-48.png'
 import vercel from './../assets/icons8-vercel-50.png'
 import render from './../assets/Render-logomark-Black.png'
 
+import php from './../assets/icons8-php-48.png'
+import cpp from './../assets/icons8-c-48.png'
+import java from './../assets/icons8-java-48.png'
 import css from './../assets/icons8-css3-48.png'
 import html from './../assets/icons8-html5-48.png'
 import javascript from './../assets/icons8-javascript-48.png'
@@ -45,6 +48,26 @@ import acres from './../assets/acres.png'
 
 
 export const skillsIcons = [
+  {
+    category: "Languages",
+    icon: javascript,
+    title: "JavaScript"
+  },
+  {
+    category: "Languages",
+    icon: java,
+    title: "Java"
+  },
+  {
+    category: "Languages",
+    icon: cpp,
+    title: "C++"
+  },
+  {
+    category: "Languages",
+    icon: php,
+    title: "PHP"
+  },
   {
     category: "Front-End",
     icon: html,
@@ -254,8 +277,8 @@ export const providedServices = [
   },
   {
     icon: seo,
-    name: "Basic SEO",
-    desc: "Optimizing websites for better visibility and ranking on search engines through best practices."
+    name: "SEO (On-page & Technical)",
+    desc: "Optimizing on-page and Technical websites for better visibility and ranking on search engines through best practices."
   }, 
 
 ]
@@ -284,5 +307,11 @@ export const services = [
     icon: paint,
     name: "Web Design",
     desc: "Create visually appealing and user-centered designs using Framer, WordPress and Tailwind CSS"
-  }
+  },
+  {
+    number: "05",
+    icon: seo,
+    name: "SEO Optimization",
+    desc: "Improve website visibility and ranking on search engines through on-page and technical SEO strategies"
+  },
 ]
