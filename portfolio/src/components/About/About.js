@@ -147,7 +147,7 @@ function About() {
                     <h3>Social Links</h3>
                     <a href="https://www.facebook.com/aiplats"><img src={facebook} alt='facebook'/></a>
                     <a href="https://www.instagram.com/aiplatss/"><img src={instagram} alt='instagram'/></a>
-                    <a href="https://github.com/aipPlaton"><img src={github} alt='github'/></a>
+                    <a href="https://github.com/aiplats"><img src={github} alt='github'/></a>
                     <a href="https://www.linkedin.com/in/aiplats"><img src={linkedin} alt='linkedin'/></a>
                   </div>
                 </div>

@@ -32,7 +32,7 @@ export const Footer = () => {
             <a href="https://www.linkedin.com/in/aiplats" target="_blank" rel="noopener noreferrer">
               <img src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://github.com/aipPlaton" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/aiplats" target="_blank" rel="noopener noreferrer">
               <img src={github} alt="GitHub" />
             </a>
           </div>
