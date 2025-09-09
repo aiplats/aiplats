@@ -246,13 +246,13 @@ export const freelance = [
   {
     project: historiko,
     name: "Historiko",
-    desc: "A Learning Management System (LMS) for Araling Panlipunan, with incorporated gamified quizzes, flashcards, and progress— boosting student engagement.",
+    desc: "A Learning Management System (LMS) for Social Studies, with incorporated gamified quizzes, flashcards, and progress— boosting student engagement.",
     techstack: ["HTML5", "CSS3", "React", "JavaScript", "Supabase", "Node.js"],
     link: "https://historiko.vercel.app/",
   },
   {
     project: acres,
-    name: "Alliance Core Real Estate Services",
+    name: "Alliance Core Real Estate Services (On-going)",
     desc: "A Professional Real Estate Website show casting exclusive listings and partner developers.",
     techstack: ["HTML5", "CSS3", "React", "JavaScript"],
     link: "https://alliancecore-res.vercel.app/",
