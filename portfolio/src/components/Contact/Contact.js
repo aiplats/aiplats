@@ -70,7 +70,12 @@ export const Contact = () => {
                               <p>{contact.name}</p>
                             </a>
                         ))}
-                        <GoogleMapAPI />
+                      <div className="google-map-desktop-view">
+                        <GoogleMapAPI />  
+                      </div>  
+                    </div>
+                    <div className="google-map-mobile-view">
+                      <GoogleMapAPI />
                     </div>
                 </form>
             </div>

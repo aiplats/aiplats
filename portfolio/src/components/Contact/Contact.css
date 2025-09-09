@@ -188,6 +188,14 @@
     font-size: 14px;
 }
 
+.google-map-mobile-view {
+    display: none;
+}
+
+.google-map-desktop-view {
+    display: flex;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .contact-vertical-line {
         display: none;
@@ -275,6 +283,15 @@
     .personal-deets:hover {
         transform: translateY(-5px);
     }
+
+    .google-map-desktop-view {
+        display: none;
+    }
+
+    .google-map-mobile-view {
+        display: flex;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -296,6 +313,15 @@
     }
 
     .contact-input button {
+        padding: 10px;
+    }
+
+    .google-map-desktop-view {
+        display: none;
+    }
+
+    .google-map-mobile-view {
+        display: flex;
         padding: 10px;
     }
 }
