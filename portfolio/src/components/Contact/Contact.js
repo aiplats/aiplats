@@ -49,7 +49,7 @@ export const Contact = () => {
                         </div>
 
                         <input className="contact-details" placeholder="Subject" name="subject" required />
-                        <input className="contact-details" placeholder="Message" name="message" required />
+                        <textarea className="contact-details" placeholder="Message" name="message" required />
 
                         <button type="submit"><RiSendPlaneFill  size={25} />Send Message</button>
                     </div>
