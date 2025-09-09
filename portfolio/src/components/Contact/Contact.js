@@ -5,6 +5,7 @@ import { socialContact } from '../assets/assets';
 
 import { FiMail } from 'react-icons/fi';
 import { RiSendPlaneFill } from 'react-icons/ri';
+import GoogleMapAPI from '../GoogleMap/GoogleMapAPI';
 
 export const Contact = () => {
   const form = useRef();
@@ -69,6 +70,7 @@ export const Contact = () => {
                               <p>{contact.name}</p>
                             </a>
                         ))}
+                        <GoogleMapAPI />
                     </div>
                 </form>
             </div>

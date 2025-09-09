@@ -93,7 +93,7 @@
 }
 
 .contact-details[placeholder="Message"] {
-    min-height: 120px;
+    min-height: 200px;
     resize: vertical;
 }
 
