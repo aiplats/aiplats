@@ -20,7 +20,7 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <meta name="theme-color" content="#000000" />
-    
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <meta name="google-site-verification" content="SbzrkgoUy3_PGxXEyicoMvsbcFdYY8tLBDN6D67-yy0" />
@@ -43,7 +43,19 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="loading-screen">
+    <img src="/aiplatslogo-192.png" alt="Loading..." />
+    <p>Loading...</p>
+  </div>
+
+  <div id="root" style="display: none;"></div>
+  
+  <script>
+    window.addEventListener("load", function() {
+      document.getElementById('loading-screen').style.display = "none";
+      document.getElementById('root').style.display = "block";
+    });
+  </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
