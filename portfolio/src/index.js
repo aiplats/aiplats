@@ -18,13 +18,12 @@ reportWebVitals();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/service-worker.js')
-      .then(reg => {
-        console.log('Service Worker registered:', reg);
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registered with Workbox:', registration);
       })
-      .catch(err => {
-        console.error('Service Worker registration failed:', err);
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
       });
   });
 }
