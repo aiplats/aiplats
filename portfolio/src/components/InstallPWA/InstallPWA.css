@@ -9,6 +9,7 @@
   border-radius: 50px;
   font-size: 14px;
   cursor: pointer;
+  z-index: 9999;
   transition: all 0.3s ease;
   animation: popIn 0.4s ease;
 }
@@ -25,7 +26,46 @@
 }
 
 .pwa-container button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
-    background: linear-gradient(135deg, #E17055, #FDCB6E);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
+  background: linear-gradient(135deg, #E17055, #FDCB6E);
+}
+
+@media (max-width: 1024px) {
+  .pwa-container button {
+    top: 75px;
+    right: 20px;
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+
+/* 🟢 For Mobile Phones */
+@media (max-width: 768px) {
+  .pwa-container button {
+    top: 75px; /* Slightly closer to the navbar */
+    right: 15px;
+    font-size: 12px;
+    padding: 9px 18px;
+  }
+}
+
+/* 🔵 Small Phones (iPhone SE, smaller Android) */
+@media (max-width: 480px) {
+  .pwa-container button {
+    top: 75px;
+    right: 10px;
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+/* ⚫ Extra Small Screens */
+@media (max-width: 360px) {
+  .pwa-container button {
+    top: 60px;
+    right: 10px;
+    font-size: 10px;
+    padding: 7px 14px;
+  }
 }
