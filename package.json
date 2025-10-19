@@ -10,12 +10,14 @@
     "workbox-routing": "^7.3.0",
     "workbox-strategies": "^7.3.0"
   },
-
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-}
-
+    "start": "react-scripts start",
+    "build": "react-scripts build && workbox generateSW workbox-config.js",
+    "serve": "serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "workbox-cli": "^7.3.0"
+  }
 }
