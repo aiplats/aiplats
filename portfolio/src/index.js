@@ -20,18 +20,16 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
-        console.log('Service Worker registered with Workbox:', registration);
+        console.log('Service Worker registered', registration);
       })
       .catch(error => {
         console.log('Service Worker registration failed:', error);
       });
+
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+      loadingScreen.style.opacity = '0';
+      setTimeout(() => loadingScreen.remove(), 500);
+    }
   });
 }
-
-window.addEventListener('load', () => {
-  const loadingScreen = document.getElementById('loading-screen');
-  if (loadingScreen) {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => loadingScreen.remove(), 500);
-  }
-});
