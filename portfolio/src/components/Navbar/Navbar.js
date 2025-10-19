@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.css'
-import aiplatslogo from './../assets/aiplatslogo.jpeg'
+import aiplatslogo from './../assets/aiplatslogo.png'
 import { Link } from 'react-router-dom'
 import { FaRegMessage } from 'react-icons/fa6';
 
