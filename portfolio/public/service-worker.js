@@ -21,6 +21,7 @@ const urlsToCache = [
 
 // Install & pre-cache assets
 self.addEventListener("install", (event) => {
+  self.skipWainting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Service Worker: Caching files");
@@ -46,6 +47,7 @@ self.addEventListener("fetch", (event) => {
 // Activate & clear old caches
 self.addEventListener("activate", (event) => {
   const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(clientsClaim.claim());
   event.waitUntil(
     caches.keys().then((cacheNames) =>
       Promise.all(
