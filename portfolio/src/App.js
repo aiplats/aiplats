@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Header } from './components/Header/Header';
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { Footer } from './components/Footer/Footer';
+import InstallPWA from './components/InstallPWA/InstallPWA';
 
 const About = lazy(() => import('./components/About/About'));
 const Project = lazy(() => import('./components/Projects/Project'));
@@ -55,6 +56,7 @@ function App() {
         />
       </Routes>
 
+      <InstallPWA />
       <Footer />
     </BrowserRouter>
   );
