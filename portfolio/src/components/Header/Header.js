@@ -87,6 +87,7 @@ export const Header = () => {
             <div className="grid-right">
               <div className="typing-block">
                 <h2>"Progress over Perfection"</h2>
+                
                 <h1 className="typing-text">A {text}<span className="cursor">|</span></h1>
                 <div className="grid-right-buttons">
                   <Link to="/About"><button><span><HiArrowRightEndOnRectangle size={30}/>Learn More!</span></button></Link>

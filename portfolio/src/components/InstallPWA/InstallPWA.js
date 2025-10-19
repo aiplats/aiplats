@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './InstallPWA.css'
 
 function InstallPWA() {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -38,26 +39,16 @@ function InstallPWA() {
 
   return (
     <>
+    <div className="pwa-container">
       {isInstallable && (
         <button
           onClick={handleInstallClick}
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            padding: "10px 20px",
-            backgroundColor: "#007bff",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-            zIndex: 1000,
-          }}
+          className="install-btn"
         >
           📲 Install Aiplats App
         </button>
       )}
+      </div>
     </>
   );
 }
