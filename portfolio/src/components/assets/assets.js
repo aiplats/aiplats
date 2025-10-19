@@ -252,7 +252,7 @@ export const freelance = [
   },
   {
     project: acres,
-    name: "Alliance Core Real Estate Services (On-going)",
+    name: "Alliance Core Real Estate Services",
     desc: "A Professional Real Estate Website show casting exclusive listings and partner developers.",
     techstack: ["HTML5", "CSS3", "React", "JavaScript"],
     link: "https://alliancecore-res.vercel.app/",
