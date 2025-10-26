@@ -3,6 +3,7 @@ import './Navbar.css'
 import aiplatslogo from './../assets/aiplatslogo.png'
 import { Link } from 'react-router-dom'
 import { FaRegMessage } from 'react-icons/fa6';
+import { HiArrowDownCircle } from 'react-icons/hi2';
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState('Home');
@@ -52,21 +53,10 @@ export const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="contact-button">
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveSection('Contact');
-                  setIsMobileMenuOpen(false);
-                
-                  const element = document.getElementById('contact-section');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                CONTACT <FaRegMessage size={20} />
-              </button>
+            <div className="navbar-cv-buttons">
+              <a href="/Platon_Alexander_Isaac_CV.pdf" className="nav-cv" download="Platon_Alexander_Isaac_CV.pdf">
+                <HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Grab My CV
+              </a>
             </div>
 
             <div className="mobile-menu-button" onClick={toggleMobileMenu}>
@@ -109,13 +99,8 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className={activeSection === 'Contact' ? 'active' : ''}>
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavigationClick('contact-section', 'Contact');
-                }}>
-                Contact
+              <a href="/Platon_Alexander_Isaac_CV.pdf" className="about-btn btn-secondary" download="Platon_Alexander_Isaac_CV.pdf">
+                <HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Grab My CV
               </a>
             </li>
           </ul>

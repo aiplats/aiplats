@@ -141,36 +141,34 @@
     transform: translateY(-5px);
 }
 
-.contact-button {
-  display: flex;
-  justify-content: center;
+.navbar-cv-buttons {
+    display: flex;
+    background: linear-gradient(135deg, #FDCB6E, #E17055);
+    border-radius: 12px;
+    color: #ffd700;
+    box-shadow: none;
+    transition: all 0.5 ease;
 }
 
-.contact-button button {
-  display: flex;
-  align-items: center;
-  gap: 8px;                 
-  background: linear-gradient(135deg, #FDCB6E, #E17055);
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(253, 203, 110, 0.4);
+.navbar-cv-buttons:hover {
+    background: linear-gradient(135deg, #E17055, #FDCB6E);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
 }
 
-.contact-button button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(253, 203, 110, 0.6);
-  background: linear-gradient(135deg, #E17055, #FDCB6E);
+.navbar-cv-buttons a {
+    transition: all 0.5 ease;
+    text-decoration: none;
+    color: white;
 }
 
-.contact-button button:active {
-  transform: translateY(-1px);
+.nav-cv {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 /* Mobile menu button */
