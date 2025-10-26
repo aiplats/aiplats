@@ -289,7 +289,7 @@ function About() {
             }}>
             <FiMail size={24} style={{marginRight: '10px', verticalAlign: "middle"}}/>Let's Work Together!
           </a>
-          <a href="/Platon_Alexander_CV.pdf" className="about-btn btn-secondary" download="Platon_Alexander_CV.pdf">
+          <a href="/Platon_Alexander_Isaac_CV.pdf" className="about-btn btn-secondary" download="Platon_Alexander_Isaac_CV.pdf">
             <HiArrowDownCircle size={25} style={{marginRight: '10px', verticalAlign: "middle"}}/>Grab My CV
           </a>
         </div>
