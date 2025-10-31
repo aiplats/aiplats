@@ -122,9 +122,9 @@ function Project() {
 
                       <br />
 
-                      <p>Tech Stack used:</p>
+                      <p>Tools used:</p>
                       <div className="techstack-icons">
-                        {proj.techstack.map((tech, i) => {
+                        {proj.tools.map((tech, i) => {
                           const techIcon = getIconByTitle(tech);
                           return techIcon ? (
                             <img 

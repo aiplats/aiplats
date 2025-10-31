@@ -46,6 +46,7 @@ import mahikacafe from './../assets/mahikacafe.png'
 import historiko from './../assets/historiko.png'
 import taalert from './../assets/taalert.png'
 import acres from './../assets/acres.png'
+import marksfurniture from './../assets/marksfurniture.png'
 
 
 export const skillsIcons = [
@@ -191,7 +192,7 @@ export const skillsIcons = [
   },
 ];
 
-export  const certifications = [
+export const certifications = [
   {
     icon: itflogo,
     title: "CompTIA IT Fundamentals+",
@@ -267,9 +268,10 @@ export const freelance = [
 
 export const wordpressProjects = [
   {
-    project: 'Marks North Eastern Furniture and Foundation',
+    project: marksfurniture,
     name: 'Marks North Eastern Furniture and Foundation',
     desc: 'Marks North Eastern Furniture and Foundation is a non-profit charitable organization dedicated to repurposing quality furniture and distributing it to families in need across New England',
+    tools: ["WordPress", "Elementor", "HTML5", "CSS3", "JAVASCRIPT"],
     link: 'https://www.marksfurniturefoundation.shop/'
   }
 ]
