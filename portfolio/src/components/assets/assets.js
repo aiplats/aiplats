@@ -17,6 +17,7 @@ import api from './../assets/icons8-api-64.png'
 import responsive from './../assets/icons8-responsive-design-50.png'
 import uiux from './../assets/icons8-ui-ux-design-50.png'
 import wordpress from './../assets/icons8-wordpress-50.png'
+import elementor from './../assets/icons8-elementor-50.png'
 import framer from './../assets/icons8-framer-48.png'
 
 import git from './../assets/icons8-git-48.png'
@@ -145,6 +146,11 @@ export const skillsIcons = [
   },
   {
     category: "Design",
+    icon: elementor,
+    title: "Elementor"
+  },
+  {
+    category: "Design",
     icon: framer,
     title: "Framer"
   },
@@ -257,6 +263,15 @@ export const freelance = [
     techstack: ["HTML5", "CSS3", "React", "JavaScript"],
     link: "https://alliancecore-res.vercel.app/",
   },
+]
+
+export const wordpressProjects = [
+  {
+    project: 'Marks North Eastern Furniture and Foundation',
+    name: 'Marks North Eastern Furniture and Foundation',
+    desc: 'Marks North Eastern Furniture and Foundation is a non-profit charitable organization dedicated to repurposing quality furniture and distributing it to families in need across New England',
+    link: 'https://www.marksfurniturefoundation.shop/'
+  }
 ]
 
 export const providedServices = [
