@@ -8,7 +8,7 @@ const Statistics = () => {
   const hasStarted = useRef(false);
 
   const stats = [
-    { end: 4, suffix: '+', label: 'Projects Completed' },
+    { end: 5, suffix: '+', label: 'Projects Completed' },
     { end: 10, suffix: '+', label: 'Experience Technologies' },
     { end: 1, suffix: '+', label: 'Years Experience' },
     { end: 100, suffix: '+', label: 'Coffee Consumed' }
